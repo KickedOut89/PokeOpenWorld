@@ -33,4 +33,6 @@ func _process(delta: float) -> void:
 	for layer in _players:
 		var p: AudioStreamPlayer = _players[layer]
 		var target: float = want.get(layer, SILENT_DB)
+		if target > SILENT_DB:
+			target += linear_to_db(maxf(0.001, float(Settings.get_value("audio/ambience"))))
 		p.volume_db = move_toward(p.volume_db, target, step)

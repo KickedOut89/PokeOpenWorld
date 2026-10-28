@@ -25,6 +25,8 @@ var prompts: PromptBox
 var progression: ProgressionUI
 var party_menu: PartyMenu
 var quests: QuestRunner
+var settings_menu: SettingsMenu
+var debug_menu: DebugMenu
 var _npc_t: float = 0.0
 
 
@@ -120,6 +122,14 @@ func _ready() -> void:
 	quests = QuestRunner.new()
 	quests.name = "Quests"
 	add_child(quests)
+	settings_menu = SettingsMenu.new()
+	settings_menu.name = "SettingsMenu"
+	add_child(settings_menu)
+	debug_menu = DebugMenu.new()
+	debug_menu.name = "DebugMenu"
+	debug_menu.world = self
+	add_child(debug_menu)
+	Settings.apply()
 	party_menu = PartyMenu.new()
 	party_menu.name = "PartyMenu"
 	add_child(party_menu)

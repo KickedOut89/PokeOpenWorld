@@ -20,6 +20,7 @@ var _grades: Dictionary = {}
 
 
 func _ready() -> void:
+	add_to_group(&"lighting_director")
 	model = LightingModel.from_db(Data.db)
 	_build()
 	var rec := Data.db.get_record(&"lighting", &"periods")
