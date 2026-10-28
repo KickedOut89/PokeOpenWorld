@@ -1,0 +1,14 @@
+{
+ "id": "foresight",
+ "name": "Foresight",
+ "type": "normal",
+ "category": "status",
+ "power": 0,
+ "pp": 40,
+ "accuracy": 100,
+ "priority": 0,
+ "shape": "self",
+ "range": 0.0,
+ "active_s": 0.15,
+ "source": "PokeAPI (Gen 5 values)"
+}

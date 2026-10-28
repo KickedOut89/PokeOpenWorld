@@ -1,0 +1,46 @@
+{
+ "id": "weedle",
+ "name": "Weedle",
+ "dex": 13,
+ "types": [
+  "bug",
+  "poison"
+ ],
+ "base": {
+  "hp": 40,
+  "atk": 35,
+  "def": 30,
+  "spa": 20,
+  "spd": 20,
+  "spe": 50
+ },
+ "catch_rate": 255,
+ "base_exp": 39,
+ "growth": "medium_fast",
+ "ev_yield": {
+  "spe": 1
+ },
+ "learnset": [
+  [
+   1,
+   "poison_sting"
+  ],
+  [
+   1,
+   "string_shot"
+  ],
+  [
+   15,
+   "bug_bite"
+  ]
+ ],
+ "evolves": [
+  {
+   "to": "kakuna",
+   "level": 7
+  }
+ ],
+ "temperament": "aggressive",
+ "gender_ratio": 4,
+ "source": "PokeAPI (Gen 5 Black/White learnset)"
+}

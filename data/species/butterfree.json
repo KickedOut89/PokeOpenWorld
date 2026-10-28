@@ -1,0 +1,74 @@
+{
+ "id": "butterfree",
+ "name": "Butterfree",
+ "dex": 12,
+ "types": [
+  "bug",
+  "flying"
+ ],
+ "base": {
+  "hp": 60,
+  "atk": 45,
+  "def": 50,
+  "spa": 80,
+  "spd": 80,
+  "spe": 70
+ },
+ "catch_rate": 45,
+ "base_exp": 178,
+ "growth": "medium_fast",
+ "ev_yield": {
+  "spa": 2,
+  "spd": 1
+ },
+ "learnset": [
+  [
+   1,
+   "confusion"
+  ],
+  [
+   10,
+   "confusion"
+  ],
+  [
+   12,
+   "poison_powder"
+  ],
+  [
+   12,
+   "sleep_powder"
+  ],
+  [
+   12,
+   "stun_spore"
+  ],
+  [
+   16,
+   "gust"
+  ],
+  [
+   18,
+   "supersonic"
+  ],
+  [
+   22,
+   "whirlwind"
+  ],
+  [
+   24,
+   "psybeam"
+  ],
+  [
+   28,
+   "silver_wind"
+  ],
+  [
+   30,
+   "tailwind"
+  ]
+ ],
+ "evolves": [],
+ "temperament": "timid",
+ "gender_ratio": 4,
+ "source": "PokeAPI (Gen 5 Black/White learnset)"
+}

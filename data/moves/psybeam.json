@@ -1,0 +1,14 @@
+{
+ "id": "psybeam",
+ "name": "Psybeam",
+ "type": "psychic",
+ "category": "special",
+ "power": 65,
+ "pp": 20,
+ "accuracy": 100,
+ "priority": 0,
+ "shape": "projectile",
+ "range": 12.0,
+ "active_s": 0.15,
+ "source": "PokeAPI (Gen 5 values)"
+}

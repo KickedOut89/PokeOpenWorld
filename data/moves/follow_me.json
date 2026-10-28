@@ -1,0 +1,14 @@
+{
+ "id": "follow_me",
+ "name": "Follow Me",
+ "type": "normal",
+ "category": "status",
+ "power": 0,
+ "pp": 20,
+ "accuracy": 100,
+ "priority": 2,
+ "shape": "self",
+ "range": 0.0,
+ "active_s": 0.15,
+ "source": "PokeAPI (Gen 5 values)"
+}

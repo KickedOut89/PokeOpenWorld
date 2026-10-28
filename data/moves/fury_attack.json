@@ -1,0 +1,14 @@
+{
+ "id": "fury_attack",
+ "name": "Fury Attack",
+ "type": "normal",
+ "category": "physical",
+ "power": 15,
+ "pp": 20,
+ "accuracy": 85,
+ "priority": 0,
+ "shape": "melee_arc",
+ "range": 2.5,
+ "active_s": 0.15,
+ "source": "PokeAPI (Gen 5 values)"
+}

@@ -1,0 +1,78 @@
+{
+ "id": "bulbasaur",
+ "name": "Bulbasaur",
+ "dex": 1,
+ "types": [
+  "grass",
+  "poison"
+ ],
+ "base": {
+  "hp": 45,
+  "atk": 49,
+  "def": 49,
+  "spa": 65,
+  "spd": 65,
+  "spe": 45
+ },
+ "catch_rate": 45,
+ "base_exp": 64,
+ "growth": "medium_slow",
+ "ev_yield": {
+  "spa": 1
+ },
+ "learnset": [
+  [
+   1,
+   "tackle"
+  ],
+  [
+   3,
+   "growl"
+  ],
+  [
+   7,
+   "leech_seed"
+  ],
+  [
+   9,
+   "vine_whip"
+  ],
+  [
+   13,
+   "poison_powder"
+  ],
+  [
+   13,
+   "sleep_powder"
+  ],
+  [
+   15,
+   "take_down"
+  ],
+  [
+   19,
+   "razor_leaf"
+  ],
+  [
+   21,
+   "sweet_scent"
+  ],
+  [
+   25,
+   "growth"
+  ],
+  [
+   27,
+   "double_edge"
+  ]
+ ],
+ "evolves": [
+  {
+   "to": "ivysaur",
+   "level": 16
+  }
+ ],
+ "temperament": "territorial",
+ "gender_ratio": 1,
+ "source": "PokeAPI (Gen 5 Black/White learnset)"
+}

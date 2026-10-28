@@ -1,0 +1,14 @@
+{
+ "id": "hyper_fang",
+ "name": "Hyper Fang",
+ "type": "normal",
+ "category": "physical",
+ "power": 80,
+ "pp": 15,
+ "accuracy": 90,
+ "priority": 0,
+ "shape": "melee_arc",
+ "range": 2.5,
+ "active_s": 0.15,
+ "source": "PokeAPI (Gen 5 values)"
+}

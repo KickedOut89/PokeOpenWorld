@@ -1,0 +1,14 @@
+{
+ "id": "uproar",
+ "name": "Uproar",
+ "type": "normal",
+ "category": "special",
+ "power": 90,
+ "pp": 10,
+ "accuracy": 100,
+ "priority": 0,
+ "shape": "projectile",
+ "range": 12.0,
+ "active_s": 0.15,
+ "source": "PokeAPI (Gen 5 values)"
+}

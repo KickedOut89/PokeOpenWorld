@@ -1,0 +1,19 @@
+{
+ "id": "agility",
+ "name": "Agility",
+ "type": "psychic",
+ "category": "status",
+ "power": 0,
+ "pp": 30,
+ "accuracy": 100,
+ "priority": 0,
+ "shape": "self",
+ "range": 0.0,
+ "active_s": 0.15,
+ "source": "PokeAPI (Gen 5 values)",
+ "stat_change": {
+  "target": "self",
+  "stat": "spe",
+  "stages": 2
+ }
+}

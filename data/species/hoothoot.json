@@ -1,0 +1,70 @@
+{
+ "id": "hoothoot",
+ "name": "Hoothoot",
+ "dex": 163,
+ "types": [
+  "normal",
+  "flying"
+ ],
+ "base": {
+  "hp": 60,
+  "atk": 30,
+  "def": 30,
+  "spa": 36,
+  "spd": 56,
+  "spe": 50
+ },
+ "catch_rate": 255,
+ "base_exp": 52,
+ "growth": "medium_fast",
+ "ev_yield": {
+  "hp": 1
+ },
+ "learnset": [
+  [
+   1,
+   "foresight"
+  ],
+  [
+   1,
+   "growl"
+  ],
+  [
+   1,
+   "tackle"
+  ],
+  [
+   5,
+   "hypnosis"
+  ],
+  [
+   9,
+   "peck"
+  ],
+  [
+   13,
+   "uproar"
+  ],
+  [
+   17,
+   "reflect"
+  ],
+  [
+   21,
+   "confusion"
+  ],
+  [
+   25,
+   "echoed_voice"
+  ],
+  [
+   29,
+   "take_down"
+  ]
+ ],
+ "evolves": [],
+ "temperament": "passive",
+ "gender_ratio": 4,
+ "source": "PokeAPI (Gen 5 Black/White learnset)",
+ "nocturnal": true
+}

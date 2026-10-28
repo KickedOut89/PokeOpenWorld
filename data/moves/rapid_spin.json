@@ -1,0 +1,19 @@
+{
+ "id": "rapid_spin",
+ "name": "Rapid Spin",
+ "type": "normal",
+ "category": "physical",
+ "power": 20,
+ "pp": 40,
+ "accuracy": 100,
+ "priority": 0,
+ "shape": "melee_arc",
+ "range": 2.5,
+ "active_s": 0.15,
+ "source": "PokeAPI (Gen 5 values)",
+ "stat_change": {
+  "target": "foe",
+  "stat": "spe",
+  "stages": 1
+ }
+}

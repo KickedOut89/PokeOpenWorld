@@ -1,0 +1,14 @@
+{
+ "id": "razor_leaf",
+ "name": "Razor Leaf",
+ "type": "grass",
+ "category": "physical",
+ "power": 55,
+ "pp": 25,
+ "accuracy": 95,
+ "priority": 0,
+ "shape": "melee_arc",
+ "range": 2.5,
+ "active_s": 0.15,
+ "source": "PokeAPI (Gen 5 values)"
+}

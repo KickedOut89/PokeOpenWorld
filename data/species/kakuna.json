@@ -1,0 +1,42 @@
+{
+ "id": "kakuna",
+ "name": "Kakuna",
+ "dex": 14,
+ "types": [
+  "bug",
+  "poison"
+ ],
+ "base": {
+  "hp": 45,
+  "atk": 25,
+  "def": 50,
+  "spa": 25,
+  "spd": 25,
+  "spe": 35
+ },
+ "catch_rate": 120,
+ "base_exp": 72,
+ "growth": "medium_fast",
+ "ev_yield": {
+  "def": 2
+ },
+ "learnset": [
+  [
+   1,
+   "harden"
+  ],
+  [
+   7,
+   "harden"
+  ]
+ ],
+ "evolves": [
+  {
+   "to": "beedrill",
+   "level": 10
+  }
+ ],
+ "temperament": "passive",
+ "gender_ratio": 4,
+ "source": "PokeAPI (Gen 5 Black/White learnset)"
+}

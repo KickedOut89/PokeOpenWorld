@@ -1,0 +1,14 @@
+{
+ "id": "electro_ball",
+ "name": "Electro Ball",
+ "type": "electric",
+ "category": "special",
+ "power": 0,
+ "pp": 10,
+ "accuracy": 100,
+ "priority": 0,
+ "shape": "projectile",
+ "range": 12.0,
+ "active_s": 0.15,
+ "source": "PokeAPI (Gen 5 values)"
+}

@@ -1,0 +1,84 @@
+{
+ "id": "raticate",
+ "name": "Raticate",
+ "dex": 20,
+ "types": [
+  "normal"
+ ],
+ "base": {
+  "hp": 55,
+  "atk": 81,
+  "def": 60,
+  "spa": 50,
+  "spd": 70,
+  "spe": 97
+ },
+ "catch_rate": 127,
+ "base_exp": 145,
+ "growth": "medium_fast",
+ "ev_yield": {
+  "spe": 2
+ },
+ "learnset": [
+  [
+   1,
+   "focus_energy"
+  ],
+  [
+   1,
+   "quick_attack"
+  ],
+  [
+   1,
+   "swords_dance"
+  ],
+  [
+   1,
+   "tackle"
+  ],
+  [
+   1,
+   "tail_whip"
+  ],
+  [
+   4,
+   "quick_attack"
+  ],
+  [
+   7,
+   "focus_energy"
+  ],
+  [
+   10,
+   "bite"
+  ],
+  [
+   13,
+   "pursuit"
+  ],
+  [
+   16,
+   "hyper_fang"
+  ],
+  [
+   19,
+   "sucker_punch"
+  ],
+  [
+   20,
+   "scary_face"
+  ],
+  [
+   24,
+   "crunch"
+  ],
+  [
+   29,
+   "assurance"
+  ]
+ ],
+ "evolves": [],
+ "temperament": "aggressive",
+ "gender_ratio": 4,
+ "source": "PokeAPI (Gen 5 Black/White learnset)"
+}

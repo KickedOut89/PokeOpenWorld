@@ -1,0 +1,19 @@
+{
+ "id": "sand_attack",
+ "name": "Sand Attack",
+ "type": "ground",
+ "category": "status",
+ "power": 0,
+ "pp": 15,
+ "accuracy": 100,
+ "priority": 0,
+ "shape": "self",
+ "range": 0.0,
+ "active_s": 0.15,
+ "source": "PokeAPI (Gen 5 values)",
+ "stat_change": {
+  "target": "foe",
+  "stat": "accuracy",
+  "stages": -1
+ }
+}

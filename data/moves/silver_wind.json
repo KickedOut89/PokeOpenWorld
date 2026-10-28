@@ -1,0 +1,19 @@
+{
+ "id": "silver_wind",
+ "name": "Silver Wind",
+ "type": "bug",
+ "category": "special",
+ "power": 60,
+ "pp": 5,
+ "accuracy": 100,
+ "priority": 0,
+ "shape": "projectile",
+ "range": 12.0,
+ "active_s": 0.15,
+ "source": "PokeAPI (Gen 5 values)",
+ "stat_change": {
+  "target": "foe",
+  "stat": "atk",
+  "stages": 1
+ }
+}

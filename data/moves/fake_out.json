@@ -1,0 +1,14 @@
+{
+ "id": "fake_out",
+ "name": "Fake Out",
+ "type": "normal",
+ "category": "physical",
+ "power": 40,
+ "pp": 10,
+ "accuracy": 100,
+ "priority": 3,
+ "shape": "melee_arc",
+ "range": 2.5,
+ "active_s": 0.15,
+ "source": "PokeAPI (Gen 5 values)"
+}

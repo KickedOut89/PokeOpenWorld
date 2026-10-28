@@ -1,0 +1,19 @@
+{
+ "id": "crunch",
+ "name": "Crunch",
+ "type": "dark",
+ "category": "physical",
+ "power": 80,
+ "pp": 15,
+ "accuracy": 100,
+ "priority": 0,
+ "shape": "melee_arc",
+ "range": 2.5,
+ "active_s": 0.15,
+ "source": "PokeAPI (Gen 5 values)",
+ "stat_change": {
+  "target": "foe",
+  "stat": "def",
+  "stages": -1
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "id": "super_fang",
+ "name": "Super Fang",
+ "type": "normal",
+ "category": "physical",
+ "power": 0,
+ "pp": 10,
+ "accuracy": 90,
+ "priority": 0,
+ "shape": "melee_arc",
+ "range": 2.5,
+ "active_s": 0.15,
+ "source": "PokeAPI (Gen 5 values)"
+}

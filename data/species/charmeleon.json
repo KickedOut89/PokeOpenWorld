@@ -1,0 +1,61 @@
+{
+ "id": "charmeleon",
+ "name": "Charmeleon",
+ "dex": 5,
+ "types": [
+  "fire"
+ ],
+ "base": {
+  "hp": 58,
+  "atk": 64,
+  "def": 58,
+  "spa": 80,
+  "spd": 65,
+  "spe": 80
+ },
+ "catch_rate": 45,
+ "base_exp": 142,
+ "growth": "medium_slow",
+ "ev_yield": {
+  "spa": 1,
+  "spe": 1
+ },
+ "learnset": [
+  [
+   1,
+   "ember"
+  ],
+  [
+   1,
+   "growl"
+  ],
+  [
+   1,
+   "scratch"
+  ],
+  [
+   7,
+   "ember"
+  ],
+  [
+   10,
+   "smokescreen"
+  ],
+  [
+   17,
+   "dragon_rage"
+  ],
+  [
+   21,
+   "scary_face"
+  ],
+  [
+   28,
+   "fire_fang"
+  ]
+ ],
+ "evolves": [],
+ "temperament": "aggressive",
+ "gender_ratio": 1,
+ "source": "PokeAPI (Gen 5 Black/White learnset)"
+}

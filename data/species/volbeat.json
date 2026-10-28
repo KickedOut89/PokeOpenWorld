@@ -1,0 +1,66 @@
+{
+ "id": "volbeat",
+ "name": "Volbeat",
+ "dex": 313,
+ "types": [
+  "bug"
+ ],
+ "base": {
+  "hp": 65,
+  "atk": 73,
+  "def": 55,
+  "spa": 47,
+  "spd": 75,
+  "spe": 85
+ },
+ "catch_rate": 150,
+ "base_exp": 151,
+ "growth": "erratic",
+ "ev_yield": {
+  "spe": 1
+ },
+ "learnset": [
+  [
+   1,
+   "flash"
+  ],
+  [
+   1,
+   "tackle"
+  ],
+  [
+   5,
+   "double_team"
+  ],
+  [
+   9,
+   "confuse_ray"
+  ],
+  [
+   13,
+   "moonlight"
+  ],
+  [
+   17,
+   "quick_attack"
+  ],
+  [
+   21,
+   "tail_glow"
+  ],
+  [
+   25,
+   "signal_beam"
+  ],
+  [
+   29,
+   "protect"
+  ]
+ ],
+ "evolves": [],
+ "temperament": "passive",
+ "gender_ratio": 0,
+ "source": "PokeAPI (Gen 5 Black/White learnset)",
+ "nocturnal": true,
+ "ambient_only": true
+}
