@@ -79,10 +79,10 @@ func test_player_spawn_anchor_exists() -> void:
 	assert_true(found)
 
 
-func test_world_scene_builds_all_chunks() -> void:
+func test_world_scene_streams_chunks_around_player() -> void:
 	var world: Node3D = load("res://scenes/regions/kanto/kanto_world.tscn").instantiate()
 	add_child_autofree(world)
 	await wait_physics_frames(2)
 	var chunk_nodes := world.find_children("Chunk_*", "Node3D", true, false)
-	assert_gte(chunk_nodes.size(), 8)
+	assert_gte(chunk_nodes.size(), 6, "3x3 around the Pallet spawn holds 6 existing chunks")
 	assert_not_null(world.find_child("Player", true, false))

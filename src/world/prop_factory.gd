@@ -14,6 +14,10 @@ const ROOF_COLORS := {
 }
 
 
+static var _mats: Dictionary = {}
+static var _tree_parts: Dictionary = {}
+
+
 static func make(prop: Dictionary) -> Node3D:
 	var kind: String = prop.get("kind", "generic")
 	var node: Node3D
@@ -34,31 +38,40 @@ static func make(prop: Dictionary) -> Node3D:
 	return node
 
 
+## Trees share one trunk mesh, canopy mesh and collision shape; size varies by node scale.
 static func tree(pos: Vector3, scale: float) -> StaticBody3D:
+	if _tree_parts.is_empty():
+		var tm := CylinderMesh.new()
+		tm.top_radius = 0.25
+		tm.bottom_radius = 0.35
+		tm.height = 2.0
+		tm.radial_segments = 8
+		tm.material = _mat(Color("6b4a2b"))
+		var cm := SphereMesh.new()
+		cm.radius = 1.6
+		cm.height = 3.0
+		cm.radial_segments = 12
+		cm.rings = 6
+		cm.material = _mat(Color("2f6b2f"))
+		var shape := CylinderShape3D.new()
+		shape.radius = 0.9
+		shape.height = 3.0
+		_tree_parts = {"trunk": tm, "canopy": cm, "shape": shape}
 	var body := StaticBody3D.new()
 	body.position = pos
+	var visual := Node3D.new()
+	visual.scale = Vector3.ONE * scale
+	body.add_child(visual)
 	var trunk := MeshInstance3D.new()
-	var tm := CylinderMesh.new()
-	tm.top_radius = 0.25 * scale
-	tm.bottom_radius = 0.35 * scale
-	tm.height = 2.0 * scale
-	tm.material = _mat(Color("6b4a2b"))
-	trunk.mesh = tm
-	trunk.position.y = 1.0 * scale
-	body.add_child(trunk)
+	trunk.mesh = _tree_parts.trunk
+	trunk.position.y = 1.0
+	visual.add_child(trunk)
 	var canopy := MeshInstance3D.new()
-	var cm := SphereMesh.new()
-	cm.radius = 1.6 * scale
-	cm.height = 3.0 * scale
-	cm.material = _mat(Color("2f6b2f"))
-	canopy.mesh = cm
-	canopy.position.y = 3.0 * scale
-	body.add_child(canopy)
+	canopy.mesh = _tree_parts.canopy
+	canopy.position.y = 3.0
+	visual.add_child(canopy)
 	var col := CollisionShape3D.new()
-	var shape := CylinderShape3D.new()
-	shape.radius = 0.9 * scale
-	shape.height = 3.0
-	col.shape = shape
+	col.shape = _tree_parts.shape
 	col.position.y = 1.5
 	body.add_child(col)
 	return body
@@ -80,7 +93,8 @@ static func _building(prop: Dictionary) -> Node3D:
 	var win := MeshInstance3D.new()
 	var wm := QuadMesh.new()
 	wm.size = Vector2(1.0, 0.8)
-	var wmat := _mat(Color("2a3a4a"))
+	var wmat := StandardMaterial3D.new()
+	wmat.albedo_color = Color("2a3a4a")
 	wmat.emission_enabled = true
 	wmat.emission = Color("ffcf7a")
 	wmat.emission_energy_multiplier = 0.0
@@ -125,7 +139,10 @@ static func _box(size: Vector3, color: Color, solid: bool) -> Node3D:
 
 
 static func _mat(c: Color) -> StandardMaterial3D:
-	var m := StandardMaterial3D.new()
-	m.albedo_color = c
-	m.roughness = 0.85
-	return m
+	var key := c.to_html()
+	if not _mats.has(key):
+		var m := StandardMaterial3D.new()
+		m.albedo_color = c
+		m.roughness = 0.85
+		_mats[key] = m
+	return _mats[key]

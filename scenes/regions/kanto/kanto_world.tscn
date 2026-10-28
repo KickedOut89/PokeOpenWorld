@@ -5,4 +5,4 @@
 [node name="KantoWorld" type="Node3D"]
 script = ExtResource("1")
 
-[node name="Chunks" type="Node3D" parent="."]
+

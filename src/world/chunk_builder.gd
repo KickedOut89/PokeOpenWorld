@@ -2,7 +2,7 @@ class_name ChunkBuilder
 extends RefCounted
 ## Builds a detached Node3D for one chunk: terrain GridMap (1 m tiles, 4x4 per cell),
 ## terrain/obstacle collision, trees, ledges, props, door and spawn-zone areas, anchors.
-## Safe to call off the main thread (never touches the scene tree).
+## Call on the main thread: collision/GridMap setup is not thread-safe.
 
 const CELL := ChunkData.CELL_M
 
@@ -38,9 +38,11 @@ func build(data: ChunkData) -> Node3D:
 	var props := Node3D.new()
 	props.name = "Props"
 	root.add_child(props)
+	var cells := PackedInt32Array()
 	for y in ChunkData.CELLS:
 		for x in ChunkData.CELLS:
-			_build_cell(data, x, y, grid, terrain, props)
+			_build_cell(data, x, y, cells, terrain, props)
+	_fill_grid(grid, cells)
 	for p in data.props:
 		props.add_child(PropFactory.make(p))
 	for d in data.doors:
@@ -56,7 +58,13 @@ func build(data: ChunkData) -> Node3D:
 	return root
 
 
-func _build_cell(data: ChunkData, x: int, y: int, grid: GridMap, terrain: StaticBody3D, props: Node3D) -> void:
+## cells: flat [x, y, z, item, ...]
+static func _fill_grid(grid: GridMap, cells: PackedInt32Array) -> void:
+	for i in range(0, cells.size(), 4):
+		grid.set_cell_item(Vector3i(cells[i], cells[i + 1], cells[i + 2]), cells[i + 3])
+
+
+func _build_cell(data: ChunkData, x: int, y: int, cells: PackedInt32Array, terrain: StaticBody3D, props: Node3D) -> void:
 	var ch := data.cell(x, y)
 	if ch == " " or not _items.has(ch):
 		return
@@ -69,7 +77,7 @@ func _build_cell(data: ChunkData, x: int, y: int, grid: GridMap, terrain: Static
 	for ty in 4:
 		for tx in 4:
 			var h := hash([_seed, data.coord.x, data.coord.y, x * 4 + tx, y * 4 + ty])
-			grid.set_cell_item(Vector3i(x * 4 + tx, lvl, y * 4 + ty), ids[absi(h) % ids.size()])
+			cells.append_array([x * 4 + tx, lvl, y * 4 + ty, ids[absi(h) % ids.size()]])
 	var top := float(lvl)
 	# Ground collision slab for the cell.
 	_add_box(terrain, Vector3(x * CELL + 2, top - 0.5, y * CELL + 2), Vector3(CELL, 1.0, CELL))
@@ -122,11 +130,16 @@ func _stairs(x: int, y: int, lvl: int, def: Dictionary) -> StaticBody3D:
 	return body
 
 
+static var _box_shapes: Dictionary = {}
+
+
 func _add_box(body: StaticBody3D, center: Vector3, size: Vector3) -> void:
 	var col := CollisionShape3D.new()
-	var s := BoxShape3D.new()
-	s.size = size
-	col.shape = s
+	if not _box_shapes.has(size):
+		var bs := BoxShape3D.new()
+		bs.size = size
+		_box_shapes[size] = bs
+	col.shape = _box_shapes[size]
 	col.position = center
 	body.add_child(col)
 
