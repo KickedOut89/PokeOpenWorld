@@ -1,0 +1,7 @@
+extends GutTest
+
+
+func test_engine_version() -> void:
+	var v: Dictionary = Engine.get_version_info()
+	assert_eq(v.major, 4)
+	assert_eq(v.minor, 7)
