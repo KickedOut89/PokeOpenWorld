@@ -14,6 +14,7 @@ var lamps_on: bool = false
 var overrides: Dictionary = {}  # debug menu: field -> value
 var interior: bool = false      # inside a building: no sun/moon/sky fog, warm ambient
 
+var _flash: float = 0.0
 var _sky_mat: ProceduralSkyMaterial
 var _grades: Dictionary = {}
 
@@ -84,6 +85,11 @@ func _build() -> void:
 	add_child(moon)
 
 
+## Lightning: a brief burst of ambient/exposure that decays over ~0.4 s.
+func flash() -> void:
+	_flash = 1.0
+
+
 func current_state() -> LightingState:
 	var w: WeatherModel = Weather.model_for_area(area)
 	var cur := w.current if w != null else &"clear"
@@ -92,8 +98,12 @@ func current_state() -> LightingState:
 	return model.sample(Clock.model.minutes, cur, tgt, blend)
 
 
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
 	var s := current_state()
+	if _flash > 0.0:
+		s.ambient_energy += 2.5 * _flash
+		s.exposure += 0.6 * _flash
+		_flash = maxf(0.0, _flash - delta * 2.5)
 	for k in overrides:
 		s.set(k, overrides[k])
 	_orient(sun, s.sun_dir)

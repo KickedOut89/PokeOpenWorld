@@ -19,6 +19,10 @@ func _init(lib: MeshLibrary, seed_value: int) -> void:
 	_tileset = lib.get_meta(&"tileset", {})
 
 
+func library() -> MeshLibrary:
+	return _lib
+
+
 func build(data: ChunkData) -> Node3D:
 	var root := Node3D.new()
 	root.name = "Chunk_%d_%d" % [data.coord.x, data.coord.y]

@@ -86,3 +86,10 @@ func test_world_scene_streams_chunks_around_player() -> void:
 	var chunk_nodes := world.find_children("Chunk_*", "Node3D", true, false)
 	assert_gte(chunk_nodes.size(), 6, "3x3 around the Pallet spawn holds 6 existing chunks")
 	assert_not_null(world.find_child("Player", true, false))
+
+
+func test_weather_fx_knows_starting_area() -> void:
+	var world: KantoWorld = load("res://scenes/regions/kanto/kanto_world.tscn").instantiate()
+	add_child_autofree(world)
+	await wait_physics_frames(1)
+	assert_eq(world.weather_fx.area, &"pallet_town")

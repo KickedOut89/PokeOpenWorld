@@ -28,6 +28,10 @@ func setup_from_db(db: DataDB, seed_value: int) -> void:
 	_planner = StreamingPlanner.new(coords)
 
 
+func library() -> MeshLibrary:
+	return _builder.library()
+
+
 func has_record(c: Vector2i) -> bool:
 	return _records.has(c)
 

@@ -12,6 +12,7 @@ var lighting: LightingDirector
 var interiors: InteriorManager
 var doors: DoorController
 var toast: MessageToast
+var weather_fx: WeatherFx
 
 
 func _ready() -> void:
@@ -45,6 +46,13 @@ func _ready() -> void:
 	doors.player = player
 	doors.interiors = interiors
 	add_child(doors)
+	weather_fx = WeatherFx.new()
+	weather_fx.name = "WeatherFx"
+	weather_fx.camera = camera
+	weather_fx.lighting = lighting
+	weather_fx.area = streamer.current_area
+	add_child(weather_fx)
+	weather_fx.track_library(streamer.library())
 	toast = MessageToast.new()
 	toast.name = "Toast"
 	add_child(toast)
