@@ -1,5 +1,5 @@
 .godot/
 build/
-user_assets/
+/user_assets/
 *.tmp
 .superpowers/
