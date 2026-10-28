@@ -20,6 +20,7 @@ var dialogue: DialogueBox
 var ambience: AmbiencePlayer
 var fights: FightController
 var trainer_sight: TrainerSight
+var capture: CaptureController
 var _npc_t: float = 0.0
 
 
@@ -101,6 +102,10 @@ func _ready() -> void:
 	trainer_sight.name = "TrainerSight"
 	trainer_sight.world = self
 	add_child(trainer_sight)
+	capture = CaptureController.new()
+	capture.name = "Capture"
+	capture.world = self
+	add_child(capture)
 	spawner.wild_spawned.connect(func(w: WildPokemon) -> void: w.engaged.connect(func(x: WildPokemon) -> void: fights.start_wild(x)))
 	toast = MessageToast.new()
 	toast.name = "Toast"

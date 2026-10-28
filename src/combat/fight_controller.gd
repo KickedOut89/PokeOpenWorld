@@ -119,6 +119,10 @@ func _spawn_trainer_foe() -> void:
 func _physics_process(delta: float) -> void:
 	if model == null:
 		return
+	if foe_actor != null and not is_instance_valid(foe_actor):
+		foe_actor = null  # e.g. caught by CaptureController this frame
+	if foe_wild != null and not is_instance_valid(foe_wild):
+		foe_wild = null
 	var me := model.active()
 	var foe := model.current_foe()
 	for c in [me, foe]:
@@ -126,7 +130,7 @@ func _physics_process(delta: float) -> void:
 			for e in c.tick(delta, rng):
 				hud.flash_event(e)
 	_player_input(me, delta)
-	if foe != null and foe_actor != null and is_instance_valid(foe_actor):
+	if foe != null and foe_actor != null and is_instance_valid(foe_actor) and foe_actor.visible:
 		_foe_think(foe, delta)
 	_tick_side(&"player", me, foe, delta)
 	if foe != null:
@@ -140,7 +144,7 @@ func _physics_process(delta: float) -> void:
 	if model.active_index != was_index:
 		player_actor.creature = model.active().creature
 		player_actor._ready()
-	if trainer.size() > 0 and r == &"ongoing" and foe_actor is BattleActor and (foe_actor as BattleActor).creature != current_foe_creature():
+	if trainer.size() > 0 and r == &"ongoing" and foe_actor != null and foe_actor is BattleActor and (foe_actor as BattleActor).creature != current_foe_creature():
 		_spawn_trainer_foe()
 	hud.refresh(self)
 	if r != &"ongoing":
@@ -206,6 +210,9 @@ func _tick_side(side: StringName, user: Combatant, target: Combatant, delta: flo
 		return
 	var actor: Node3D = player_actor if side == &"player" else foe_actor
 	var other: Node3D = foe_actor if side == &"player" else player_actor
+	if actor == null:
+		_exec[side] = null
+		return
 	for e in ex.tick(delta):
 		if e == &"active_start":
 			_on_active(side, ex.move, user, target, actor, other)
@@ -394,7 +401,7 @@ func _finish(r: StringName) -> void:
 			EventBus.message.emit("Got away safely!")
 		&"caught":
 			pass
-	if foe_actor is BattleActor and is_instance_valid(foe_actor):
+	if foe_actor != null and is_instance_valid(foe_actor) and foe_actor is BattleActor:
 		foe_actor.queue_free()
 	foe_actor = null
 	foe_wild = null

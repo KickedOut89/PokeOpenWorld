@@ -15,6 +15,14 @@ var last_center: StringName = &"pallet_home"
 var party := Party.new()
 
 
+## Adds a Pokémon to the party; returns &"party" (Task 27 adds PC overflow).
+func give_pokemon(c: Creature) -> StringName:
+	if party.members.size() < Party.MAX:
+		party.members.append(c)
+		return &"party"
+	return &"none"
+
+
 func set_flag(f: StringName) -> void:
 	if flags.has(f):
 		return
