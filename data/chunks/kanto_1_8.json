@@ -1,0 +1,177 @@
+{
+ "id": "kanto_1_8",
+ "region": "kanto",
+ "coord": [
+  1,
+  8
+ ],
+ "area": "viridian_city",
+ "cells": [
+  "TT..............",
+  "TT..............",
+  "TT.T............",
+  "TT...........fff",
+  "TT...........fff",
+  "TT....~~~~~..fff",
+  "Tw=...~~~~~.....",
+  "Tw=...~~~~~.....",
+  "=w....~~~~~.....",
+  "=w....~~~~~.T...",
+  "Tw..............",
+  "Tw..fffff......T",
+  "TT..fffff.......",
+  "TT.T............",
+  "TT..............",
+  "TT.............."
+ ],
+ "heights": [
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222"
+ ],
+ "props": [
+  {
+   "id": "park_bench_a",
+   "kind": "bench",
+   "pos": [
+    50.0,
+    2.0,
+    30.0
+   ],
+   "rot": 0.0,
+   "footprint": [
+    2.0,
+    0.6
+   ],
+   "height": 0.5,
+   "color": "#8a6a45",
+   "area": "viridian_city"
+  },
+  {
+   "id": "park_bench_b",
+   "kind": "bench",
+   "pos": [
+    50.0,
+    2.0,
+    46.0
+   ],
+   "rot": 0.0,
+   "footprint": [
+    2.0,
+    0.6
+   ],
+   "height": 0.5,
+   "color": "#8a6a45",
+   "area": "viridian_city"
+  },
+  {
+   "id": "viridian_lamp_12",
+   "kind": "lamp",
+   "pos": [
+    34.0,
+    2.0,
+    62.0
+   ],
+   "rot": 0.0,
+   "area": "viridian_city"
+  },
+  {
+   "id": "route22_sign",
+   "kind": "sign",
+   "pos": [
+    10.0,
+    2.0,
+    26.0
+   ],
+   "rot": 0.0,
+   "footprint": [
+    0.8,
+    0.2
+   ],
+   "height": 1.4,
+   "color": "#8a6a45",
+   "area": "viridian_city"
+  },
+  {
+   "id": "viridian_flock_park",
+   "kind": "flock",
+   "pos": [
+    58.0,
+    2.0,
+    26.0
+   ],
+   "rot": 0.0,
+   "count": 6.0,
+   "area": "viridian_city"
+  },
+  {
+   "id": "viridian_drifters_park",
+   "kind": "drifters",
+   "pos": [
+    42.0,
+    2.0,
+    18.0
+   ],
+   "rot": 0.0,
+   "count": 3.0,
+   "area": "viridian_city"
+  }
+ ],
+ "doors": [],
+ "spawn_zones": [],
+ "npc_anchors": [
+  {
+   "id": "v_park_bench",
+   "pos": [
+    50.0,
+    2.0,
+    34.0
+   ],
+   "kind": "spot",
+   "area": "viridian_city"
+  },
+  {
+   "id": "v_park_pond",
+   "pos": [
+    38.0,
+    2.0,
+    42.0
+   ],
+   "kind": "spot",
+   "area": "viridian_city"
+  },
+  {
+   "id": "v_route22_fence",
+   "pos": [
+    14.0,
+    2.0,
+    34.0
+   ],
+   "kind": "spot",
+   "area": "viridian_city"
+  },
+  {
+   "id": "v_night_bench",
+   "pos": [
+    58.0,
+    2.0,
+    46.0
+   ],
+   "kind": "spot",
+   "area": "viridian_city"
+  }
+ ]
+}

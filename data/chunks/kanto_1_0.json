@@ -1,0 +1,147 @@
+{
+ "id": "kanto_1_0",
+ "region": "kanto",
+ "coord": [
+  1,
+  0
+ ],
+ "area": "viridian_forest",
+ "cells": [
+  "TTTTTTTTTTTTTTdd",
+  "TTTTTTTTTTTTTTdd",
+  "TTTTTTTTTTTTTTdd",
+  "TTTTTTTTTTTTTTdd",
+  "TTTTTTTTTTTTTTdd",
+  "TTTTTTTTTTTTTTdd",
+  "TTTTTTdddddddddd",
+  "TT........dddddd",
+  "TT.#####..dddddd",
+  "TT.#####..TTTTTT",
+  "TT.#####..\"\"\"\"\"\"",
+  "TT.ddddd..\"\"\"\"\"\"",
+  "TT.ddddd..\"\"\"\"\"\"",
+  "TT...dd...\"\"\"\"\"\"",
+  "TTTTTTddd\"\"\"\"\"\"\"",
+  "TTTTTTddd\"\"\"\"\"\"\""
+ ],
+ "heights": [
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222"
+ ],
+ "props": [
+  {
+   "id": "bug_catcher_hideout",
+   "kind": "building",
+   "template": "house_small",
+   "pos": [
+    22.0,
+    2.0,
+    38.0
+   ],
+   "rot": 0.0,
+   "footprint": [
+    19.0,
+    11.0
+   ],
+   "height": 3.5,
+   "area": "viridian_forest"
+  },
+  {
+   "id": "forest_north_sign",
+   "kind": "sign",
+   "pos": [
+    54.0,
+    2.0,
+    6.0
+   ],
+   "rot": 0.0,
+   "footprint": [
+    0.8,
+    0.2
+   ],
+   "height": 1.4,
+   "color": "#8a6a45",
+   "area": "viridian_forest"
+  }
+ ],
+ "doors": [
+  {
+   "id": "bug_catcher_hideout_door",
+   "building": "bug_catcher_hideout",
+   "interior": "bug_catcher_hideout_int",
+   "pos": [
+    22.0,
+    2.0,
+    44.2
+   ],
+   "unlock": {
+    "type": "reward",
+    "reward": {
+     "kind": "pokedex_caught",
+     "count": 10.0
+    }
+   },
+   "locked_text": "A sign: 'BUG CATCHERS ONLY. Show your best bug!'",
+   "area": "viridian_forest"
+  }
+ ],
+ "spawn_zones": [
+  {
+   "id": "forest_grass_west",
+   "table": "viridian_forest",
+   "rect": [
+    36.0,
+    40.0,
+    28.0,
+    28.0
+   ],
+   "area": "viridian_forest"
+  }
+ ],
+ "npc_anchors": [
+  {
+   "id": "f_trail_west",
+   "pos": [
+    30.0,
+    2.0,
+    58.0
+   ],
+   "kind": "spot",
+   "area": "viridian_forest"
+  },
+  {
+   "id": "f_hideout_door",
+   "pos": [
+    22.0,
+    2.0,
+    50.0
+   ],
+   "kind": "spot",
+   "area": "viridian_forest"
+  },
+  {
+   "id": "f_north_gate",
+   "pos": [
+    62.0,
+    2.0,
+    10.0
+   ],
+   "kind": "spot",
+   "area": "viridian_forest"
+  }
+ ]
+}

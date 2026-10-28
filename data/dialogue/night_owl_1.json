@@ -1,0 +1,57 @@
+{
+ "id": "night_owl_1",
+ "barks": [
+  {
+   "text": "Can't sleep."
+  },
+  {
+   "text": "Quiet tonight... too quiet.",
+   "when": {
+    "periods": [
+     "night"
+    ]
+   }
+  },
+  {
+   "text": "Stay on the path in fog like this.",
+   "when": {
+    "weather": [
+     "fog"
+    ]
+   }
+  },
+  {
+   "text": "The berries will love this rain.",
+   "when": {
+    "weather": [
+     "rain"
+    ]
+   }
+  },
+  {
+   "text": "Thunder! Get inside!",
+   "when": {
+    "weather": [
+     "thunderstorm"
+    ]
+   }
+  }
+ ],
+ "talk": [
+  {
+   "text": "Hoothoot hoot at the same time every night. You can set your clock by them."
+  },
+  {
+   "text": "Oh! You've got a Pok\u00e9mon now! Hoothoot hoot at the same time every night. You can set your clock by them.",
+   "when": {
+    "flag": "got_starter"
+   }
+  },
+  {
+   "text": "Filling that Pok\u00e9dex? Good luck!",
+   "when": {
+    "flag": "got_pokedex"
+   }
+  }
+ ]
+}

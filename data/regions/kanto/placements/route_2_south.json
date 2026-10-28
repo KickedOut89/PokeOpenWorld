@@ -1,0 +1,195 @@
+{
+ "props": [
+  {
+   "id": "forest_gatehouse",
+   "kind": "building",
+   "template": "gatehouse",
+   "pos": [
+    218.0,
+    2.0,
+    270.0
+   ],
+   "rot": 0,
+   "footprint": [
+    27.0,
+    19.0
+   ],
+   "height": 5.0
+  },
+  {
+   "id": "camp_tent_a",
+   "kind": "tent",
+   "pos": [
+    150.0,
+    2.0,
+    414.0
+   ],
+   "rot": 0,
+   "footprint": [
+    2.4,
+    2.4
+   ],
+   "height": 1.8,
+   "color": "#d08a3a"
+  },
+  {
+   "id": "camp_tent_b",
+   "kind": "tent",
+   "pos": [
+    162.0,
+    2.0,
+    422.0
+   ],
+   "rot": 0,
+   "footprint": [
+    2.4,
+    2.4
+   ],
+   "height": 1.8,
+   "color": "#3a8ad0"
+  },
+  {
+   "id": "campfire",
+   "kind": "lamp",
+   "pos": [
+    158.0,
+    2.0,
+    418.0
+   ],
+   "rot": 0
+  },
+  {
+   "id": "route2_flock",
+   "kind": "flock",
+   "pos": [
+    218.0,
+    2.0,
+    322.0
+   ],
+   "rot": 0,
+   "count": 5
+  },
+  {
+   "id": "route2_drifters",
+   "kind": "drifters",
+   "pos": [
+    162.0,
+    2.0,
+    338.0
+   ],
+   "rot": 0,
+   "count": 3
+  },
+  {
+   "id": "route2_sign",
+   "kind": "sign",
+   "pos": [
+    182.0,
+    2.0,
+    434.0
+   ],
+   "rot": 0,
+   "footprint": [
+    0.8,
+    0.2
+   ],
+   "height": 1.4,
+   "color": "#8a6a45"
+  }
+ ],
+ "doors": [
+  {
+   "id": "forest_gatehouse_door",
+   "building": "forest_gatehouse",
+   "interior": "forest_gatehouse_int",
+   "pos": [
+    218.0,
+    2.0,
+    280.2
+   ],
+   "unlock": {
+    "type": "always"
+   },
+   "locked_text": "It's locked."
+  }
+ ],
+ "spawn_zones": [
+  {
+   "id": "route2_west_grass",
+   "table": "route_2",
+   "rect": [
+    144.0,
+    280.0,
+    36.0,
+    36.0
+   ]
+  },
+  {
+   "id": "route2_east_grass",
+   "table": "route_2",
+   "rect": [
+    200.0,
+    360.0,
+    36.0,
+    44.0
+   ]
+  },
+  {
+   "id": "route2_small_grass",
+   "table": "route_2",
+   "rect": [
+    148.0,
+    376.0,
+    28.0,
+    16.0
+   ]
+  }
+ ],
+ "npc_anchors": [
+  {
+   "id": "r2_camp",
+   "pos": [
+    154.0,
+    2.0,
+    426.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "r2_gate_front",
+   "pos": [
+    218.0,
+    2.0,
+    282.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "r2_path_mid",
+   "pos": [
+    194.0,
+    2.0,
+    354.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "r2_bench",
+   "pos": [
+    202.0,
+    2.0,
+    434.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "r2_lookout",
+   "pos": [
+    226.0,
+    2.0,
+    418.0
+   ],
+   "kind": "spot"
+  }
+ ]
+}

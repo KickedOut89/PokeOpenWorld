@@ -1,0 +1,9 @@
+{
+ "id": "viridian_mart_int",
+ "template": "mart",
+ "furnishing": [],
+ "npcs": [
+  "mart_clerk"
+ ],
+ "lighting": "interior_warm"
+}

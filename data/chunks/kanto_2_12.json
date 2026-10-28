@@ -129,6 +129,16 @@
    ],
    "kind": "work",
    "area": "route_1"
+  },
+  {
+   "id": "route1_cottage_yard",
+   "pos": [
+    34.0,
+    0.0,
+    34.0
+   ],
+   "kind": "spot",
+   "area": "route_1"
   }
  ]
 }

@@ -1,0 +1,57 @@
+{
+ "id": "camper_jon",
+ "barks": [
+  {
+   "text": "Marshmallow?"
+  },
+  {
+   "text": "The dew's still on the grass.",
+   "when": {
+    "periods": [
+     "morning"
+    ]
+   }
+  },
+  {
+   "text": "Evenings are my favorite here.",
+   "when": {
+    "periods": [
+     "evening"
+    ]
+   }
+  },
+  {
+   "text": "Puddles everywhere!",
+   "when": {
+    "weather": [
+     "rain"
+    ]
+   }
+  },
+  {
+   "text": "Thunder! Get inside!",
+   "when": {
+    "weather": [
+     "thunderstorm"
+    ]
+   }
+  }
+ ],
+ "talk": [
+  {
+   "text": "We're camping out to see the glowing Volbeat at night. Worth the bug bites."
+  },
+  {
+   "text": "Oh! You've got a Pok\u00e9mon now! We're camping out to see the glowing Volbeat at night. Worth the bug bites.",
+   "when": {
+    "flag": "got_starter"
+   }
+  },
+  {
+   "text": "Filling that Pok\u00e9dex? Good luck!",
+   "when": {
+    "flag": "got_pokedex"
+   }
+  }
+ ]
+}

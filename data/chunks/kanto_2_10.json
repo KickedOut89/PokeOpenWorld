@@ -57,5 +57,16 @@
    "area": "route_1"
   }
  ],
- "npc_anchors": []
+ "npc_anchors": [
+  {
+   "id": "route1_ledge_view",
+   "pos": [
+    50.0,
+    2.0,
+    62.0
+   ],
+   "kind": "spot",
+   "area": "route_1"
+  }
+ ]
 }

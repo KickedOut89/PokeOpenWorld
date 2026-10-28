@@ -1,0 +1,9 @@
+{
+ "id": "viridian_cafe_int",
+ "template": "shop",
+ "furnishing": [],
+ "npcs": [
+  "barista_tomo"
+ ],
+ "lighting": "interior_warm"
+}

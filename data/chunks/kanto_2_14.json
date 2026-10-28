@@ -202,6 +202,26 @@
    ],
    "kind": "spot",
    "area": "pallet_town"
+  },
+  {
+   "id": "pallet_shore",
+   "pos": [
+    34.0,
+    0.0,
+    38.0
+   ],
+   "kind": "spot",
+   "area": "pallet_town"
+  },
+  {
+   "id": "pallet_cafe_front",
+   "pos": [
+    26.0,
+    0.0,
+    6.0
+   ],
+   "kind": "spot",
+   "area": "pallet_town"
   }
  ]
 }

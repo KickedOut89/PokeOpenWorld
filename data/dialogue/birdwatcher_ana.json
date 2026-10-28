@@ -1,0 +1,57 @@
+{
+ "id": "birdwatcher_ana",
+ "barks": [
+  {
+   "text": "Shh \u2014 a Pidgey flock."
+  },
+  {
+   "text": "Up with the Pidgey, as always.",
+   "when": {
+    "periods": [
+     "morning"
+    ]
+   }
+  },
+  {
+   "text": "Look at that sky \u2014 all orange.",
+   "when": {
+    "periods": [
+     "evening"
+    ]
+   }
+  },
+  {
+   "text": "The berries will love this rain.",
+   "when": {
+    "weather": [
+     "rain"
+    ]
+   }
+  },
+  {
+   "text": "Hold on to your hat!",
+   "when": {
+    "weather": [
+     "thunderstorm"
+    ]
+   }
+  }
+ ],
+ "talk": [
+  {
+   "text": "Pidgey in the morning, Hoothoot at night. Sentret only come out while the sun's up."
+  },
+  {
+   "text": "Take good care of your partner. Pidgey in the morning, Hoothoot at night. Sentret only come out while the sun's up.",
+   "when": {
+    "flag": "got_starter"
+   }
+  },
+  {
+   "text": "A Pok\u00e9dex! Professor Oak must trust you.",
+   "when": {
+    "flag": "got_pokedex"
+   }
+  }
+ ]
+}

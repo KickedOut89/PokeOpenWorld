@@ -1,0 +1,9 @@
+{
+ "id": "flower_shop_int",
+ "template": "shop",
+ "furnishing": [],
+ "npcs": [
+  "florist_pia"
+ ],
+ "lighting": "interior_warm"
+}

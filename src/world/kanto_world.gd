@@ -93,6 +93,13 @@ func _ready() -> void:
 	add_child(toast)
 
 
+func teleport_to_anchor(id: StringName) -> void:
+	player.global_position = find_anchor(id) + Vector3(0, 0.3, 0)
+	streamer.update_now()
+	camera.snap()
+	update_npcs()
+
+
 func find_anchor(id: StringName) -> Vector3:
 	for coord in streamer.records():
 		var d: ChunkData = streamer.record(coord)

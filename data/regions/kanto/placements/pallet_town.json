@@ -547,6 +547,96 @@
     954.0
    ],
    "kind": "spot"
+  },
+  {
+   "id": "pallet_farm",
+   "pos": [
+    146.0,
+    0.0,
+    866.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "pallet_pen",
+   "pos": [
+    238.0,
+    0.0,
+    914.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "pallet_shore",
+   "pos": [
+    162.0,
+    0.0,
+    934.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "pallet_flowers",
+   "pos": [
+    150.0,
+    0.0,
+    842.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "pallet_cafe_front",
+   "pos": [
+    154.0,
+    0.0,
+    902.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "pallet_lab_front",
+   "pos": [
+    214.0,
+    0.0,
+    906.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "pallet_north_path",
+   "pos": [
+    190.0,
+    0.0,
+    846.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "pallet_greenhouse_front",
+   "pos": [
+    238.0,
+    0.0,
+    902.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "pallet_east_lawn",
+   "pos": [
+    230.0,
+    0.0,
+    878.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "pallet_west_lawn",
+   "pos": [
+    166.0,
+    0.0,
+    886.0
+   ],
+   "kind": "spot"
   }
  ]
 }

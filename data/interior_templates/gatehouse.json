@@ -1,0 +1,40 @@
+{
+ "id": "gatehouse",
+ "size": [
+  12,
+  8
+ ],
+ "floor": "#b0a080",
+ "wall": "#d8d0b8",
+ "light": "#ffe8c8",
+ "furniture": [
+  {
+   "kind": "desk",
+   "pos": [
+    3.5,
+    0,
+    -2.5
+   ],
+   "size": [
+    3.0,
+    1.0,
+    1.0
+   ],
+   "color": "#8a6a45"
+  },
+  {
+   "kind": "map",
+   "pos": [
+    -3,
+    1.0,
+    -3.8
+   ],
+   "size": [
+    3.0,
+    1.6,
+    0.1
+   ],
+   "color": "#4a7a4a"
+  }
+ ]
+}

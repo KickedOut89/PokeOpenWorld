@@ -1,0 +1,63 @@
+{
+ "id": "mart_clerk",
+ "barks": [
+  {
+   "text": "Welcome!"
+  },
+  {
+   "text": "Morning! Best part of the day.",
+   "when": {
+    "periods": [
+     "morning"
+    ]
+   }
+  },
+  {
+   "text": "Sun's going down. Time to head home soon.",
+   "when": {
+    "periods": [
+     "evening"
+    ]
+   }
+  },
+  {
+   "text": "Ugh, I'm soaked!",
+   "when": {
+    "weather": [
+     "rain"
+    ]
+   }
+  },
+  {
+   "text": "Thunder! Get inside!",
+   "when": {
+    "weather": [
+     "thunderstorm"
+    ]
+   }
+  }
+ ],
+ "talk": [
+  {
+   "text": "Welcome! ...Oh, are you from Pallet Town? I have a parcel for Professor Oak."
+  },
+  {
+   "text": "Oh! You've got a Pok\u00e9mon now! Welcome! ...Oh, are you from Pallet Town? I have a parcel for Professor Oak.",
+   "when": {
+    "flag": "got_starter"
+   }
+  },
+  {
+   "text": "Filling that Pok\u00e9dex? Good luck!",
+   "when": {
+    "flag": "got_pokedex"
+   }
+  },
+  {
+   "text": "Thanks again for taking Oak's parcel to him.",
+   "when": {
+    "flag": "got_parcel"
+   }
+  }
+ ]
+}

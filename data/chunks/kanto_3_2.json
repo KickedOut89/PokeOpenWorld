@@ -1,0 +1,72 @@
+{
+ "id": "kanto_3_2",
+ "region": "kanto",
+ "coord": [
+  3,
+  2
+ ],
+ "area": "viridian_forest",
+ "cells": [
+  "dddddddddTTTTTTT",
+  "TTTTTTdddTTTTTTT",
+  "TT\"\"\"\"dddTTTTTTT",
+  "TT\"\"\"\"dddTTTTTTT",
+  "TT\"\"\"\"dddTTTTTTT",
+  "TT\"\"\"\"dddTTTTTTT",
+  "TT\"\"\"\"dddTTTTTTT",
+  "TT\"\"\"\"dddTTTTTTT",
+  "TT\"\"\"\"dddTTTTTTT",
+  "TT\"\"\"\"dddTTTTTTT",
+  "TT\"\"\"\"dddTTTTTTT",
+  "TT\"\"\"\"dddTTTTTTT",
+  "dd\"\"\"\"dddTTTTTTT",
+  "dddddddddTTTTTTT",
+  "dddddddddTTTTTTT",
+  "TTTTTTTTTTTTTTTT"
+ ],
+ "heights": [
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222"
+ ],
+ "props": [],
+ "doors": [],
+ "spawn_zones": [
+  {
+   "id": "forest_grass_east",
+   "table": "viridian_forest",
+   "rect": [
+    8.0,
+    8.0,
+    16.0,
+    44.0
+   ],
+   "area": "viridian_forest"
+  }
+ ],
+ "npc_anchors": [
+  {
+   "id": "f_bug_spot_b",
+   "pos": [
+    30.0,
+    2.0,
+    26.0
+   ],
+   "kind": "spot",
+   "area": "viridian_forest"
+  }
+ ]
+}

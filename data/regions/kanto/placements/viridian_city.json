@@ -1,0 +1,1405 @@
+{
+ "props": [
+  {
+   "id": "viridian_center",
+   "kind": "building",
+   "template": "center",
+   "pos": [
+    222.0,
+    2.0,
+    596.0
+   ],
+   "rot": 0,
+   "footprint": [
+    27.0,
+    15.0
+   ],
+   "height": 5.0
+  },
+  {
+   "id": "viridian_mart",
+   "kind": "building",
+   "template": "mart",
+   "pos": [
+    164.0,
+    2.0,
+    596.0
+   ],
+   "rot": 0,
+   "footprint": [
+    23.0,
+    15.0
+   ],
+   "height": 4.5
+  },
+  {
+   "id": "viridian_gym",
+   "kind": "building",
+   "template": "gym",
+   "pos": [
+    260.0,
+    2.0,
+    478.0
+   ],
+   "rot": 0,
+   "footprint": [
+    39.0,
+    27.0
+   ],
+   "height": 7.0
+  },
+  {
+   "id": "trainer_school",
+   "kind": "building",
+   "template": "house_large",
+   "pos": [
+    160.0,
+    2.0,
+    530.0
+   ],
+   "rot": 0,
+   "footprint": [
+    31.0,
+    19.0
+   ],
+   "height": 5.0
+  },
+  {
+   "id": "old_mans_house",
+   "kind": "building",
+   "template": "house_small",
+   "pos": [
+    114.0,
+    2.0,
+    612.0
+   ],
+   "rot": 0,
+   "footprint": [
+    19.0,
+    15.0
+   ],
+   "height": 4.5
+  },
+  {
+   "id": "viridian_cafe",
+   "kind": "building",
+   "template": "shop",
+   "pos": [
+    290.0,
+    2.0,
+    596.0
+   ],
+   "rot": 0,
+   "footprint": [
+    19.0,
+    15.0
+   ],
+   "height": 4.5
+  },
+  {
+   "id": "police_box",
+   "kind": "building",
+   "template": "shop",
+   "pos": [
+    212.0,
+    2.0,
+    614.0
+   ],
+   "rot": 0,
+   "footprint": [
+    15.0,
+    11.0
+   ],
+   "height": 3.5
+  },
+  {
+   "id": "viridian_apartments",
+   "kind": "building",
+   "template": "apartment",
+   "pos": [
+    94.0,
+    2.0,
+    474.0
+   ],
+   "rot": 0,
+   "footprint": [
+    35.0,
+    27.0
+   ],
+   "height": 9.0
+  },
+  {
+   "id": "flower_shop",
+   "kind": "building",
+   "template": "shop",
+   "pos": [
+    290.0,
+    2.0,
+    528.0
+   ],
+   "rot": 0,
+   "footprint": [
+    19.0,
+    15.0
+   ],
+   "height": 4.5
+  },
+  {
+   "id": "viridian_workshop",
+   "kind": "building",
+   "template": "shop",
+   "pos": [
+    292.0,
+    2.0,
+    616.0
+   ],
+   "rot": 0,
+   "footprint": [
+    23.0,
+    15.0
+   ],
+   "height": 4.5
+  },
+  {
+   "id": "viridian_house_1",
+   "kind": "building",
+   "template": "house_small",
+   "pos": [
+    128.0,
+    2.0,
+    468.0
+   ],
+   "rot": 0,
+   "footprint": [
+    15.0,
+    15.0
+   ],
+   "height": 4.5
+  },
+  {
+   "id": "viridian_house_2",
+   "kind": "building",
+   "template": "house_small",
+   "pos": [
+    152.0,
+    2.0,
+    468.0
+   ],
+   "rot": 0,
+   "footprint": [
+    15.0,
+    15.0
+   ],
+   "height": 4.5
+  },
+  {
+   "id": "viridian_house_3",
+   "kind": "building",
+   "template": "house_small",
+   "pos": [
+    172.0,
+    2.0,
+    468.0
+   ],
+   "rot": 0,
+   "footprint": [
+    15.0,
+    15.0
+   ],
+   "height": 4.5
+  },
+  {
+   "id": "viridian_house_4",
+   "kind": "building",
+   "template": "house_small",
+   "pos": [
+    216.0,
+    2.0,
+    468.0
+   ],
+   "rot": 0,
+   "footprint": [
+    15.0,
+    15.0
+   ],
+   "height": 4.5
+  },
+  {
+   "id": "viridian_house_5",
+   "kind": "building",
+   "template": "house_large",
+   "pos": [
+    130.0,
+    2.0,
+    490.0
+   ],
+   "rot": 0,
+   "footprint": [
+    19.0,
+    19.0
+   ],
+   "height": 5.0
+  },
+  {
+   "id": "viridian_house_6",
+   "kind": "building",
+   "template": "house_small",
+   "pos": [
+    156.0,
+    2.0,
+    488.0
+   ],
+   "rot": 0,
+   "footprint": [
+    15.0,
+    15.0
+   ],
+   "height": 4.5
+  },
+  {
+   "id": "viridian_house_7",
+   "kind": "building",
+   "template": "house_large",
+   "pos": [
+    218.0,
+    2.0,
+    490.0
+   ],
+   "rot": 0,
+   "footprint": [
+    19.0,
+    19.0
+   ],
+   "height": 5.0
+  },
+  {
+   "id": "viridian_house_8",
+   "kind": "building",
+   "template": "house_small",
+   "pos": [
+    296.0,
+    2.0,
+    468.0
+   ],
+   "rot": 0,
+   "footprint": [
+    15.0,
+    15.0
+   ],
+   "height": 4.5
+  },
+  {
+   "id": "viridian_house_9",
+   "kind": "building",
+   "template": "house_small",
+   "pos": [
+    296.0,
+    2.0,
+    488.0
+   ],
+   "rot": 0,
+   "footprint": [
+    15.0,
+    15.0
+   ],
+   "height": 4.5
+  },
+  {
+   "id": "viridian_house_10",
+   "kind": "building",
+   "template": "house_small",
+   "pos": [
+    86.0,
+    2.0,
+    600.0
+   ],
+   "rot": 0,
+   "footprint": [
+    19.0,
+    15.0
+   ],
+   "height": 4.5
+  },
+  {
+   "id": "viridian_house_11",
+   "kind": "building",
+   "template": "house_small",
+   "pos": [
+    86.0,
+    2.0,
+    620.0
+   ],
+   "rot": 0,
+   "footprint": [
+    19.0,
+    15.0
+   ],
+   "height": 4.5
+  },
+  {
+   "id": "viridian_house_12",
+   "kind": "building",
+   "template": "house_small",
+   "pos": [
+    250.0,
+    2.0,
+    608.0
+   ],
+   "rot": 0,
+   "footprint": [
+    19.0,
+    15.0
+   ],
+   "height": 4.5
+  },
+  {
+   "id": "viridian_house_13",
+   "kind": "building",
+   "template": "house_small",
+   "pos": [
+    268.0,
+    2.0,
+    608.0
+   ],
+   "rot": 0,
+   "footprint": [
+    15.0,
+    15.0
+   ],
+   "height": 4.5
+  },
+  {
+   "id": "viridian_house_15",
+   "kind": "building",
+   "template": "house_small",
+   "pos": [
+    136.0,
+    2.0,
+    612.0
+   ],
+   "rot": 0,
+   "footprint": [
+    15.0,
+    15.0
+   ],
+   "height": 4.5
+  },
+  {
+   "id": "viridian_house_16",
+   "kind": "building",
+   "template": "house_large",
+   "pos": [
+    290.0,
+    2.0,
+    560.0
+   ],
+   "rot": 0,
+   "footprint": [
+    19.0,
+    15.0
+   ],
+   "height": 5.0
+  },
+  {
+   "id": "market_stall_0",
+   "kind": "stall",
+   "pos": [
+    218.0,
+    2.0,
+    530.0
+   ],
+   "rot": 0,
+   "footprint": [
+    3.0,
+    2.0
+   ],
+   "height": 2.4,
+   "color": "#c8743a"
+  },
+  {
+   "id": "market_stall_1",
+   "kind": "stall",
+   "pos": [
+    234.0,
+    2.0,
+    530.0
+   ],
+   "rot": 0,
+   "footprint": [
+    3.0,
+    2.0
+   ],
+   "height": 2.4,
+   "color": "#3a8ac8"
+  },
+  {
+   "id": "market_stall_2",
+   "kind": "stall",
+   "pos": [
+    250.0,
+    2.0,
+    530.0
+   ],
+   "rot": 0,
+   "footprint": [
+    3.0,
+    2.0
+   ],
+   "height": 2.4,
+   "color": "#8ac83a"
+  },
+  {
+   "id": "market_stall_3",
+   "kind": "stall",
+   "pos": [
+    218.0,
+    2.0,
+    550.0
+   ],
+   "rot": 0,
+   "footprint": [
+    3.0,
+    2.0
+   ],
+   "height": 2.4,
+   "color": "#c83a6a"
+  },
+  {
+   "id": "market_stall_4",
+   "kind": "stall",
+   "pos": [
+    234.0,
+    2.0,
+    550.0
+   ],
+   "rot": 0,
+   "footprint": [
+    3.0,
+    2.0
+   ],
+   "height": 2.4,
+   "color": "#c8b83a"
+  },
+  {
+   "id": "market_stall_5",
+   "kind": "stall",
+   "pos": [
+    250.0,
+    2.0,
+    550.0
+   ],
+   "rot": 0,
+   "footprint": [
+    3.0,
+    2.0
+   ],
+   "height": 2.4,
+   "color": "#6a3ac8"
+  },
+  {
+   "id": "bus_stop",
+   "kind": "bench",
+   "pos": [
+    202.0,
+    2.0,
+    570.0
+   ],
+   "rot": 0,
+   "footprint": [
+    2.4,
+    0.8
+   ],
+   "height": 2.2,
+   "color": "#4a6a9a"
+  },
+  {
+   "id": "park_bench_a",
+   "kind": "bench",
+   "pos": [
+    114.0,
+    2.0,
+    542.0
+   ],
+   "rot": 0,
+   "footprint": [
+    2.0,
+    0.6
+   ],
+   "height": 0.5,
+   "color": "#8a6a45"
+  },
+  {
+   "id": "park_bench_b",
+   "kind": "bench",
+   "pos": [
+    114.0,
+    2.0,
+    558.0
+   ],
+   "rot": 0,
+   "footprint": [
+    2.0,
+    0.6
+   ],
+   "height": 0.5,
+   "color": "#8a6a45"
+  },
+  {
+   "id": "viridian_lamp_0",
+   "kind": "lamp",
+   "pos": [
+    182.0,
+    2.0,
+    466.0
+   ],
+   "rot": 0
+  },
+  {
+   "id": "viridian_lamp_1",
+   "kind": "lamp",
+   "pos": [
+    202.0,
+    2.0,
+    490.0
+   ],
+   "rot": 0
+  },
+  {
+   "id": "viridian_lamp_2",
+   "kind": "lamp",
+   "pos": [
+    182.0,
+    2.0,
+    514.0
+   ],
+   "rot": 0
+  },
+  {
+   "id": "viridian_lamp_3",
+   "kind": "lamp",
+   "pos": [
+    202.0,
+    2.0,
+    538.0
+   ],
+   "rot": 0
+  },
+  {
+   "id": "viridian_lamp_4",
+   "kind": "lamp",
+   "pos": [
+    182.0,
+    2.0,
+    562.0
+   ],
+   "rot": 0
+  },
+  {
+   "id": "viridian_lamp_5",
+   "kind": "lamp",
+   "pos": [
+    202.0,
+    2.0,
+    586.0
+   ],
+   "rot": 0
+  },
+  {
+   "id": "viridian_lamp_6",
+   "kind": "lamp",
+   "pos": [
+    182.0,
+    2.0,
+    610.0
+   ],
+   "rot": 0
+  },
+  {
+   "id": "viridian_lamp_7",
+   "kind": "lamp",
+   "pos": [
+    146.0,
+    2.0,
+    502.0
+   ],
+   "rot": 0
+  },
+  {
+   "id": "viridian_lamp_8",
+   "kind": "lamp",
+   "pos": [
+    242.0,
+    2.0,
+    502.0
+   ],
+   "rot": 0
+  },
+  {
+   "id": "viridian_lamp_9",
+   "kind": "lamp",
+   "pos": [
+    146.0,
+    2.0,
+    574.0
+   ],
+   "rot": 0
+  },
+  {
+   "id": "viridian_lamp_10",
+   "kind": "lamp",
+   "pos": [
+    242.0,
+    2.0,
+    574.0
+   ],
+   "rot": 0
+  },
+  {
+   "id": "viridian_lamp_11",
+   "kind": "lamp",
+   "pos": [
+    282.0,
+    2.0,
+    574.0
+   ],
+   "rot": 0
+  },
+  {
+   "id": "viridian_lamp_12",
+   "kind": "lamp",
+   "pos": [
+    98.0,
+    2.0,
+    574.0
+   ],
+   "rot": 0
+  },
+  {
+   "id": "viridian_sign",
+   "kind": "sign",
+   "pos": [
+    182.0,
+    2.0,
+    626.0
+   ],
+   "rot": 0,
+   "footprint": [
+    0.8,
+    0.2
+   ],
+   "height": 1.4,
+   "color": "#8a6a45"
+  },
+  {
+   "id": "route22_sign",
+   "kind": "sign",
+   "pos": [
+    74.0,
+    2.0,
+    538.0
+   ],
+   "rot": 0,
+   "footprint": [
+    0.8,
+    0.2
+   ],
+   "height": 1.4,
+   "color": "#8a6a45"
+  },
+  {
+   "id": "viridian_flock_park",
+   "kind": "flock",
+   "pos": [
+    122.0,
+    2.0,
+    538.0
+   ],
+   "rot": 0,
+   "count": 6
+  },
+  {
+   "id": "viridian_flock_market",
+   "kind": "flock",
+   "pos": [
+    254.0,
+    2.0,
+    566.0
+   ],
+   "rot": 0,
+   "count": 4
+  },
+  {
+   "id": "viridian_laundry_a",
+   "kind": "laundry",
+   "pos": [
+    98.0,
+    2.0,
+    622.0
+   ],
+   "rot": 0
+  },
+  {
+   "id": "viridian_laundry_b",
+   "kind": "laundry",
+   "pos": [
+    298.0,
+    2.0,
+    498.0
+   ],
+   "rot": 0
+  },
+  {
+   "id": "viridian_drifters_park",
+   "kind": "drifters",
+   "pos": [
+    106.0,
+    2.0,
+    530.0
+   ],
+   "rot": 0,
+   "count": 3
+  }
+ ],
+ "doors": [
+  {
+   "id": "viridian_center_door",
+   "building": "viridian_center",
+   "interior": "viridian_center_int",
+   "pos": [
+    222.0,
+    2.0,
+    604.2
+   ],
+   "unlock": {
+    "type": "always"
+   },
+   "locked_text": "It's locked."
+  },
+  {
+   "id": "viridian_mart_door",
+   "building": "viridian_mart",
+   "interior": "viridian_mart_int",
+   "pos": [
+    164.0,
+    2.0,
+    604.2
+   ],
+   "unlock": {
+    "type": "always"
+   },
+   "locked_text": "The Mart is closed.",
+   "hours": [
+    8,
+    21
+   ]
+  },
+  {
+   "id": "viridian_gym_door",
+   "building": "viridian_gym",
+   "interior": "viridian_gym_int",
+   "pos": [
+    260.0,
+    2.0,
+    492.2
+   ],
+   "unlock": {
+    "type": "flag",
+    "flag": "viridian_gym_open"
+   },
+   "locked_text": "The Gym's doors are locked. The Leader is away."
+  },
+  {
+   "id": "trainer_school_door",
+   "building": "trainer_school",
+   "interior": "trainer_school_int",
+   "pos": [
+    160.0,
+    2.0,
+    540.2
+   ],
+   "unlock": {
+    "type": "always"
+   },
+   "locked_text": "School's out for the day.",
+   "hours": [
+    8,
+    18
+   ]
+  },
+  {
+   "id": "old_mans_house_door",
+   "building": "old_mans_house",
+   "interior": "old_mans_house_int",
+   "pos": [
+    114.0,
+    2.0,
+    620.2
+   ],
+   "unlock": {
+    "type": "always"
+   },
+   "locked_text": "It's locked."
+  },
+  {
+   "id": "viridian_cafe_door",
+   "building": "viridian_cafe",
+   "interior": "viridian_cafe_int",
+   "pos": [
+    290.0,
+    2.0,
+    604.2
+   ],
+   "unlock": {
+    "type": "time"
+   },
+   "locked_text": "The caf\u00e9 is closed for the night.",
+   "hours": [
+    7,
+    22
+   ]
+  },
+  {
+   "id": "police_box_door",
+   "building": "police_box",
+   "interior": "police_box_int",
+   "pos": [
+    212.0,
+    2.0,
+    620.2
+   ],
+   "unlock": {
+    "type": "pending"
+   },
+   "locked_text": "Officer Jenny is out on patrol."
+  },
+  {
+   "id": "viridian_apartments_door",
+   "building": "viridian_apartments",
+   "interior": "viridian_apartments_int",
+   "pos": [
+    94.0,
+    2.0,
+    488.2
+   ],
+   "unlock": {
+    "type": "pending"
+   },
+   "locked_text": "Residents only."
+  },
+  {
+   "id": "flower_shop_door",
+   "building": "flower_shop",
+   "interior": "flower_shop_int",
+   "pos": [
+    290.0,
+    2.0,
+    536.2
+   ],
+   "unlock": {
+    "type": "time"
+   },
+   "locked_text": "Closed. Fresh flowers tomorrow!",
+   "hours": [
+    9,
+    18
+   ]
+  },
+  {
+   "id": "viridian_workshop_door",
+   "building": "viridian_workshop",
+   "interior": "viridian_workshop_int",
+   "pos": [
+    292.0,
+    2.0,
+    624.2
+   ],
+   "unlock": {
+    "type": "pending"
+   },
+   "locked_text": "A sign reads: 'Gone for parts.'"
+  },
+  {
+   "id": "viridian_house_1_door",
+   "building": "viridian_house_1",
+   "interior": "viridian_house_1_int",
+   "pos": [
+    128.0,
+    2.0,
+    476.2
+   ],
+   "unlock": {
+    "type": "always"
+   },
+   "locked_text": "It's locked."
+  },
+  {
+   "id": "viridian_house_2_door",
+   "building": "viridian_house_2",
+   "interior": "viridian_house_2_int",
+   "pos": [
+    152.0,
+    2.0,
+    476.2
+   ],
+   "unlock": {
+    "type": "pending"
+   },
+   "locked_text": "Do not disturb."
+  },
+  {
+   "id": "viridian_house_3_door",
+   "building": "viridian_house_3",
+   "interior": "viridian_house_3_int",
+   "pos": [
+    172.0,
+    2.0,
+    476.2
+   ],
+   "unlock": {
+    "type": "always"
+   },
+   "locked_text": "It's locked."
+  },
+  {
+   "id": "viridian_house_4_door",
+   "building": "viridian_house_4",
+   "interior": "viridian_house_4_int",
+   "pos": [
+    216.0,
+    2.0,
+    476.2
+   ],
+   "unlock": {
+    "type": "pending"
+   },
+   "locked_text": "A dog barks inside, but no one answers."
+  },
+  {
+   "id": "viridian_house_5_door",
+   "building": "viridian_house_5",
+   "interior": "viridian_house_5_int",
+   "pos": [
+    130.0,
+    2.0,
+    500.2
+   ],
+   "unlock": {
+    "type": "always"
+   },
+   "locked_text": "It's locked."
+  },
+  {
+   "id": "viridian_house_6_door",
+   "building": "viridian_house_6",
+   "interior": "viridian_house_6_int",
+   "pos": [
+    156.0,
+    2.0,
+    496.2
+   ],
+   "unlock": {
+    "type": "pending"
+   },
+   "locked_text": "Do not disturb."
+  },
+  {
+   "id": "viridian_house_7_door",
+   "building": "viridian_house_7",
+   "interior": "viridian_house_7_int",
+   "pos": [
+    218.0,
+    2.0,
+    500.2
+   ],
+   "unlock": {
+    "type": "pending"
+   },
+   "locked_text": "The door won't budge."
+  },
+  {
+   "id": "viridian_house_8_door",
+   "building": "viridian_house_8",
+   "interior": "viridian_house_8_int",
+   "pos": [
+    296.0,
+    2.0,
+    476.2
+   ],
+   "unlock": {
+    "type": "always"
+   },
+   "locked_text": "It's locked."
+  },
+  {
+   "id": "viridian_house_9_door",
+   "building": "viridian_house_9",
+   "interior": "viridian_house_9_int",
+   "pos": [
+    296.0,
+    2.0,
+    496.2
+   ],
+   "unlock": {
+    "type": "pending"
+   },
+   "locked_text": "No one's home."
+  },
+  {
+   "id": "viridian_house_10_door",
+   "building": "viridian_house_10",
+   "interior": "viridian_house_10_int",
+   "pos": [
+    86.0,
+    2.0,
+    608.2
+   ],
+   "unlock": {
+    "type": "always"
+   },
+   "locked_text": "It's locked."
+  },
+  {
+   "id": "viridian_house_11_door",
+   "building": "viridian_house_11",
+   "interior": "viridian_house_11_int",
+   "pos": [
+    86.0,
+    2.0,
+    628.2
+   ],
+   "unlock": {
+    "type": "pending"
+   },
+   "locked_text": "The door won't budge."
+  },
+  {
+   "id": "viridian_house_12_door",
+   "building": "viridian_house_12",
+   "interior": "viridian_house_12_int",
+   "pos": [
+    250.0,
+    2.0,
+    616.2
+   ],
+   "unlock": {
+    "type": "always"
+   },
+   "locked_text": "It's locked."
+  },
+  {
+   "id": "viridian_house_13_door",
+   "building": "viridian_house_13",
+   "interior": "viridian_house_13_int",
+   "pos": [
+    268.0,
+    2.0,
+    616.2
+   ],
+   "unlock": {
+    "type": "pending"
+   },
+   "locked_text": "No one's home."
+  },
+  {
+   "id": "viridian_house_15_door",
+   "building": "viridian_house_15",
+   "interior": "viridian_house_15_int",
+   "pos": [
+    136.0,
+    2.0,
+    620.2
+   ],
+   "unlock": {
+    "type": "always"
+   },
+   "locked_text": "It's locked."
+  },
+  {
+   "id": "viridian_house_16_door",
+   "building": "viridian_house_16",
+   "interior": "viridian_house_16_int",
+   "pos": [
+    290.0,
+    2.0,
+    568.2
+   ],
+   "unlock": {
+    "type": "pending"
+   },
+   "locked_text": "A dog barks inside, but no one answers."
+  }
+ ],
+ "spawn_zones": [],
+ "npc_anchors": [
+  {
+   "id": "v_plaza_n",
+   "pos": [
+    190.0,
+    2.0,
+    506.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "v_plaza_s",
+   "pos": [
+    190.0,
+    2.0,
+    578.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "v_avenue_mid",
+   "pos": [
+    194.0,
+    2.0,
+    546.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "v_center_front",
+   "pos": [
+    222.0,
+    2.0,
+    606.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "v_mart_front",
+   "pos": [
+    162.0,
+    2.0,
+    606.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "v_school_yard",
+   "pos": [
+    158.0,
+    2.0,
+    542.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "v_park_bench",
+   "pos": [
+    114.0,
+    2.0,
+    546.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "v_park_pond",
+   "pos": [
+    102.0,
+    2.0,
+    554.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "v_market_a",
+   "pos": [
+    222.0,
+    2.0,
+    538.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "v_market_b",
+   "pos": [
+    238.0,
+    2.0,
+    538.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "v_market_c",
+   "pos": [
+    254.0,
+    2.0,
+    538.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "v_market_d",
+   "pos": [
+    226.0,
+    2.0,
+    554.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "v_market_e",
+   "pos": [
+    246.0,
+    2.0,
+    554.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "v_cafe_tables",
+   "pos": [
+    286.0,
+    2.0,
+    606.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "v_bus_stop",
+   "pos": [
+    206.0,
+    2.0,
+    570.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "v_gym_front",
+   "pos": [
+    258.0,
+    2.0,
+    498.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "v_flower_front",
+   "pos": [
+    290.0,
+    2.0,
+    538.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "v_workshop_yard",
+   "pos": [
+    290.0,
+    2.0,
+    626.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "v_old_man_porch",
+   "pos": [
+    114.0,
+    2.0,
+    622.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "v_east_street",
+   "pos": [
+    274.0,
+    2.0,
+    506.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "v_west_street",
+   "pos": [
+    106.0,
+    2.0,
+    506.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "v_south_gate",
+   "pos": [
+    206.0,
+    2.0,
+    630.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "v_north_gate",
+   "pos": [
+    190.0,
+    2.0,
+    458.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "v_apartment_steps",
+   "pos": [
+    94.0,
+    2.0,
+    490.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "v_alley_east",
+   "pos": [
+    274.0,
+    2.0,
+    582.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "v_route22_fence",
+   "pos": [
+    78.0,
+    2.0,
+    546.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "v_police_post",
+   "pos": [
+    210.0,
+    2.0,
+    622.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "v_night_bench",
+   "pos": [
+    122.0,
+    2.0,
+    558.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "v_lamp_corner",
+   "pos": [
+    242.0,
+    2.0,
+    578.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "viridian_center_counter",
+   "pos": [
+    222.0,
+    2.0,
+    606.0
+   ],
+   "kind": "work"
+  }
+ ]
+}

@@ -162,5 +162,16 @@
   }
  ],
  "spawn_zones": [],
- "npc_anchors": []
+ "npc_anchors": [
+  {
+   "id": "pallet_east_lawn",
+   "pos": [
+    38.0,
+    0.0,
+    46.0
+   ],
+   "kind": "spot",
+   "area": "pallet_town"
+  }
+ ]
 }

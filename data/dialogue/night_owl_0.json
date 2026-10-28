@@ -1,0 +1,57 @@
+{
+ "id": "night_owl_0",
+ "barks": [
+  {
+   "text": "Lovely night."
+  },
+  {
+   "text": "Watch your step in the dark.",
+   "when": {
+    "periods": [
+     "night"
+    ]
+   }
+  },
+  {
+   "text": "Stay on the path in fog like this.",
+   "when": {
+    "weather": [
+     "fog"
+    ]
+   }
+  },
+  {
+   "text": "At least the dust settles.",
+   "when": {
+    "weather": [
+     "rain"
+    ]
+   }
+  },
+  {
+   "text": "Hold on to your hat!",
+   "when": {
+    "weather": [
+     "thunderstorm"
+    ]
+   }
+  }
+ ],
+ "talk": [
+  {
+   "text": "I only come out after dark. The city feels like mine."
+  },
+  {
+   "text": "Take good care of your partner. I only come out after dark. The city feels like mine.",
+   "when": {
+    "flag": "got_starter"
+   }
+  },
+  {
+   "text": "Filling that Pok\u00e9dex? Good luck!",
+   "when": {
+    "flag": "got_pokedex"
+   }
+  }
+ ]
+}

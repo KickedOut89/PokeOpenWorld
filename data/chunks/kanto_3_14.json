@@ -166,5 +166,36 @@
   }
  ],
  "spawn_zones": [],
- "npc_anchors": []
+ "npc_anchors": [
+  {
+   "id": "pallet_pen",
+   "pos": [
+    46.0,
+    0.0,
+    18.0
+   ],
+   "kind": "spot",
+   "area": "pallet_town"
+  },
+  {
+   "id": "pallet_lab_front",
+   "pos": [
+    22.0,
+    0.0,
+    10.0
+   ],
+   "kind": "spot",
+   "area": "pallet_town"
+  },
+  {
+   "id": "pallet_greenhouse_front",
+   "pos": [
+    46.0,
+    0.0,
+    6.0
+   ],
+   "kind": "spot",
+   "area": "pallet_town"
+  }
+ ]
 }

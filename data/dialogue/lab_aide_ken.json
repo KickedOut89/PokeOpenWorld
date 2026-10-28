@@ -1,0 +1,57 @@
+{
+ "id": "lab_aide_ken",
+ "barks": [
+  {
+   "text": "Twelve Rattata counted. Or was it thirteen?"
+  },
+  {
+   "text": "Morning! Best part of the day.",
+   "when": {
+    "periods": [
+     "morning"
+    ]
+   }
+  },
+  {
+   "text": "Sun's going down. Time to head home soon.",
+   "when": {
+    "periods": [
+     "evening"
+    ]
+   }
+  },
+  {
+   "text": "Ugh, I'm soaked!",
+   "when": {
+    "weather": [
+     "rain"
+    ]
+   }
+  },
+  {
+   "text": "Hold on to your hat!",
+   "when": {
+    "weather": [
+     "thunderstorm"
+    ]
+   }
+  }
+ ],
+ "talk": [
+  {
+   "text": "The Pok\u00e9mon in the pen are research partners. Don't startle them!"
+  },
+  {
+   "text": "Take good care of your partner. The Pok\u00e9mon in the pen are research partners. Don't startle them!",
+   "when": {
+    "flag": "got_starter"
+   }
+  },
+  {
+   "text": "Filling that Pok\u00e9dex? Good luck!",
+   "when": {
+    "flag": "got_pokedex"
+   }
+  }
+ ]
+}

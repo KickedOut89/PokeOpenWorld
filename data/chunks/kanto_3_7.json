@@ -1,0 +1,137 @@
+{
+ "id": "kanto_3_7",
+ "region": "kanto",
+ "coord": [
+  3,
+  7
+ ],
+ "area": "viridian_city",
+ "cells": [
+  "==TTTTTTTTTTTTTT",
+  "==TTTTTTTTTTTTTT",
+  "==..............",
+  "==..####........",
+  "==..####....####",
+  "==..####....####",
+  "==..####....####",
+  "==..........####",
+  "==..#####...####",
+  "==..#####...####",
+  "==..#####...####",
+  "==..#####.......",
+  "==..#####.......",
+  "==..............",
+  "================",
+  "================"
+ ],
+ "heights": [
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222"
+ ],
+ "props": [
+  {
+   "id": "viridian_house_4",
+   "kind": "building",
+   "template": "house_small",
+   "pos": [
+    24.0,
+    2.0,
+    20.0
+   ],
+   "rot": 0.0,
+   "footprint": [
+    15.0,
+    15.0
+   ],
+   "height": 4.5,
+   "area": "viridian_city"
+  },
+  {
+   "id": "viridian_house_7",
+   "kind": "building",
+   "template": "house_large",
+   "pos": [
+    26.0,
+    2.0,
+    42.0
+   ],
+   "rot": 0.0,
+   "footprint": [
+    19.0,
+    19.0
+   ],
+   "height": 5.0,
+   "area": "viridian_city"
+  },
+  {
+   "id": "viridian_lamp_1",
+   "kind": "lamp",
+   "pos": [
+    10.0,
+    2.0,
+    42.0
+   ],
+   "rot": 0.0,
+   "area": "viridian_city"
+  },
+  {
+   "id": "viridian_lamp_8",
+   "kind": "lamp",
+   "pos": [
+    50.0,
+    2.0,
+    54.0
+   ],
+   "rot": 0.0,
+   "area": "viridian_city"
+  }
+ ],
+ "doors": [
+  {
+   "id": "viridian_house_4_door",
+   "building": "viridian_house_4",
+   "interior": "viridian_house_4_int",
+   "pos": [
+    24.0,
+    2.0,
+    28.2
+   ],
+   "unlock": {
+    "type": "pending"
+   },
+   "locked_text": "A dog barks inside, but no one answers.",
+   "area": "viridian_city"
+  },
+  {
+   "id": "viridian_house_7_door",
+   "building": "viridian_house_7",
+   "interior": "viridian_house_7_int",
+   "pos": [
+    26.0,
+    2.0,
+    52.2
+   ],
+   "unlock": {
+    "type": "pending"
+   },
+   "locked_text": "The door won't budge.",
+   "area": "viridian_city"
+  }
+ ],
+ "spawn_zones": [],
+ "npc_anchors": []
+}

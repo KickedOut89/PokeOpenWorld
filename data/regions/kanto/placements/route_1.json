@@ -193,6 +193,60 @@
     810.0
    ],
    "kind": "work"
+  },
+  {
+   "id": "route1_vendor_home",
+   "pos": [
+    238.0,
+    1.0,
+    730.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "route1_north_end",
+   "pos": [
+    210.0,
+    2.0,
+    646.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "route1_south_end",
+   "pos": [
+    194.0,
+    0.0,
+    826.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "route1_ledge_view",
+   "pos": [
+    178.0,
+    2.0,
+    702.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "route1_grass_edge",
+   "pos": [
+    186.0,
+    1.0,
+    762.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "route1_cottage_yard",
+   "pos": [
+    162.0,
+    0.0,
+    802.0
+   ],
+   "kind": "spot"
   }
  ]
 }

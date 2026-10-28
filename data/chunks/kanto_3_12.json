@@ -57,5 +57,16 @@
    "area": "route_1"
   }
  ],
- "npc_anchors": []
+ "npc_anchors": [
+  {
+   "id": "route1_south_end",
+   "pos": [
+    2.0,
+    0.0,
+    58.0
+   ],
+   "kind": "spot",
+   "area": "route_1"
+  }
+ ]
 }

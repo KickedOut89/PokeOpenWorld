@@ -1,0 +1,57 @@
+{
+ "id": "painter_sol",
+ "barks": [
+  {
+   "text": "The light is perfect right now."
+  },
+  {
+   "text": "Coffee first, then everything else.",
+   "when": {
+    "periods": [
+     "morning"
+    ]
+   }
+  },
+  {
+   "text": "Lamps are coming on.",
+   "when": {
+    "periods": [
+     "evening"
+    ]
+   }
+  },
+  {
+   "text": "At least the dust settles.",
+   "when": {
+    "weather": [
+     "rain"
+    ]
+   }
+  },
+  {
+   "text": "Hold on to your hat!",
+   "when": {
+    "weather": [
+     "thunderstorm"
+    ]
+   }
+  }
+ ],
+ "talk": [
+  {
+   "text": "I'm painting the sea. It changes color every hour \u2014 I never finish."
+  },
+  {
+   "text": "Take good care of your partner. I'm painting the sea. It changes color every hour \u2014 I never finish.",
+   "when": {
+    "flag": "got_starter"
+   }
+  },
+  {
+   "text": "Filling that Pok\u00e9dex? Good luck!",
+   "when": {
+    "flag": "got_pokedex"
+   }
+  }
+ ]
+}

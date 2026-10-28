@@ -123,6 +123,16 @@
    ],
    "kind": "spot",
    "area": "route_1"
+  },
+  {
+   "id": "route1_vendor_home",
+   "pos": [
+    46.0,
+    1.0,
+    26.0
+   ],
+   "kind": "spot",
+   "area": "route_1"
   }
  ]
 }

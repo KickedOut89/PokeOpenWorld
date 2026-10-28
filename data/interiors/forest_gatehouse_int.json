@@ -1,0 +1,9 @@
+{
+ "id": "forest_gatehouse_int",
+ "template": "gatehouse",
+ "furnishing": [],
+ "npcs": [
+  "gate_guard_ray"
+ ],
+ "lighting": "interior_warm"
+}

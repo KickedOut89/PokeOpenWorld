@@ -242,6 +242,46 @@
    ],
    "kind": "spot",
    "area": "pallet_town"
+  },
+  {
+   "id": "pallet_farm",
+   "pos": [
+    18.0,
+    0.0,
+    34.0
+   ],
+   "kind": "spot",
+   "area": "pallet_town"
+  },
+  {
+   "id": "pallet_flowers",
+   "pos": [
+    22.0,
+    0.0,
+    10.0
+   ],
+   "kind": "spot",
+   "area": "pallet_town"
+  },
+  {
+   "id": "pallet_north_path",
+   "pos": [
+    62.0,
+    0.0,
+    14.0
+   ],
+   "kind": "spot",
+   "area": "pallet_town"
+  },
+  {
+   "id": "pallet_west_lawn",
+   "pos": [
+    38.0,
+    0.0,
+    54.0
+   ],
+   "kind": "spot",
+   "area": "pallet_town"
   }
  ]
 }

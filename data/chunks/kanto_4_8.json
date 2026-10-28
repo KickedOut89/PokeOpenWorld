@@ -1,0 +1,141 @@
+{
+ "id": "kanto_4_8",
+ "region": "kanto",
+ "coord": [
+  4,
+  8
+ ],
+ "area": "viridian_city",
+ "cells": [
+  "..............TT",
+  "..............TT",
+  "###...#####...TT",
+  "==#...#####...TT",
+  "==#...#####...TT",
+  "==#...#####...TT",
+  "==#...........TT",
+  "==#...........TT",
+  "==#...........TT",
+  "==#...........TT",
+  "==#...#####...TT",
+  "==#...#####...TT",
+  "###...#####...TT",
+  "......#####...TT",
+  "..............TT",
+  "..............TT"
+ ],
+ "heights": [
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222"
+ ],
+ "props": [
+  {
+   "id": "flower_shop",
+   "kind": "building",
+   "template": "shop",
+   "pos": [
+    34.0,
+    2.0,
+    16.0
+   ],
+   "rot": 0.0,
+   "footprint": [
+    19.0,
+    15.0
+   ],
+   "height": 4.5,
+   "area": "viridian_city"
+  },
+  {
+   "id": "viridian_house_16",
+   "kind": "building",
+   "template": "house_large",
+   "pos": [
+    34.0,
+    2.0,
+    48.0
+   ],
+   "rot": 0.0,
+   "footprint": [
+    19.0,
+    15.0
+   ],
+   "height": 5.0,
+   "area": "viridian_city"
+  },
+  {
+   "id": "viridian_lamp_11",
+   "kind": "lamp",
+   "pos": [
+    26.0,
+    2.0,
+    62.0
+   ],
+   "rot": 0.0,
+   "area": "viridian_city"
+  }
+ ],
+ "doors": [
+  {
+   "id": "flower_shop_door",
+   "building": "flower_shop",
+   "interior": "flower_shop_int",
+   "pos": [
+    34.0,
+    2.0,
+    24.2
+   ],
+   "unlock": {
+    "type": "time"
+   },
+   "locked_text": "Closed. Fresh flowers tomorrow!",
+   "hours": [
+    9.0,
+    18.0
+   ],
+   "area": "viridian_city"
+  },
+  {
+   "id": "viridian_house_16_door",
+   "building": "viridian_house_16",
+   "interior": "viridian_house_16_int",
+   "pos": [
+    34.0,
+    2.0,
+    56.2
+   ],
+   "unlock": {
+    "type": "pending"
+   },
+   "locked_text": "A dog barks inside, but no one answers.",
+   "area": "viridian_city"
+  }
+ ],
+ "spawn_zones": [],
+ "npc_anchors": [
+  {
+   "id": "v_flower_front",
+   "pos": [
+    34.0,
+    2.0,
+    26.0
+   ],
+   "kind": "spot",
+   "area": "viridian_city"
+  }
+ ]
+}

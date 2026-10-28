@@ -1,0 +1,905 @@
+{
+ "mom": {
+  "id": "mom",
+  "name": "Mom",
+  "role": "resident",
+  "home": "player_house_door",
+  "schedule": "mom_day",
+  "dialogue": "mom",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "indoors"
+  }
+ },
+ "daisy": {
+  "id": "daisy",
+  "name": "Daisy",
+  "role": "resident",
+  "home": "rival_house_door",
+  "schedule": "daisy_day",
+  "dialogue": "daisy",
+  "sprite": "default",
+  "companion": "meowth",
+  "weather_behavior": {
+   "rain": "umbrella"
+  },
+  "umbrella_color": "#d07ab0"
+ },
+ "professor_oak": {
+  "id": "professor_oak",
+  "name": "Professor Oak",
+  "role": "resident",
+  "home": "oaks_lab_door",
+  "schedule": "professor_oak_day",
+  "dialogue": "professor_oak",
+  "sprite": "default"
+ },
+ "lab_aide_ken": {
+  "id": "lab_aide_ken",
+  "name": "Lab Aide Ken",
+  "role": "resident",
+  "home": "pallet_house_2_door",
+  "schedule": "lab_aide_ken_day",
+  "dialogue": "lab_aide_ken",
+  "sprite": "default",
+  "companion": "pidgey",
+  "weather_behavior": {
+   "rain": "umbrella"
+  }
+ },
+ "cafe_owner_mae": {
+  "id": "cafe_owner_mae",
+  "name": "Mae",
+  "role": "resident",
+  "home": "pallet_cafe_door",
+  "schedule": "cafe_owner_mae_day",
+  "dialogue": "cafe_owner_mae",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "awning"
+  }
+ },
+ "farmer_joe": {
+  "id": "farmer_joe",
+  "name": "Farmer Joe",
+  "role": "resident",
+  "home": "pallet_barn_door",
+  "schedule": "farmer_joe_day",
+  "dialogue": "farmer_joe",
+  "sprite": "default",
+  "companion": "growlithe",
+  "weather_behavior": {
+   "rain": "umbrella"
+  }
+ },
+ "farmer_kid_tess": {
+  "id": "farmer_kid_tess",
+  "name": "Tess",
+  "role": "resident",
+  "home": "pallet_barn_door",
+  "schedule": "farmer_kid_tess_day",
+  "dialogue": "farmer_kid_tess",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "indoors"
+  }
+ },
+ "fisherman_hal": {
+  "id": "fisherman_hal",
+  "name": "Hal",
+  "role": "resident",
+  "home": "fishing_shack_door",
+  "schedule": "fisherman_hal_day",
+  "dialogue": "fisherman_hal",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "umbrella",
+   "thunderstorm": "indoors"
+  }
+ },
+ "granny_ruth": {
+  "id": "granny_ruth",
+  "name": "Granny Ruth",
+  "role": "resident",
+  "home": "pallet_house_3_door",
+  "schedule": "granny_ruth_day",
+  "dialogue": "granny_ruth",
+  "sprite": "default",
+  "companion": "sentret",
+  "weather_behavior": {
+   "rain": "indoors"
+  }
+ },
+ "jogger_lin": {
+  "id": "jogger_lin",
+  "name": "Lin",
+  "role": "resident",
+  "home": "pallet_house_1_door",
+  "schedule": "jogger_lin_day",
+  "dialogue": "jogger_lin",
+  "sprite": "default",
+  "companion": "pidgey",
+  "weather_behavior": {
+   "rain": "indoors"
+  }
+ },
+ "painter_sol": {
+  "id": "painter_sol",
+  "name": "Sol",
+  "role": "resident",
+  "home": "pallet_house_4_door",
+  "schedule": "painter_sol_day",
+  "dialogue": "painter_sol",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "indoors"
+  }
+ },
+ "boy_milo": {
+  "id": "boy_milo",
+  "name": "Milo",
+  "role": "resident",
+  "home": "pallet_house_1_door",
+  "schedule": "boy_milo_day",
+  "dialogue": "boy_milo",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "indoors"
+  }
+ },
+ "gardener_bea": {
+  "id": "gardener_bea",
+  "name": "Bea",
+  "role": "resident",
+  "home": "oak_greenhouse_door",
+  "schedule": "gardener_bea_day",
+  "dialogue": "gardener_bea",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "awning"
+  }
+ },
+ "vendor_gus": {
+  "id": "vendor_gus",
+  "name": "Gus",
+  "role": "resident",
+  "home": "route1_vendor_home",
+  "schedule": "vendor_gus_day",
+  "dialogue": "vendor_gus",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "awning"
+  }
+ },
+ "berry_farmer_ida": {
+  "id": "berry_farmer_ida",
+  "name": "Ida",
+  "role": "resident",
+  "home": "berry_farmer_cottage_door",
+  "schedule": "berry_farmer_ida_day",
+  "dialogue": "berry_farmer_ida",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "umbrella"
+  }
+ },
+ "berry_farmer_ned": {
+  "id": "berry_farmer_ned",
+  "name": "Ned",
+  "role": "resident",
+  "home": "berry_farmer_cottage_door",
+  "schedule": "berry_farmer_ned_day",
+  "dialogue": "berry_farmer_ned",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "indoors"
+  }
+ },
+ "traveler_rosa": {
+  "id": "traveler_rosa",
+  "name": "Rosa",
+  "role": "resident",
+  "home": "route1_north_end",
+  "schedule": "traveler_rosa_day",
+  "dialogue": "traveler_rosa",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "umbrella"
+  },
+  "umbrella_color": "#e0a030"
+ },
+ "traveler_kurt": {
+  "id": "traveler_kurt",
+  "name": "Kurt",
+  "role": "resident",
+  "home": "route1_south_end",
+  "schedule": "traveler_kurt_day",
+  "dialogue": "traveler_kurt",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "umbrella"
+  }
+ },
+ "youngster_joey": {
+  "id": "youngster_joey",
+  "name": "Joey",
+  "role": "resident",
+  "home": "route1_south_end",
+  "schedule": "youngster_joey_day",
+  "dialogue": "youngster_joey",
+  "sprite": "default",
+  "companion": "rattata",
+  "weather_behavior": {
+   "rain": "indoors"
+  }
+ },
+ "birdwatcher_ana": {
+  "id": "birdwatcher_ana",
+  "name": "Ana",
+  "role": "resident",
+  "home": "route1_vendor_home",
+  "schedule": "birdwatcher_ana_day",
+  "dialogue": "birdwatcher_ana",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "umbrella"
+  }
+ },
+ "nurse_joy": {
+  "id": "nurse_joy",
+  "name": "Nurse Joy",
+  "role": "resident",
+  "home": "viridian_center_door",
+  "schedule": "nurse_joy_day",
+  "dialogue": "nurse_joy",
+  "sprite": "default"
+ },
+ "mart_clerk": {
+  "id": "mart_clerk",
+  "name": "Mart Clerk",
+  "role": "resident",
+  "home": "viridian_mart_door",
+  "schedule": "mart_clerk_day",
+  "dialogue": "mart_clerk",
+  "sprite": "default"
+ },
+ "teacher_ines": {
+  "id": "teacher_ines",
+  "name": "Ms. Ines",
+  "role": "resident",
+  "home": "trainer_school_door",
+  "schedule": "teacher_ines_day",
+  "dialogue": "teacher_ines",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "indoors"
+  }
+ },
+ "student_0": {
+  "id": "student_0",
+  "name": "Pip",
+  "role": "resident",
+  "home": "viridian_house_1_door",
+  "schedule": "student_0_day",
+  "dialogue": "student_0",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "indoors"
+  }
+ },
+ "student_1": {
+  "id": "student_1",
+  "name": "Rina",
+  "role": "resident",
+  "home": "viridian_house_3_door",
+  "schedule": "student_1_day",
+  "dialogue": "student_1",
+  "sprite": "default",
+  "companion": "pidgey",
+  "weather_behavior": {
+   "rain": "indoors"
+  }
+ },
+ "student_2": {
+  "id": "student_2",
+  "name": "Theo",
+  "role": "resident",
+  "home": "viridian_house_5_door",
+  "schedule": "student_2_day",
+  "dialogue": "student_2",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "indoors"
+  }
+ },
+ "student_3": {
+  "id": "student_3",
+  "name": "Junie",
+  "role": "resident",
+  "home": "viridian_house_8_door",
+  "schedule": "student_3_day",
+  "dialogue": "student_3",
+  "sprite": "default",
+  "companion": "caterpie",
+  "weather_behavior": {
+   "rain": "indoors"
+  }
+ },
+ "vendor_olga": {
+  "id": "vendor_olga",
+  "name": "Olga",
+  "role": "resident",
+  "home": "viridian_house_2_door",
+  "schedule": "vendor_olga_day",
+  "dialogue": "vendor_olga",
+  "sprite": "default",
+  "companion": "meowth",
+  "weather_behavior": {
+   "rain": "awning"
+  }
+ },
+ "vendor_benny": {
+  "id": "vendor_benny",
+  "name": "Benny",
+  "role": "resident",
+  "home": "viridian_house_4_door",
+  "schedule": "vendor_benny_day",
+  "dialogue": "vendor_benny",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "awning"
+  }
+ },
+ "vendor_suki": {
+  "id": "vendor_suki",
+  "name": "Suki",
+  "role": "resident",
+  "home": "viridian_house_6_door",
+  "schedule": "vendor_suki_day",
+  "dialogue": "vendor_suki",
+  "sprite": "default",
+  "companion": "rattata",
+  "weather_behavior": {
+   "rain": "awning"
+  }
+ },
+ "vendor_hector": {
+  "id": "vendor_hector",
+  "name": "Hector",
+  "role": "resident",
+  "home": "viridian_house_7_door",
+  "schedule": "vendor_hector_day",
+  "dialogue": "vendor_hector",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "awning"
+  }
+ },
+ "vendor_lena": {
+  "id": "vendor_lena",
+  "name": "Lena",
+  "role": "resident",
+  "home": "viridian_house_9_door",
+  "schedule": "vendor_lena_day",
+  "dialogue": "vendor_lena",
+  "sprite": "default",
+  "companion": "oddish",
+  "weather_behavior": {
+   "rain": "awning"
+  }
+ },
+ "barista_tomo": {
+  "id": "barista_tomo",
+  "name": "Tomo",
+  "role": "resident",
+  "home": "viridian_cafe_door",
+  "schedule": "barista_tomo_day",
+  "dialogue": "barista_tomo",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "awning"
+  }
+ },
+ "florist_pia": {
+  "id": "florist_pia",
+  "name": "Pia",
+  "role": "resident",
+  "home": "flower_shop_door",
+  "schedule": "florist_pia_day",
+  "dialogue": "florist_pia",
+  "sprite": "default",
+  "companion": "oddish",
+  "weather_behavior": {
+   "rain": "awning"
+  }
+ },
+ "officer_jenny": {
+  "id": "officer_jenny",
+  "name": "Officer Jenny",
+  "role": "resident",
+  "home": "police_box_door",
+  "schedule": "officer_jenny_day",
+  "dialogue": "officer_jenny",
+  "sprite": "default",
+  "companion": "growlithe",
+  "weather_behavior": {
+   "rain": "umbrella"
+  },
+  "umbrella_color": "#2a3a8a"
+ },
+ "mechanic_dov": {
+  "id": "mechanic_dov",
+  "name": "Dov",
+  "role": "resident",
+  "home": "viridian_workshop_door",
+  "schedule": "mechanic_dov_day",
+  "dialogue": "mechanic_dov",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "awning"
+  }
+ },
+ "old_man_ezra": {
+  "id": "old_man_ezra",
+  "name": "Old Man Ezra",
+  "role": "resident",
+  "home": "old_mans_house_door",
+  "schedule": "old_man_ezra_day",
+  "dialogue": "old_man_ezra",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "indoors"
+  }
+ },
+ "granddaughter_lu": {
+  "id": "granddaughter_lu",
+  "name": "Lu",
+  "role": "resident",
+  "home": "old_mans_house_door",
+  "schedule": "granddaughter_lu_day",
+  "dialogue": "granddaughter_lu",
+  "sprite": "default",
+  "companion": "sentret",
+  "weather_behavior": {
+   "rain": "indoors"
+  }
+ },
+ "commuter_0": {
+  "id": "commuter_0",
+  "name": "Paolo",
+  "role": "resident",
+  "home": "viridian_house_11_door",
+  "schedule": "commuter_0_day",
+  "dialogue": "commuter_0",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "umbrella"
+  }
+ },
+ "commuter_1": {
+  "id": "commuter_1",
+  "name": "Greta",
+  "role": "resident",
+  "home": "viridian_house_13_door",
+  "schedule": "commuter_1_day",
+  "dialogue": "commuter_1",
+  "sprite": "default",
+  "companion": "pidgey",
+  "weather_behavior": {
+   "rain": "umbrella"
+  }
+ },
+ "commuter_2": {
+  "id": "commuter_2",
+  "name": "Fumi",
+  "role": "resident",
+  "home": "viridian_house_16_door",
+  "schedule": "commuter_2_day",
+  "dialogue": "commuter_2",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "umbrella"
+  }
+ },
+ "jogger_0": {
+  "id": "jogger_0",
+  "name": "Kai",
+  "role": "resident",
+  "home": "viridian_house_6_door",
+  "schedule": "jogger_0_day",
+  "dialogue": "jogger_0",
+  "sprite": "default",
+  "companion": "growlithe",
+  "weather_behavior": {
+   "rain": "indoors"
+  }
+ },
+ "jogger_1": {
+  "id": "jogger_1",
+  "name": "Mira",
+  "role": "resident",
+  "home": "viridian_house_7_door",
+  "schedule": "jogger_1_day",
+  "dialogue": "jogger_1",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "indoors"
+  }
+ },
+ "park_elder_0": {
+  "id": "park_elder_0",
+  "name": "Elder Bo",
+  "role": "resident",
+  "home": "viridian_house_9_door",
+  "schedule": "park_elder_0_day",
+  "dialogue": "park_elder_0",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "indoors"
+  }
+ },
+ "park_elder_1": {
+  "id": "park_elder_1",
+  "name": "Elder Wen",
+  "role": "resident",
+  "home": "viridian_house_11_door",
+  "schedule": "park_elder_1_day",
+  "dialogue": "park_elder_1",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "indoors"
+  }
+ },
+ "kid_0": {
+  "id": "kid_0",
+  "name": "Tobi",
+  "role": "resident",
+  "home": "viridian_house_4_door",
+  "schedule": "kid_0_day",
+  "dialogue": "kid_0",
+  "sprite": "default",
+  "companion": "caterpie",
+  "weather_behavior": {
+   "rain": "indoors"
+  }
+ },
+ "kid_1": {
+  "id": "kid_1",
+  "name": "Nell",
+  "role": "resident",
+  "home": "viridian_house_6_door",
+  "schedule": "kid_1_day",
+  "dialogue": "kid_1",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "indoors"
+  }
+ },
+ "kid_2": {
+  "id": "kid_2",
+  "name": "Rex",
+  "role": "resident",
+  "home": "viridian_house_7_door",
+  "schedule": "kid_2_day",
+  "dialogue": "kid_2",
+  "sprite": "default",
+  "companion": "rattata",
+  "weather_behavior": {
+   "rain": "indoors"
+  }
+ },
+ "apartment_0": {
+  "id": "apartment_0",
+  "name": "Hana",
+  "role": "resident",
+  "home": "viridian_apartments_door",
+  "schedule": "apartment_0_day",
+  "dialogue": "apartment_0",
+  "sprite": "default",
+  "companion": "meowth",
+  "weather_behavior": {
+   "rain": "umbrella"
+  }
+ },
+ "apartment_1": {
+  "id": "apartment_1",
+  "name": "Dmitri",
+  "role": "resident",
+  "home": "viridian_apartments_door",
+  "schedule": "apartment_1_day",
+  "dialogue": "apartment_1",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "umbrella"
+  }
+ },
+ "apartment_2": {
+  "id": "apartment_2",
+  "name": "Yuki",
+  "role": "resident",
+  "home": "viridian_apartments_door",
+  "schedule": "apartment_2_day",
+  "dialogue": "apartment_2",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "umbrella"
+  }
+ },
+ "apartment_3": {
+  "id": "apartment_3",
+  "name": "Sam",
+  "role": "resident",
+  "home": "viridian_apartments_door",
+  "schedule": "apartment_3_day",
+  "dialogue": "apartment_3",
+  "sprite": "default",
+  "companion": "pidgey",
+  "weather_behavior": {
+   "rain": "umbrella"
+  }
+ },
+ "night_owl_0": {
+  "id": "night_owl_0",
+  "name": "Vera",
+  "role": "resident",
+  "home": "viridian_house_13_door",
+  "schedule": "night_owl_0_day",
+  "dialogue": "night_owl_0",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "indoors"
+  },
+  "night_owl": true
+ },
+ "night_owl_1": {
+  "id": "night_owl_1",
+  "name": "Moss",
+  "role": "resident",
+  "home": "viridian_house_16_door",
+  "schedule": "night_owl_1_day",
+  "dialogue": "night_owl_1",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "indoors"
+  },
+  "night_owl": true
+ },
+ "night_owl_2": {
+  "id": "night_owl_2",
+  "name": "Quill",
+  "role": "resident",
+  "home": "viridian_apartments_door",
+  "schedule": "night_owl_2_day",
+  "dialogue": "night_owl_2",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "indoors"
+  },
+  "night_owl": true
+ },
+ "couple_ana_li": {
+  "id": "couple_ana_li",
+  "name": "Ana & Li",
+  "role": "resident",
+  "home": "viridian_house_10_door",
+  "schedule": "couple_ana_li_day",
+  "dialogue": "couple_ana_li",
+  "sprite": "default",
+  "companion": "pidgey",
+  "weather_behavior": {
+   "rain": "umbrella"
+  },
+  "umbrella_color": "#c04060"
+ },
+ "delivery_bo": {
+  "id": "delivery_bo",
+  "name": "Bo",
+  "role": "resident",
+  "home": "viridian_house_12_door",
+  "schedule": "delivery_bo_day",
+  "dialogue": "delivery_bo",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "umbrella"
+  }
+ },
+ "musician_cal": {
+  "id": "musician_cal",
+  "name": "Cal",
+  "role": "resident",
+  "home": "viridian_house_15_door",
+  "schedule": "musician_cal_day",
+  "dialogue": "musician_cal",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "awning"
+  }
+ },
+ "painter_ivy": {
+  "id": "painter_ivy",
+  "name": "Ivy",
+  "role": "resident",
+  "home": "viridian_house_3_door",
+  "schedule": "painter_ivy_day",
+  "dialogue": "painter_ivy",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "indoors"
+  }
+ },
+ "dogwalker_finn": {
+  "id": "dogwalker_finn",
+  "name": "Finn",
+  "role": "resident",
+  "home": "viridian_house_1_door",
+  "schedule": "dogwalker_finn_day",
+  "dialogue": "dogwalker_finn",
+  "sprite": "default",
+  "companion": "growlithe",
+  "weather_behavior": {
+   "rain": "umbrella"
+  }
+ },
+ "gym_fan_rudy": {
+  "id": "gym_fan_rudy",
+  "name": "Rudy",
+  "role": "resident",
+  "home": "viridian_house_8_door",
+  "schedule": "gym_fan_rudy_day",
+  "dialogue": "gym_fan_rudy",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "umbrella"
+  }
+ },
+ "gate_guard_ray": {
+  "id": "gate_guard_ray",
+  "name": "Ray",
+  "role": "resident",
+  "home": "forest_gatehouse_door",
+  "schedule": "gate_guard_ray_day",
+  "dialogue": "gate_guard_ray",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "indoors"
+  }
+ },
+ "ranger_maple": {
+  "id": "ranger_maple",
+  "name": "Ranger Maple",
+  "role": "resident",
+  "home": "ranger_outpost_door",
+  "schedule": "ranger_maple_day",
+  "dialogue": "ranger_maple",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "umbrella",
+   "thunderstorm": "umbrella"
+  }
+ },
+ "ranger_cedar": {
+  "id": "ranger_cedar",
+  "name": "Ranger Cedar",
+  "role": "resident",
+  "home": "ranger_outpost_door",
+  "schedule": "ranger_cedar_day",
+  "dialogue": "ranger_cedar",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "umbrella"
+  }
+ },
+ "camper_jon": {
+  "id": "camper_jon",
+  "name": "Jon",
+  "role": "resident",
+  "home": "r2_camp",
+  "schedule": "camper_jon_day",
+  "dialogue": "camper_jon",
+  "sprite": "default",
+  "companion": "rattata",
+  "weather_behavior": {
+   "rain": "awning"
+  }
+ },
+ "camper_sia": {
+  "id": "camper_sia",
+  "name": "Sia",
+  "role": "resident",
+  "home": "r2_camp",
+  "schedule": "camper_sia_day",
+  "dialogue": "camper_sia",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "awning"
+  }
+ },
+ "hiker_gord": {
+  "id": "hiker_gord",
+  "name": "Gord",
+  "role": "resident",
+  "home": "r2_bench",
+  "schedule": "hiker_gord_day",
+  "dialogue": "hiker_gord",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "umbrella"
+  }
+ },
+ "lass_poppy": {
+  "id": "lass_poppy",
+  "name": "Poppy",
+  "role": "resident",
+  "home": "r2_bench",
+  "schedule": "lass_poppy_day",
+  "dialogue": "lass_poppy",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "indoors"
+  }
+ },
+ "birdwatcher_tal": {
+  "id": "birdwatcher_tal",
+  "name": "Tal",
+  "role": "resident",
+  "home": "f_north_gate",
+  "schedule": "birdwatcher_tal_day",
+  "dialogue": "birdwatcher_tal",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "umbrella"
+  }
+ },
+ "bug_catcher_0": {
+  "id": "bug_catcher_0",
+  "name": "Bug Catcher Rick",
+  "role": "trainer",
+  "home": "f_bug_spot_a",
+  "schedule": "bug_catcher_0_day",
+  "dialogue": "bug_catcher_0",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "umbrella",
+   "thunderstorm": "umbrella"
+  }
+ },
+ "bug_catcher_1": {
+  "id": "bug_catcher_1",
+  "name": "Bug Catcher Doug",
+  "role": "trainer",
+  "home": "f_bug_spot_b",
+  "schedule": "bug_catcher_1_day",
+  "dialogue": "bug_catcher_1",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "umbrella",
+   "thunderstorm": "umbrella"
+  }
+ },
+ "bug_catcher_2": {
+  "id": "bug_catcher_2",
+  "name": "Bug Catcher Anthony",
+  "role": "trainer",
+  "home": "f_bug_spot_c",
+  "schedule": "bug_catcher_2_day",
+  "dialogue": "bug_catcher_2",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "umbrella",
+   "thunderstorm": "umbrella"
+  }
+ },
+ "bug_catcher_3": {
+  "id": "bug_catcher_3",
+  "name": "Bug Catcher Charlie",
+  "role": "trainer",
+  "home": "f_bug_spot_d",
+  "schedule": "bug_catcher_3_day",
+  "dialogue": "bug_catcher_3",
+  "sprite": "default",
+  "weather_behavior": {
+   "rain": "umbrella",
+   "thunderstorm": "umbrella"
+  }
+ }
+}
