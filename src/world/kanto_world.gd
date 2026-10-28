@@ -14,6 +14,8 @@ var doors: DoorController
 var toast: MessageToast
 var weather_fx: WeatherFx
 var spawner: SpawnNode
+var npcs: NPCManager
+var _npc_t: float = 0.0
 
 
 func _ready() -> void:
@@ -60,6 +62,13 @@ func _ready() -> void:
 	spawner.camera = camera
 	spawner.player = player
 	add_child(spawner)
+	npcs = NPCManager.new()
+	npcs.name = "NPCs"
+	add_child(npcs)
+	npcs.cap = GraphicsPresets.npc_cap()
+	npcs.setup(Data.db.table(&"npcs"), Data.db.table(&"schedules"), NPCManager.index_anchors(streamer.records()),
+		func(rec: Dictionary) -> Node3D: return NPC.make(rec))
+	update_npcs()
 	toast = MessageToast.new()
 	toast.name = "Toast"
 	add_child(toast)
@@ -72,3 +81,23 @@ func find_anchor(id: StringName) -> Vector3:
 			if StringName(a.id) == id:
 				return d.origin() + Vector3(float(a.pos[0]), float(a.pos[1]), float(a.pos[2]))
 	return Vector3.ZERO
+
+
+func _physics_process(delta: float) -> void:
+	_npc_t -= delta
+	if _npc_t <= 0.0:
+		_npc_t = NPCManager.UPDATE_INTERVAL
+		update_npcs()
+
+
+func update_npcs() -> void:
+	if npcs == null or interiors != null and interiors.is_inside():
+		return
+	npcs.cap = GraphicsPresets.npc_cap()
+	var hour := Clock.model.minutes / 60.0
+	npcs.update(player.global_position, hour, _weather_for_chunk, streamer.loaded_coords())
+
+
+func _weather_for_chunk(c: Vector2i) -> StringName:
+	var d := streamer.record(c)
+	return Weather.weather_for_area(d.area) if d != null else &"clear"
