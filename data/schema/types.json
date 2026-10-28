@@ -1,0 +1,6 @@
+{
+ "required": {
+  "id": "string",
+  "chart": "dict"
+ }
+}
