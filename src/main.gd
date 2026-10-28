@@ -43,6 +43,12 @@ func _ready() -> void:
 		add_child(world)
 		if _start_anchor != &"":
 			world.teleport_to_anchor(_start_anchor)
+		elif _shot_path == "" and Saves.has_save(SaveService.AUTOSAVE_SLOT):
+			world.player.input_enabled = false
+			world.prompts.ask("Welcome back!", ["Continue", "New Game"], func(i: int) -> void:
+				world.player.input_enabled = true
+				if i == 0:
+					world.continue_from_save(SaveService.AUTOSAVE_SLOT))
 
 
 func _process(_delta: float) -> void:

@@ -28,6 +28,19 @@ func on_removed(zone_id: StringName, game_minutes: float) -> void:
 	list.append(game_minutes + _rng.randf_range(RESPAWN_GAME_MIN.x, RESPAWN_GAME_MIN.y))
 
 
+func timers_to_dict() -> Dictionary:
+	var out := {}
+	for z in _blocked_until:
+		out[String(z)] = (_blocked_until[z] as Array).duplicate()
+	return out
+
+
+func timers_from_dict(d: Dictionary) -> void:
+	_blocked_until = {}
+	for z in d:
+		_blocked_until[StringName(z)] = (d[z] as Array).map(func(t: Variant) -> float: return float(t))
+
+
 func roll_shiny() -> bool:
 	return _rng.randi_range(1, SHINY_ODDS) == 1
 

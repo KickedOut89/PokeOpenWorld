@@ -19,6 +19,7 @@ var _player: Node3D
 var _world: Node3D
 var _db: DataDB
 var _door_world_pos: Vector3
+var current_door: Dictionary = {}
 var _fade: ColorRect
 
 
@@ -58,6 +59,7 @@ func enter(door: Dictionary, door_world_pos: Vector3) -> bool:
 	_world.add_child(current_interior)
 	_spawn_interior_npcs(rec, tpl)
 	current_id = id
+	current_door = door
 	_door_world_pos = door_world_pos
 	var streamer := _streamer()
 	if streamer != null:
@@ -106,6 +108,10 @@ func exit() -> void:
 	_set_overworld_active(true)
 	exited.emit(id)
 	await _fade_to(0.0)
+
+
+func outdoor_return_point() -> Vector3:
+	return _door_world_pos
 
 
 func _streamer() -> WorldStreamer:

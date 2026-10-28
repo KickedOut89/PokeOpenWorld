@@ -120,6 +120,10 @@ func _ready() -> void:
 	party_menu.name = "PartyMenu"
 	add_child(party_menu)
 	spawner.wild_spawned.connect(func(w: WildPokemon) -> void: w.engaged.connect(func(x: WildPokemon) -> void: fights.start_wild(x)))
+	Saves.in_fight = func() -> bool: return fights != null and fights.in_fight()
+	EventBus.area_entered.connect(func(_a: StringName) -> void: autosave())
+	interiors.entered.connect(func(_id: StringName) -> void: autosave())
+	interiors.exited.connect(func(_id: StringName) -> void: autosave())
 	toast = MessageToast.new()
 	toast.name = "Toast"
 	add_child(toast)
@@ -238,3 +242,73 @@ func _open_mart(rec: Dictionary) -> void:
 				EventBus.message.emit("Bought a %s." % Data.db.get_record(&"items", stock[i]).get("name", stock[i]))
 			else:
 				EventBus.message.emit("You don't have enough money."))
+
+
+## The world's part of a save: where the player is, respawn timers, quest progress.
+func snapshot_world() -> Dictionary:
+	var p := player.global_position
+	var block := {"pos": [p.x, p.y, p.z], "area": String(streamer.current_area)}
+	if interiors.is_inside():
+		var o := interiors.outdoor_return_point()
+		block["interior"] = {"id": String(interiors.current_id), "door": String(interiors.current_door.get("id", "")), "outdoor_pos": [o.x, o.y, o.z]}
+	return Saves.snapshot({"player": block, "spawns_respawn_timers": spawner.director.timers_to_dict(), "quests": quest_state()})
+
+
+## Quest progress for saving (Task 29 fills this in).
+func quest_state() -> Dictionary:
+	return {}
+
+
+func restore_quests(_d: Dictionary) -> void:
+	pass
+
+
+func autosave() -> void:
+	if not is_inside_tree() or player == null or (fights != null and fights.in_fight()):
+		return
+	Saves.save(SaveService.AUTOSAVE_SLOT, snapshot_world())
+
+
+func save_manually() -> void:
+	if Saves.save(SaveService.AUTOSAVE_SLOT, snapshot_world()) == OK:
+		EventBus.message.emit("Game saved.")
+	else:
+		EventBus.message.emit("You can't save right now.")
+
+
+## Loads a slot and puts the player back where they were (inside a building if saved there).
+func continue_from_save(slot: int) -> bool:
+	var r := Saves.load_slot(slot)
+	if not r.ok:
+		return false
+	var block := Saves.apply(r.data)
+	spawner.director.timers_from_dict(r.data.get("spawns_respawn_timers", {}))
+	restore_quests(r.data.get("quests", {}))
+	if block.has("interior"):
+		var outdoor: Vector3 = block.interior.outdoor_pos
+		player.global_position = outdoor
+		streamer.update_now()
+		var door := _door_record(StringName(block.interior.get("door", "")))
+		if not door.is_empty():
+			await interiors.enter(door, outdoor)
+	elif block.has("pos"):
+		player.global_position = block.pos + Vector3(0, 0.2, 0)
+		streamer.update_now()
+	camera.snap()
+	update_npcs()
+	if r.used_backup:
+		EventBus.message.emit("Your last save was damaged; the previous save was loaded.")
+	return true
+
+
+func _door_record(id: StringName) -> Dictionary:
+	for c in streamer.records():
+		for d in streamer.record(c).doors:
+			if StringName(d.id) == id:
+				return d
+	return {}
+
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventKey and (event as InputEventKey).pressed and (event as InputEventKey).physical_keycode == KEY_F5:
+		save_manually()
