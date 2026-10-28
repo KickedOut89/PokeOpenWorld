@@ -10,5 +10,6 @@
  "shape": "self",
  "range": 0.0,
  "active_s": 0.15,
- "source": "PokeAPI (Gen 5 values)"
+ "source": "PokeAPI (Gen 5 values)",
+ "tuned": true
 }

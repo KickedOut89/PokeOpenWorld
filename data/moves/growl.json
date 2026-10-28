@@ -7,7 +7,7 @@
  "pp": 40,
  "accuracy": 100,
  "priority": 0,
- "shape": "self",
+ "shape": "area",
  "range": 0.0,
  "active_s": 0.15,
  "source": "PokeAPI (Gen 5 values)",
@@ -15,5 +15,7 @@
   "target": "foe",
   "stat": "atk",
   "stages": -1
- }
+ },
+ "radius": 5.5,
+ "tuned": true
 }

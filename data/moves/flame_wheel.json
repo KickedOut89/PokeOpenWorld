@@ -14,5 +14,7 @@
  "status": {
   "id": "brn",
   "chance": 0.1
- }
+ },
+ "arc_deg": 100.0,
+ "tuned": true
 }

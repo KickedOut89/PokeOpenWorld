@@ -10,5 +10,8 @@
  "shape": "projectile",
  "range": 12.0,
  "active_s": 0.15,
- "source": "PokeAPI (Gen 5 values)"
+ "source": "PokeAPI (Gen 5 values)",
+ "speed": 18.0,
+ "radius": 0.7,
+ "tuned": true
 }

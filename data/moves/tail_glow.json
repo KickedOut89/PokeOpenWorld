@@ -15,5 +15,6 @@
   "target": "self",
   "stat": "spa",
   "stages": 3
- }
+ },
+ "tuned": true
 }

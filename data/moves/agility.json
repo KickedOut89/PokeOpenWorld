@@ -15,5 +15,6 @@
   "target": "self",
   "stat": "spe",
   "stages": 2
- }
+ },
+ "tuned": true
 }

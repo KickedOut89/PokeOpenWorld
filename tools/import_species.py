@@ -139,7 +139,7 @@ def main():
         moves.update(e[1] for e in rec["learnset"])
         json.dump(rec, open(os.path.join(ROOT, "data/species", name + ".json"), "w"), indent=1)
         print("species", name, rec["base"], "learn", len(rec["learnset"]))
-    keep = ("shape", "range", "arc_deg", "radius", "speed", "windup_s", "active_s", "cooldown_override")
+    keep = ("shape", "range", "arc_deg", "radius", "speed", "windup_s", "active_s", "recovery_s", "cooldown_override", "tuned")
     for mid in sorted(moves):
         path = os.path.join(ROOT, "data/moves", mid + ".json")
         rec = move_record(mid.replace("_", "-"))

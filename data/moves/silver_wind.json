@@ -15,5 +15,8 @@
   "target": "foe",
   "stat": "atk",
   "stages": 1
- }
+ },
+ "speed": 15.0,
+ "radius": 0.7,
+ "tuned": true
 }

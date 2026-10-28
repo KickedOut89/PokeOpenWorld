@@ -15,5 +15,7 @@
   "target": "foe",
   "stat": "spe",
   "stages": 1
- }
+ },
+ "arc_deg": 100.0,
+ "tuned": true
 }

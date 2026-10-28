@@ -14,5 +14,8 @@
  "status": {
   "id": "brn",
   "chance": 0.1
- }
+ },
+ "speed": 15.0,
+ "radius": 0.7,
+ "tuned": true
 }

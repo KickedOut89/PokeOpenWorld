@@ -15,5 +15,6 @@
   "target": "self",
   "stat": "def",
   "stages": 1
- }
+ },
+ "tuned": true
 }

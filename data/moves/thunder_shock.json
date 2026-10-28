@@ -14,5 +14,8 @@
  "status": {
   "id": "par",
   "chance": 0.1
- }
+ },
+ "speed": 18.0,
+ "radius": 0.7,
+ "tuned": true
 }
