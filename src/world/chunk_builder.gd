@@ -43,10 +43,15 @@ func build(data: ChunkData) -> Node3D:
 	props.name = "Props"
 	root.add_child(props)
 	var cells := PackedInt32Array()
+	var tufts: Array[Transform3D] = []
 	for y in ChunkData.CELLS:
 		for x in ChunkData.CELLS:
 			_build_cell(data, x, y, cells, terrain, props)
+			if data.cell(x, y) == "\"":
+				_tufts_for_cell(data, x, y, tufts)
 	_fill_grid(grid, cells)
+	if not tufts.is_empty():
+		root.add_child(_grass_multimesh(tufts))
 	for p in data.props:
 		props.add_child(PropFactory.make(p))
 	for d in data.doors:
@@ -60,6 +65,65 @@ func build(data: ChunkData) -> Node3D:
 		m.set_meta(&"anchor", a)
 		root.add_child(m)
 	return root
+
+
+const TUFTS_PER_TILE := 3
+static var _tuft_mesh: ArrayMesh
+static var _tuft_material: ShaderMaterial
+
+
+## Seeded tuft placement: a few tufts per 1 m tile, jittered, scaled and rotated.
+func _tufts_for_cell(data: ChunkData, x: int, y: int, out: Array[Transform3D]) -> void:
+	var top := float(data.level(x, y))
+	for ty in 4:
+		for tx in 4:
+			for k in TUFTS_PER_TILE:
+				var h := hash([_seed, "tuft", data.coord.x, data.coord.y, x * 4 + tx, y * 4 + ty, k])
+				var jx := float(absi(h) % 1000) / 1000.0
+				var jz := float(absi(h >> 10) % 1000) / 1000.0
+				var s := 0.75 + float(absi(h >> 20) % 50) / 100.0
+				var b := Basis(Vector3.UP, float(absi(h >> 4) % 628) / 100.0).scaled(Vector3(s, s, s))
+				out.append(Transform3D(b, Vector3(x * CELL + tx + jx, top, y * CELL + ty + jz)))
+
+
+func _grass_multimesh(xforms: Array[Transform3D]) -> MultiMeshInstance3D:
+	if _tuft_mesh == null:
+		_tuft_mesh = _make_tuft_mesh()
+		_tuft_material = ShaderMaterial.new()
+		_tuft_material.shader = load("res://assets/shaders/grass_tuft.gdshader")
+	var mm := MultiMesh.new()
+	mm.transform_format = MultiMesh.TRANSFORM_3D
+	mm.mesh = _tuft_mesh
+	mm.instance_count = xforms.size()
+	for i in xforms.size():
+		mm.set_instance_transform(i, xforms[i])
+	var mmi := MultiMeshInstance3D.new()
+	mmi.name = "TallGrass"
+	mmi.multimesh = mm
+	mmi.material_override = _tuft_material
+	mmi.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+	return mmi
+
+
+## Five thin blades fanning out from a point; dark green base, lighter tips.
+static func _make_tuft_mesh() -> ArrayMesh:
+	var st := SurfaceTool.new()
+	st.begin(Mesh.PRIMITIVE_TRIANGLES)
+	var base := Color("2f6e2a")
+	var tip := Color("8cc85a")
+	for i in 5:
+		var a := TAU * i / 5.0
+		var dir := Vector3(cos(a), 0, sin(a))
+		var side := dir.cross(Vector3.UP) * 0.05
+		var lean := dir * 0.18
+		st.set_color(base)
+		st.add_vertex(-side)
+		st.set_color(base)
+		st.add_vertex(side)
+		st.set_color(tip)
+		st.add_vertex(lean + Vector3(0, 0.75, 0))
+	st.generate_normals()
+	return st.commit()
 
 
 ## cells: flat [x, y, z, item, ...]

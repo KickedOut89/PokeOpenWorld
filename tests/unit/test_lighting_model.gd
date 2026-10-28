@@ -65,3 +65,12 @@ func test_wraps_midnight_keyframes() -> void:
 	var late := m.sample(1439, &"clear", &"clear", 1.0)
 	var early := m.sample(0, &"clear", &"clear", 1.0)
 	assert_almost_eq(late.ambient_energy, early.ambient_energy, 0.02)
+
+
+func test_evening_is_warm_but_not_saturated() -> void:
+	var s := m.sample(18 * 60 + 40, &"clear", &"clear", 1.0)
+	assert_lt(s.sky_horizon.s, 0.45, "horizon saturation %.2f" % s.sky_horizon.s)
+	assert_lt(s.sun_color.s, 0.4, "sun saturation %.2f" % s.sun_color.s)
+	assert_lt(s.fog_density, 0.003)
+	var grade: Array = DataDB.load_dir("res://data").get_record(&"lighting", &"periods").grades.evening
+	assert_lt(Color(grade[1]).s, 0.12, "evening grade midtone stays near neutral")

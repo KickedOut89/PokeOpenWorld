@@ -5,7 +5,6 @@ extends RefCounted
 ## Mapping is stored as lib meta "char_items": {char: PackedInt32Array}.
 
 const WATER_DROP := 0.35
-const TALL_GRASS_EXTRA := 0.45
 
 
 static func build(tileset: Dictionary) -> MeshLibrary:
@@ -23,8 +22,6 @@ static func build(tileset: Dictionary) -> MeshLibrary:
 			var height := 1.0
 			if def.get("water", false):
 				height = 1.0 - WATER_DROP
-			elif def.get("tall_grass", false):
-				height = 1.0 + TALL_GRASS_EXTRA
 			mesh.size = Vector3(1, height, 1)
 			var mat := StandardMaterial3D.new()
 			var shift := (v - 1) * 0.04

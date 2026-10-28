@@ -119,7 +119,7 @@ func _process(delta: float) -> void:
 	_sky_mat.ground_horizon_color = s.sky_horizon
 	env.ambient_light_energy = s.ambient_energy
 	env.fog_density = s.fog_density
-	env.fog_light_color = s.sky_horizon.lerp(Color.GRAY, 0.3)
+	env.fog_light_color = s.sky_horizon.lerp(Color(0.62, 0.64, 0.68), 0.6)
 	env.volumetric_fog_density = s.volumetric_density
 	env.tonemap_exposure = s.exposure
 	if _grades.has(s.lut):

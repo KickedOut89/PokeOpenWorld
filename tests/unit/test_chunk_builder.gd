@@ -86,3 +86,18 @@ func test_stairs_ramp_rises_north() -> void:
 	assert_almost_eq(ramp.rotation.x, atan(1.0 / 4.0), 0.001)
 	assert_eq(n.get_node("Ground").get_cell_item(Vector3i(17, 0, 21)), GridMap.INVALID_CELL_ITEM, "no flat tile under the ramp")
 	n.free()
+
+
+func test_tall_grass_is_ground_level_with_tufts() -> void:
+	var n := ChunkBuilder.new(_lib, 1).build(ChunkData.from_record(_record))
+	var grass := n.find_child("TallGrass", true, false) as MultiMeshInstance3D
+	assert_not_null(grass, "tall grass cells get a tuft MultiMesh")
+	assert_gt(grass.multimesh.instance_count, 100, "fixture has 12 tall-grass cells")
+	var items: PackedInt32Array = _lib.get_meta(&"char_items")["\""]
+	var mesh := _lib.get_item_mesh(items[0]) as BoxMesh
+	assert_eq(mesh.size.y, 1.0, "the grass tile itself is flat, not a raised slab")
+	var root2 := ChunkBuilder.new(_lib, 1).build(ChunkData.from_record(_record))
+	var again := root2.find_child("TallGrass", true, false) as MultiMeshInstance3D
+	assert_eq(grass.multimesh.get_instance_transform(7), again.multimesh.get_instance_transform(7), "deterministic placement")
+	n.free()
+	root2.free()
