@@ -263,14 +263,31 @@ Routes also gain inhabited spots:
 - **Route 2:** a gatehouse before the forest, and a campsite.
 - **Viridian Forest:** a ranger outpost, and a bug-catcher hideout.
 
-**Enterable interiors:**
+**Building access — every building is designed to be enterable eventually.**
+Every door in the world is a data record with an unlock condition, so opening a
+building later is a data change, never a code change.
 
-- Required: every story building, every shop and the Pokémon Center.
-- Plus about 40–50% of homes.
+| Unlock type | Meaning | Example |
+|---|---|---|
+| `always` | Open from the start | Pokémon Center, Mart, Oak's Lab |
+| `flag` | Opens when a quest or story flag is set | A house that opens after its owner's side quest |
+| `item` | Opens when the player holds a key item | A storehouse that needs a key |
+| `reward` | Opens as a reward from another source (Pokédex count, badge count, NPC friendship) | A collector's house that opens at 10 species caught |
+| `time` | Open only during certain hours | A shop closed at night |
+| `pending` | Interior not built yet; shows locked text | Placeholder until its interior ships |
 
-Building every home's interior is the largest content cost in this section, so
-the rest are locked with a reason ("No one's home", "Do not disturb"). The
-enterable ratio is a tunable content decision.
+Each door can combine one unlock condition with time-of-day hours. A locked
+door shows its own locked line, such as "No one's home" or "The door is
+locked tight."
+
+**Slice targets:**
+
+- Interiors built: every story building, every shop, the Pokémon Center, and
+  about 40–50% of homes.
+- All other doors ship with `pending` (or a real `flag`/`item`/`reward` gate
+  if a slice quest supports it).
+- Interiors are assembled from reusable room templates (house small/large,
+  shop, workshop), so later interiors are mostly layout and furnishing data.
 
 ### 7.2 NPCs
 
@@ -441,6 +458,8 @@ Each milestone produces a playable Windows build.
 - Seasons (Gen 5 has them; candidate for a later sub-project).
 - A browser build.
 - Fully seamless interiors.
+- Interiors for every building (the door-unlock system supports them; content
+  comes in later sub-projects).
 
 ## 13. Risks
 
