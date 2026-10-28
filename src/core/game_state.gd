@@ -11,6 +11,8 @@ var badges: int = 0
 var friendship: Dictionary = {}      # npc id -> int
 var money: int = 3000
 var last_center: StringName = &"pallet_home"
+## The player's team. Saved separately by SaveService (Task 28), not in to_dict().
+var party := Party.new()
 
 
 func set_flag(f: StringName) -> void:

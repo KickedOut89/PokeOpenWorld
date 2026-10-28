@@ -5,6 +5,8 @@ extends Node3D
 
 const TICK := 0.5
 
+signal wild_spawned(w: WildPokemon)
+
 var streamer: WorldStreamer
 var camera: Camera3D
 var player: Node3D
@@ -58,6 +60,8 @@ func tick_now() -> void:
 		_wilds.erase(id)
 		if is_instance_valid(w) and not w.in_fight:
 			w.queue_free()
+		elif is_instance_valid(w):
+			_wilds[id] = w  # still fighting: keep tracking
 	for s in r.spawn:
 		var c := Creature.create(s.species, s.level, _rng, Data.db)
 		c.shiny = s.shiny
@@ -67,6 +71,7 @@ func tick_now() -> void:
 		_next_id += 1
 		w.removed.connect(_on_removed)
 		add_child(w)
+		wild_spawned.emit(w)
 
 
 func wilds() -> Array:

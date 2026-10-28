@@ -18,6 +18,7 @@ var npcs: NPCManager
 var barks: BarkSystem
 var dialogue: DialogueBox
 var ambience: AmbiencePlayer
+var fights: FightController
 var _npc_t: float = 0.0
 
 
@@ -88,6 +89,11 @@ func _ready() -> void:
 	add_child(ambience)
 	interiors.entered.connect(func(_id: StringName) -> void: ambience.indoors = true)
 	interiors.exited.connect(func(_id: StringName) -> void: ambience.indoors = false)
+	fights = FightController.new()
+	fights.name = "Fights"
+	fights.world = self
+	add_child(fights)
+	spawner.wild_spawned.connect(func(w: WildPokemon) -> void: w.engaged.connect(func(x: WildPokemon) -> void: fights.start_wild(x)))
 	toast = MessageToast.new()
 	toast.name = "Toast"
 	add_child(toast)
@@ -110,6 +116,7 @@ func find_anchor(id: StringName) -> Vector3:
 
 
 func _physics_process(delta: float) -> void:
+	_check_player_attack()
 	_npc_t -= delta
 	if _npc_t <= 0.0:
 		_npc_t = NPCManager.UPDATE_INTERVAL
@@ -147,3 +154,25 @@ func talk_to(rec: Dictionary) -> void:
 	player.input_enabled = false
 	dialogue.open(String(rec.get("name", "")), [line], dlg.get("branches", {}))
 	EventBus.npc_talked.emit(StringName(rec.get("id", "")))
+
+
+## Pressing a move key near a wild Pokémon starts the fight (the player "attacks first").
+func _check_player_attack() -> void:
+	if fights == null or fights.in_fight() or not player.input_enabled:
+		return
+	var pressed := false
+	for i in 4:
+		if Input.is_action_just_pressed(StringName("move_%d" % (i + 1))):
+			pressed = true
+	if not pressed:
+		return
+	var best: WildPokemon = null
+	var best_d := 10.0
+	for w in get_tree().get_nodes_in_group(&"wild"):
+		var d := (w as Node3D).global_position.distance_to(player.global_position)
+		if d < best_d:
+			best_d = d
+			best = w
+	if best != null:
+		best.attacked = true
+		fights.start_wild(best)
