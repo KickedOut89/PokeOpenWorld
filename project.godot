@@ -25,4 +25,6 @@ textures/canvas_textures/default_texture_filter=0
 
 [autoload]
 
+EventBus="*res://src/core/event_bus.gd"
+Clock="*res://src/core/game_clock.gd"
 Data="*res://src/core/data_autoload.gd"
