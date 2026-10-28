@@ -1,0 +1,66 @@
+extends GutTest
+
+var _record: Dictionary
+var _lib: MeshLibrary
+
+
+func before_all() -> void:
+	var blockouts := ChunkBaker.read_blockouts("res://tests/fixtures/blockout", &"test")
+	var chunks := ChunkBaker.bake(&"kanto", blockouts, ChunkBaker.read_placements("res://tests/fixtures/placements"))
+	_record = chunks[Vector2i(0, 0)]
+	_lib = MeshLibraryBuilder.build(DataDB.load_dir("res://data").table(&"tileset"))
+
+
+func _grid(root: Node3D) -> GridMap:
+	return root.get_node("Ground") as GridMap
+
+
+func test_build_is_deterministic() -> void:
+	var a := ChunkBuilder.new(_lib, 42).build(ChunkData.from_record(_record))
+	var b := ChunkBuilder.new(_lib, 42).build(ChunkData.from_record(_record))
+	var ca := _grid(a).get_used_cells()
+	var cb := _grid(b).get_used_cells()
+	assert_eq(ca.size(), cb.size())
+	assert_eq(ca.size(), 64 * 64)
+	var same := true
+	for c in ca:
+		if _grid(a).get_cell_item(c) != _grid(b).get_cell_item(c):
+			same = false
+	assert_true(same)
+	a.free()
+	b.free()
+
+
+func test_chunk_root_positioned_at_origin() -> void:
+	var rec := _record.duplicate(true)
+	rec.coord = [1, 2]
+	var n := ChunkBuilder.new(_lib, 1).build(ChunkData.from_record(rec))
+	assert_eq(n.position, Vector3(64, 0, 128))
+	n.free()
+
+
+func test_ledge_blocks_northward_only() -> void:
+	var n := ChunkBuilder.new(_lib, 1).build(ChunkData.from_record(_record))
+	var ledges := n.find_children("Ledge*", "StaticBody3D", true, false)
+	assert_eq(ledges.size(), 4, "one per ledge cell")
+	var first := ledges[0] as StaticBody3D
+	var shape := first.get_child(0) as CollisionShape3D
+	# ledge cell (2,5) spans z 20..24; wall sits on its north edge (z=20)
+	assert_almost_eq(first.position.z + shape.position.z, 20.0, 0.31)
+	assert_true(first.is_in_group(&"ledge"))
+	n.free()
+
+
+func test_doors_and_zones_become_areas() -> void:
+	var n := ChunkBuilder.new(_lib, 1).build(ChunkData.from_record(_record))
+	var door := n.find_child("Door_test_door", true, false) as Area3D
+	assert_not_null(door)
+	assert_eq(door.get_meta(&"door_id"), &"test_door")
+	assert_not_null(n.find_child("Zone_test_grass", true, false))
+	n.free()
+
+
+func test_trees_are_solid() -> void:
+	var n := ChunkBuilder.new(_lib, 1).build(ChunkData.from_record(_record))
+	assert_eq(n.find_children("Tree*", "StaticBody3D", true, false).size(), 16, "row 0 has 16 tree cells")
+	n.free()
