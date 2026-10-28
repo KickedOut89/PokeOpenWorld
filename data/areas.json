@@ -1,0 +1,7 @@
+{
+ "pallet_town": {"id": "pallet_town", "display_name": "Pallet Town", "weather_table": "kanto_town", "ambience": "town"},
+ "route_1": {"id": "route_1", "display_name": "Route 1", "weather_table": "kanto_route", "ambience": "route"},
+ "viridian_city": {"id": "viridian_city", "display_name": "Viridian City", "weather_table": "kanto_town", "ambience": "town"},
+ "route_2_south": {"id": "route_2_south", "display_name": "Route 2", "weather_table": "kanto_route", "ambience": "route"},
+ "viridian_forest": {"id": "viridian_forest", "display_name": "Viridian Forest", "weather_table": "viridian_forest", "ambience": "forest"}
+}
