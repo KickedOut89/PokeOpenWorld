@@ -88,3 +88,11 @@ func test_second_status_does_not_overwrite() -> void:
 	c.apply_status(&"psn", rng)
 	assert_false(c.apply_status(&"par", rng))
 	assert_eq(c.status, &"psn")
+
+
+func test_carried_over_sleep_still_wears_off() -> void:
+	var cr := Creature.create(&"pikachu", 30, rng, db)
+	cr.status = &"slp"
+	var c := Combatant.new(cr)
+	c.tick(6.1, rng)
+	assert_eq(c.status, &"", "sleep from a previous fight ends within 6 s")

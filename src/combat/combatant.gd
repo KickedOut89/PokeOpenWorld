@@ -24,7 +24,9 @@ var _dot_clock: float = 0.0
 func _init(c: Creature) -> void:
 	creature = c
 	status = c.status
-	status_timer = INF
+	# A sleep/freeze carried over from an earlier fight gets a fresh timer.
+	var mid := {&"slp": StatusEffects.SLEEP_RANGE, &"frz": StatusEffects.FREEZE_RANGE}
+	status_timer = (mid[status].x + mid[status].y) * 0.5 if mid.has(status) else INF
 
 
 func effective(stat: StringName) -> int:
