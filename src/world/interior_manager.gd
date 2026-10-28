@@ -65,6 +65,7 @@ func enter(door: Dictionary, door_world_pos: Vector3) -> bool:
 		streamer.target = null
 	_player.global_position = (current_interior.get_node("Spawn") as Node3D).global_position
 	_set_interior_lighting(true)
+	_set_overworld_active(false)
 	entered.emit(id)
 	await _fade_to(0.0)
 	return true
@@ -85,12 +86,22 @@ func exit() -> void:
 		streamer.target = _player
 		streamer.unpin(PIN_OWNER)
 	_set_interior_lighting(false)
+	_set_overworld_active(true)
 	exited.emit(id)
 	await _fade_to(0.0)
 
 
 func _streamer() -> WorldStreamer:
 	return _world.get(&"streamer") as WorldStreamer if &"streamer" in _world else null
+
+
+## Wild Pokémon (and later NPCs) outside pause and hide while the player is indoors.
+func _set_overworld_active(on: bool) -> void:
+	for prop in [&"spawner", &"npcs", &"ambient"]:
+		var n: Variant = _world.get(prop) if prop in _world else null
+		if n is Node3D:
+			(n as Node3D).visible = on
+			(n as Node).process_mode = Node.PROCESS_MODE_INHERIT if on else Node.PROCESS_MODE_DISABLED
 
 
 func _set_interior_lighting(on: bool) -> void:

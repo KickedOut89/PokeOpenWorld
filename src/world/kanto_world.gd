@@ -13,6 +13,7 @@ var interiors: InteriorManager
 var doors: DoorController
 var toast: MessageToast
 var weather_fx: WeatherFx
+var spawner: SpawnNode
 
 
 func _ready() -> void:
@@ -53,6 +54,12 @@ func _ready() -> void:
 	weather_fx.area = streamer.current_area
 	add_child(weather_fx)
 	weather_fx.track_library(streamer.library())
+	spawner = SpawnNode.new()
+	spawner.name = "Wilds"
+	spawner.streamer = streamer
+	spawner.camera = camera
+	spawner.player = player
+	add_child(spawner)
 	toast = MessageToast.new()
 	toast.name = "Toast"
 	add_child(toast)
