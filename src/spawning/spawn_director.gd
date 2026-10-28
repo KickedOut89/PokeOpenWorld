@@ -51,6 +51,8 @@ func tick(player_pos: Vector3, active: Array[Dictionary], zones: Array, period: 
 	var flat := Vector2(player_pos.x, player_pos.z)
 	for a in active:
 		var d := flat.distance_to(Vector2(a.pos.x, a.pos.z))
+		if a.get("in_fight", false):
+			continue
 		if d > DESPAWN_RADIUS:
 			despawn.append(int(a.id))
 			on_removed(StringName(a.get("zone_id", "")), game_minutes)

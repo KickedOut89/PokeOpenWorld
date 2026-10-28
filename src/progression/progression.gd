@@ -26,6 +26,22 @@ static func learn(c: Creature, move: StringName, forget_index: int) -> bool:
 	return true
 
 
+const EV_STAT_CAP := 255
+const EV_TOTAL_CAP := 510
+
+
+## Gen 5 effort values: the foe's yield, at most 255 per stat and 510 in total.
+static func add_evs(c: Creature, yield_: Dictionary) -> void:
+	var total := 0
+	for s in c.evs:
+		total += int(c.evs[s])
+	for s in yield_:
+		var room := mini(EV_STAT_CAP - int(c.evs.get(s, 0)), EV_TOTAL_CAP - total)
+		var add := clampi(int(yield_[s]), 0, maxi(0, room))
+		c.evs[s] = int(c.evs.get(s, 0)) + add
+		total += add
+
+
 ## A cancelled evolution simply waits: the next level-up offers it again.
 static func cancel_evolution(c: Creature) -> void:
 	c.pending_evolution = &""
@@ -40,6 +56,7 @@ static func award(model: FightModel, foes: Array, trainer: bool) -> Array:
 		var c: Creature = model.party.members[i]
 		var events: Array[Dictionary] = []
 		for f in foes:
+			add_evs(c, (f as Creature).rec().get("ev_yield", {}))
 			events.append_array(c.add_exp(exp_for_defeat(f, c.level, ids.size(), trainer)))
 		out.append({"creature": c, "events": events})
 	return out

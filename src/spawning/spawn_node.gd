@@ -51,7 +51,7 @@ func tick_now() -> void:
 		if not is_instance_valid(w):
 			_wilds.erase(id)
 			continue
-		active.append({"id": id, "pos": w.global_position, "zone_id": w.zone_id})
+		active.append({"id": id, "pos": w.global_position, "zone_id": w.zone_id, "in_fight": w.in_fight})
 	var area := streamer.area_at(player.global_position)
 	var r := director.tick(player.global_position, active, _zones(), Clock.model.period(),
 		Weather.weather_for_area(area), _is_visible, game_minutes())

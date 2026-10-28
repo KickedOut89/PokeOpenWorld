@@ -8,6 +8,8 @@ var _q: Label
 var _opts: VBoxContainer
 var _queue: Array = []   # [{question, options, callback}]
 var _current: Dictionary = {}
+var _cursor: int = 0
+var _opened_frame: int = -1
 
 
 func _ready() -> void:
@@ -58,6 +60,8 @@ func _next() -> void:
 	if _queue.is_empty():
 		return
 	_current = _queue.pop_front()
+	_cursor = 0
+	_opened_frame = Engine.get_process_frames()
 	_q.text = _current.question
 	for c in _opts.get_children():
 		c.queue_free()
@@ -67,12 +71,46 @@ func _next() -> void:
 		b.pressed.connect(choose.bind(i))
 		_opts.add_child(b)
 	_panel.visible = true
+	_highlight()
 
 
+func focus_option(i: int) -> void:
+	if not _current.is_empty():
+		_cursor = clampi(i, 0, _current.options.size() - 1)
+		_highlight()
+
+
+func _highlight() -> void:
+	var i := 0
+	for b in _opts.get_children():
+		(b as Button).modulate = Color(1, 1, 0.55) if i == _cursor else Color.WHITE
+		i += 1
+
+
+## Up/down (keys, d-pad, stick) moves the cursor; accept picks it; cancel picks the last
+## option (always the "no / leave / don't learn" choice).
+func _process(_delta: float) -> void:
+	if _current.is_empty() or Engine.get_process_frames() == _opened_frame:
+		return
+	var n: int = _current.options.size()
+	if Input.is_action_just_pressed(&"ui_down"):
+		focus_option((_cursor + 1) % n)
+	elif Input.is_action_just_pressed(&"ui_up"):
+		focus_option((_cursor - 1 + n) % n)
+	elif Input.is_action_just_pressed(&"ui_accept"):
+		choose(_cursor)
+	elif Input.is_action_just_pressed(&"ui_cancel"):
+		choose(n - 1)
+
+
+## Number keys 1-9 pick directly (keyboard only, so a controller's A never auto-answers).
 func _unhandled_input(event: InputEvent) -> void:
 	if _current.is_empty():
 		return
-	for i in 4:
-		if event.is_action_pressed(StringName("move_%d" % (i + 1))):
-			choose(i)
+	if event is InputEventKey and (event as InputEventKey).pressed:
+		var k := (event as InputEventKey).physical_keycode
+		if k >= KEY_1 and k <= KEY_9:
+			choose(k - KEY_1)
+			get_viewport().set_input_as_handled()
+		elif k == KEY_ESCAPE:
 			get_viewport().set_input_as_handled()

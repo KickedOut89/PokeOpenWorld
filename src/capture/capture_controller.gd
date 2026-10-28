@@ -135,6 +135,9 @@ func _tick_sequence(delta: float) -> void:
 
 func _on_caught() -> void:
 	var w := _target
+	if w == null or not is_instance_valid(w):
+		_target = null
+		return
 	var c: Creature = w.creature
 	State.pokedex_caught[c.species] = true
 	State.pokedex_seen[c.species] = true

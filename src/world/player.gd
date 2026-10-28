@@ -16,6 +16,9 @@ var facing: Vector2 = Vector2(0, 1)
 var last_input: Vector2 = Vector2.ZERO
 ## Tests/cutscenes: when not INF, replaces stick/keyboard input.
 var forced_input: Vector2 = Vector2.INF
+## Set every frame by the world while a dialogue/prompt/menu owns input (and for one
+## frame after it closes, so the closing key press is not read again as "talk").
+var ui_blocked: bool = false
 var _hopping: bool = false
 
 @onready var sprite: BillboardSprite = $Sprite
@@ -32,7 +35,7 @@ func _ready() -> void:
 func move_input() -> Vector2:
 	if forced_input != Vector2.INF:
 		return forced_input
-	if not input_enabled:
+	if not input_enabled or ui_blocked:
 		return Vector2.ZERO
 	return Input.get_vector(&"move_left", &"move_right", &"move_up", &"move_down")
 
@@ -60,7 +63,7 @@ func _physics_process(delta: float) -> void:
 			if c is Node and (c as Node).is_in_group(&"ledge"):
 				_hop()
 				break
-	if input_enabled and Input.is_action_just_pressed(&"interact"):
+	if input_enabled and not ui_blocked and Input.is_action_just_pressed(&"interact"):
 		interacted.emit(_interact_target())
 
 

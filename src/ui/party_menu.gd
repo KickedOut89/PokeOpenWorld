@@ -5,6 +5,8 @@ extends CanvasLayer
 
 var _panel: PanelContainer
 var _label: Label
+var can_swap: Callable = func() -> bool: return true
+var can_open: Callable = func() -> bool: return true
 
 
 func _ready() -> void:
@@ -32,7 +34,7 @@ func toggle() -> void:
 
 
 func refresh() -> void:
-	var lines: Array[String] = ["PARTY  (press 1-6 to lead)"]
+	var lines: Array[String] = ["PARTY  (press 1-6 to lead%s)" % ("" if can_swap.call() else " — not during a battle")]
 	for i in State.party.members.size():
 		var c := State.party.members[i]
 		lines.append("%d. %s  Lv%d  HP %d/%d %s" % [i + 1, c.display_name(), c.level, c.hp, c.max_hp(), String(c.status).to_upper()])
@@ -47,6 +49,8 @@ func refresh() -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed(&"menu"):
+		if not _panel.visible and not can_open.call():
+			return
 		toggle()
 		get_viewport().set_input_as_handled()
 		return
@@ -54,5 +58,12 @@ func _unhandled_input(event: InputEvent) -> void:
 		return
 	for i in 6:
 		if event is InputEventKey and (event as InputEventKey).pressed and (event as InputEventKey).physical_keycode == KEY_1 + i:
-			State.party.swap(0, i)
-			refresh()
+			swap_lead(i)
+			get_viewport().set_input_as_handled()
+
+
+func swap_lead(i: int) -> void:
+	if not can_swap.call():
+		return
+	State.party.swap(0, i)
+	refresh()

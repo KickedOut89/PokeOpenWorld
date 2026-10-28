@@ -64,7 +64,19 @@ func _ready() -> void:
 			world.prompts.ask("Welcome back!", ["Continue", "New Game"], func(i: int) -> void:
 				world.player.input_enabled = true
 				if i == 0:
-					world.continue_from_save(SaveService.AUTOSAVE_SLOT))
+					world.continue_from_save(SaveService.AUTOSAVE_SLOT)
+				else:
+					_confirm_new_game(world))
+
+
+## Starting over replaces the only save at the next autosave, so ask first.
+func _confirm_new_game(world: KantoWorld) -> void:
+	world.player.input_enabled = false
+	world.prompts.ask("Start a new game? Your saved progress will be overwritten at the next autosave.",
+		["Yes, start over", "No, continue my save"], func(i: int) -> void:
+			world.player.input_enabled = true
+			if i == 1:
+				world.continue_from_save(SaveService.AUTOSAVE_SLOT))
 
 
 func _process(_delta: float) -> void:

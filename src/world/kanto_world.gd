@@ -28,6 +28,7 @@ var quests: QuestRunner
 var settings_menu: SettingsMenu
 var debug_menu: DebugMenu
 var _npc_t: float = 0.0
+var _ui_busy_frame: int = -10
 
 
 func _ready() -> void:
@@ -89,7 +90,9 @@ func _ready() -> void:
 	dialogue.name = "Dialogue"
 	add_child(dialogue)
 	dialogue.choice_made.connect(func(f: StringName) -> void: State.set_flag(f))
-	dialogue.closed.connect(func() -> void: player.input_enabled = true)
+	dialogue.closed.connect(func() -> void:
+		player.input_enabled = true
+		_ui_busy_frame = Engine.get_physics_frames())
 	player.interacted.connect(_on_interact)
 	ambience = AmbiencePlayer.new()
 	ambience.name = "Ambience"
@@ -132,6 +135,8 @@ func _ready() -> void:
 	Settings.apply()
 	party_menu = PartyMenu.new()
 	party_menu.name = "PartyMenu"
+	party_menu.can_swap = func() -> bool: return not fights.in_fight()
+	party_menu.can_open = func() -> bool: return not (dialogue.is_open() or prompts.is_open())
 	add_child(party_menu)
 	spawner.wild_spawned.connect(func(w: WildPokemon) -> void: w.engaged.connect(func(x: WildPokemon) -> void: fights.start_wild(x)))
 	Saves.in_fight = func() -> bool: return fights != null and fights.in_fight()
@@ -173,7 +178,23 @@ func _check_pallet_exit() -> void:
 		EventBus.message.emit("Professor Oak: Hey! Wait! Don't go out! Wild Pokémon live in tall grass! You need your own Pokémon for protection.")
 
 
+## True while a dialogue, prompt or menu owns the keyboard/controller.
+func ui_busy() -> bool:
+	return (dialogue != null and dialogue.is_open()) or (prompts != null and prompts.is_open()) \
+		or (party_menu != null and party_menu.is_open()) or (settings_menu != null and settings_menu.is_open())
+
+
+## Also true for the frame right after a UI closes, so its closing press isn't reused.
+func ui_locked() -> bool:
+	if ui_busy():
+		_ui_busy_frame = Engine.get_physics_frames()
+		return true
+	return Engine.get_physics_frames() <= _ui_busy_frame + 1
+
+
 func _physics_process(delta: float) -> void:
+	if player != null:
+		player.ui_blocked = ui_locked()
 	_check_pallet_exit()
 	_check_player_attack()
 	_npc_t -= delta
@@ -207,6 +228,8 @@ func _on_interact(target: Node) -> void:
 ## Opens the NPC's context-picked talk line (and its branch, if any).
 ## NPCs with a "service" (heal, mart) perform it instead of small talk.
 func talk_to(rec: Dictionary) -> void:
+	if ui_busy():
+		return
 	if _story_talk(rec):
 		return
 	match String(rec.get("service", "")):
@@ -234,8 +257,10 @@ func talk_to(rec: Dictionary) -> void:
 
 ## Pressing a move key near a wild Pokémon starts the fight (the player "attacks first").
 func _check_player_attack() -> void:
-	if fights == null or fights.in_fight() or not player.input_enabled:
+	if fights == null or fights.in_fight() or not player.input_enabled or player.ui_blocked:
 		return
+	if Input.is_action_just_pressed(&"interact"):
+		return  # on a controller A is both talk and Move 1: talking wins
 	var pressed := false
 	for i in 4:
 		if Input.is_action_just_pressed(StringName("move_%d" % (i + 1))):

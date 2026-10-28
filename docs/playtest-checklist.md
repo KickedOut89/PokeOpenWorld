@@ -8,12 +8,13 @@ unzip it, and run `OpenWorldRemake.exe`. Tick each box and note anything that fe
 | Action | Keyboard / mouse | Controller |
 |---|---|---|
 | Move / run | WASD or arrows / Shift | Left stick / L3 |
-| Talk, enter doors | E or Enter; walk up into a door | A |
+| Talk, enter doors | E or Enter; walk up into a door | A (talking takes priority over Move 1) |
 | Moves 1-4 (in a fight) | 1 2 3 4 | A X Y RB |
 | Dodge-roll | Space | B |
 | Switch Pokémon | Tab | LB |
 | Aim / throw Poké Ball | Hold right mouse / left click or F | LT / RT |
 | Party, bag, money | Esc | Start |
+| Answer a question | Up/Down + Enter, or number keys; Esc = last option (no / leave) | D-pad + A; B = last option |
 | Settings | F2 | — |
 | Save | F5 (also autosaves on area change and doors) | — |
 | Debug tuning (debug builds) | F3 | — |

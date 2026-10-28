@@ -54,7 +54,7 @@ func can_act() -> bool:
 
 ## Returns false if the target already has a status (no overwrite).
 func apply_status(id: StringName, rng: RandomNumberGenerator) -> bool:
-	if status != &"" or is_fainted():
+	if status != &"" or is_fainted() or immune_to(id):
 		return false
 	status = id
 	creature.status = id
@@ -62,6 +62,19 @@ func apply_status(id: StringName, rng: RandomNumberGenerator) -> bool:
 	_par_clock = 0.0
 	_dot_clock = 0.0
 	return true
+
+
+## Gen 5 type immunities: Poison/Steel can't be poisoned, Fire can't be burned, Ice can't freeze.
+func immune_to(id: StringName) -> bool:
+	var t := creature.types()
+	match id:
+		&"psn":
+			return t.has("poison") or t.has("steel")
+		&"brn":
+			return t.has("fire")
+		&"frz":
+			return t.has("ice")
+	return false
 
 
 func clear_status() -> void:

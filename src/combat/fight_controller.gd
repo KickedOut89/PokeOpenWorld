@@ -123,6 +123,8 @@ func _physics_process(delta: float) -> void:
 		foe_actor = null  # e.g. caught by CaptureController this frame
 	if foe_wild != null and not is_instance_valid(foe_wild):
 		foe_wild = null
+	if world.get(&"capture") != null and (world.capture as CaptureController).busy():
+		return  # the battle holds still while a ball is in the air or shaking
 	var me := model.active()
 	var foe := model.current_foe()
 	for c in [me, foe]:
@@ -163,7 +165,7 @@ func _player_input(me: Combatant, delta: float) -> void:
 		dir = forced.get("move", Vector3.ZERO)
 		use = forced.get("use", &"")
 		dodge = forced.get("dodge", false)
-	elif input_enabled:
+	elif input_enabled and not (world.has_method(&"ui_busy") and world.ui_busy()):
 		var v := Input.get_vector(&"move_left", &"move_right", &"move_up", &"move_down")
 		dir = Vector3(v.x, 0, v.y)
 		dodge = Input.is_action_just_pressed(&"dodge")
@@ -180,6 +182,7 @@ func _player_input(me: Combatant, delta: float) -> void:
 	if dodge and not busy and me.dodge():
 		dir = player_actor.facing * 3.0
 	player_actor.drive(dir if not busy else Vector3.ZERO, move_speed(me), delta)
+	_keep_in_bounds(player_actor)
 	if use != &"" and not busy:
 		try_use(&"player", me, use)
 
@@ -310,6 +313,8 @@ func resolve_hit(rec: Dictionary, user: Combatant, target: Combatant, side: Stri
 		if not target.take_hit(dmg, mtype):
 			return 0
 		hud.show_damage(dmg, chart.mult(mtype, target.creature.types()), side)
+		if chart.mult(mtype, target.creature.types()) == 0.0:
+			return 0
 	_apply_secondary(rec, user, target)
 	return dmg
 
@@ -351,6 +356,7 @@ func _foe_think(foe: Combatant, delta: float) -> void:
 		dir = Vector3.ZERO
 	if foe_actor is BattleActor:
 		(foe_actor as BattleActor).drive(dir, move_speed(foe), delta)
+		_keep_in_bounds(foe_actor)
 	elif foe_actor is WildPokemon:
 		var w := foe_actor as WildPokemon
 		w.velocity = Vector3(dir.x, 0, dir.z) * move_speed(foe)
@@ -359,6 +365,21 @@ func _foe_think(foe: Combatant, delta: float) -> void:
 			w.sprite.face(Vector2(dir.x, dir.z))
 		w.sprite.walking = dir != Vector3.ZERO
 		w.move_and_slide()
+
+
+## Trainer battles stay inside the ring; wild fights may leave it (that's how you escape)
+## but not wander off the loaded world.
+const WILD_LEASH := FightModel.RING_RADIUS + 15.0
+
+
+func _keep_in_bounds(body: Node3D) -> void:
+	if body == null or model == null:
+		return
+	var limit := FightModel.RING_RADIUS if model.kind == &"trainer" else WILD_LEASH
+	var off := Vector2(body.global_position.x - model.center.x, body.global_position.z - model.center.z)
+	if off.length() > limit:
+		off = off.normalized() * limit
+		body.global_position = Vector3(model.center.x + off.x, body.global_position.y, model.center.z + off.y)
 
 
 func _finish(r: StringName) -> void:
@@ -388,6 +409,9 @@ func _finish(r: StringName) -> void:
 			fight_won.emit(model, foes_c)
 		&"lost":
 			State.party.heal_all()
+			if foe_wild != null and is_instance_valid(foe_wild):
+				foe_wild.in_fight = false
+				foe_wild.attacked = false
 			if trainer.get("no_blackout", false):
 				State.set_flag(StringName(trainer.get("defeated_flag", "")))
 				EventBus.message.emit(trainer.get("win_line", "The battle is over."))
