@@ -66,3 +66,9 @@ func test_validator_requires_three_context_lines() -> void:
 func test_validator_requires_companion_share_per_town() -> void:
 	var errors := DataValidator.validate(DataDB.load_dir(BAD))
 	assert_true(_has_error(errors, ["area 't'", "companion"]), "\n".join(errors))
+
+
+func test_validator_flags_bad_trainer() -> void:
+	var errors := DataValidator.validate(DataDB.load_dir(BAD))
+	assert_true(_has_error(errors, ["bad_trainer", "missingno"]), "\n".join(errors))
+	assert_true(_has_error(errors, ["bad_trainer", "ghost_npc"]), "\n".join(errors))

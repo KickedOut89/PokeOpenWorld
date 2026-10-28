@@ -19,6 +19,7 @@ var barks: BarkSystem
 var dialogue: DialogueBox
 var ambience: AmbiencePlayer
 var fights: FightController
+var trainer_sight: TrainerSight
 var _npc_t: float = 0.0
 
 
@@ -93,6 +94,13 @@ func _ready() -> void:
 	fights.name = "Fights"
 	fights.world = self
 	add_child(fights)
+	var ai := CombatAI.new(fights.chart, Data.db, fights.rng)
+	fights.ai_brain = func(st: Dictionary) -> Dictionary:
+		return ai.decide(st.me, st.my_pos, st.foe, st.foe_pos, st.ready, st.skill)
+	trainer_sight = TrainerSight.new()
+	trainer_sight.name = "TrainerSight"
+	trainer_sight.world = self
+	add_child(trainer_sight)
 	spawner.wild_spawned.connect(func(w: WildPokemon) -> void: w.engaged.connect(func(x: WildPokemon) -> void: fights.start_wild(x)))
 	toast = MessageToast.new()
 	toast.name = "Toast"

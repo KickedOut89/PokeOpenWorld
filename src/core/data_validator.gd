@@ -17,7 +17,18 @@ static func validate(db: DataDB) -> PackedStringArray:
 	_check_doors(db, out)
 	_check_spawns(db, out)
 	_check_npcs(db, out)
+	_check_trainers(db, out)
 	return out
+
+
+static func _check_trainers(db: DataDB, out: PackedStringArray) -> void:
+	for id in db.table(&"trainers"):
+		var t: Dictionary = db.table(&"trainers")[id]
+		if t.has("npc") and not db.table(&"npcs").has(StringName(t.npc)):
+			out.append("trainers/%s: npc '%s' does not exist" % [id, t.npc])
+		for p in t.get("party", []):
+			if not db.table(&"species").has(StringName(p.get("species", ""))):
+				out.append("trainers/%s: unknown species '%s'" % [id, p.get("species", "")])
 
 
 const MIN_CONTEXT_LINES := 3
