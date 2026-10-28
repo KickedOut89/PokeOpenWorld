@@ -1,0 +1,9 @@
+{
+ "poke_ball": {"id": "poke_ball", "name": "Poké Ball", "kind": "ball", "ball_bonus": 1.0, "price": 200},
+ "potion": {"id": "potion", "name": "Potion", "kind": "medicine", "heal": 20, "price": 300},
+ "antidote": {"id": "antidote", "name": "Antidote", "kind": "medicine", "cures": "psn", "price": 100},
+ "parlyz_heal": {"id": "parlyz_heal", "name": "Parlyz Heal", "kind": "medicine", "cures": "par", "price": 200},
+ "awakening": {"id": "awakening", "name": "Awakening", "kind": "medicine", "cures": "slp", "price": 250},
+ "oaks_parcel": {"id": "oaks_parcel", "name": "Oak's Parcel", "kind": "key"},
+ "town_map": {"id": "town_map", "name": "Town Map", "kind": "key"}
+}
