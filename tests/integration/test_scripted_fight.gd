@@ -9,6 +9,11 @@ func test_scripted_fight() -> void:
 	var world: KantoWorld = load("res://scenes/regions/kanto/kanto_world.tscn").instantiate()
 	add_child_autofree(world)
 	world.spawner.enabled = false
+	for id in Weather.models:  # rain would halve Ember; keep the scenario deterministic
+		var m: WeatherModel = Weather.models[id]
+		m.current = &"clear"
+		m.target = &"clear"
+		m.blend = 1.0
 	await wait_physics_frames(2)
 	var w := WildPokemon.make(Creature.create(&"caterpie", 3, rng, Data.db), world.player.global_position + Vector3(0, 0, -6), &"test")
 	world.spawner.add_child(w)

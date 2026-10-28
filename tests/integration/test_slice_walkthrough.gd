@@ -116,6 +116,10 @@ func test_slice_walkthrough() -> void:
 	assert_eq(JSON.stringify([State.to_dict(), State.party.to_array(), world.quest_state()]), snapshot)
 	# Night: night table and an emptier Viridian.
 	await _go(&"v_plaza_n")
+	var town: WeatherModel = Weather.models[&"kanto_town"]
+	town.current = &"clear"  # storms send residents indoors; compare like with like
+	town.target = &"clear"
+	town.blend = 1.0
 	Clock.model.minutes = 12 * 60.0
 	world.update_npcs()
 	var noon := world.npcs.actor_count()
