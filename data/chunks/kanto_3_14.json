@@ -1,0 +1,169 @@
+{
+ "id": "kanto_3_14",
+ "region": "kanto",
+ "coord": [
+  3,
+  14
+ ],
+ "area": "pallet_town",
+ "cells": [
+  "=.#######.###.TT",
+  "=.#######.....TT",
+  "=........wwwwwTT",
+  "=........w...wTT",
+  "=........w...wTT",
+  "=........ww.wwTT",
+  "=============.TT",
+  "=.ff.###......TT",
+  "=.ff.###......TT",
+  "=sssssssssssssTT",
+  "=~~~~~~~~~~~~~~~",
+  "=~~~~~~~~~~~~~~~",
+  "=~~~~~~~~~~~~~~~",
+  "=~~~~~~~~~~~~~~~",
+  "=~~~~~~~~~~~~~~~",
+  "~~~~~~~~~~~~~~~~"
+ ],
+ "heights": [
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000"
+ ],
+ "props": [
+  {
+   "id": "oaks_lab",
+   "kind": "building",
+   "template": "lab",
+   "pos": [
+    22.0,
+    0.0,
+    0.0
+   ],
+   "rot": 0.0,
+   "footprint": [
+    27.0,
+    15.0
+   ],
+   "height": 6.0,
+   "area": "pallet_town"
+  },
+  {
+   "id": "fishing_shack",
+   "kind": "building",
+   "template": "house_small",
+   "pos": [
+    26.0,
+    0.0,
+    32.0
+   ],
+   "rot": 0.0,
+   "footprint": [
+    11.0,
+    7.0
+   ],
+   "height": 3.5,
+   "area": "pallet_town"
+  },
+  {
+   "id": "pallet_lamp_3",
+   "kind": "lamp",
+   "pos": [
+    6.0,
+    0.0,
+    22.0
+   ],
+   "rot": 0.0,
+   "area": "pallet_town"
+  },
+  {
+   "id": "pallet_lamp_8",
+   "kind": "lamp",
+   "pos": [
+    26.0,
+    0.0,
+    22.0
+   ],
+   "rot": 0.0,
+   "area": "pallet_town"
+  },
+  {
+   "id": "pier_post_b",
+   "kind": "post",
+   "pos": [
+    6.0,
+    0.0,
+    54.0
+   ],
+   "rot": 0.0,
+   "footprint": [
+    0.4,
+    0.4
+   ],
+   "height": 1.0,
+   "color": "#6b4a2b",
+   "area": "pallet_town"
+  }
+ ],
+ "doors": [
+  {
+   "id": "oaks_lab_door",
+   "building": "oaks_lab",
+   "interior": "oaks_lab_int",
+   "pos": [
+    22.0,
+    0.0,
+    8.20000000000005
+   ],
+   "unlock": {
+    "type": "always"
+   },
+   "locked_text": "It's locked.",
+   "area": "pallet_town"
+  },
+  {
+   "id": "oak_greenhouse_door",
+   "building": "oak_greenhouse",
+   "interior": "oak_greenhouse_int",
+   "pos": [
+    46.0,
+    0.0,
+    4.20000000000005
+   ],
+   "unlock": {
+    "type": "pending"
+   },
+   "locked_text": "The greenhouse is locked. Professor Oak keeps the key.",
+   "area": "pallet_town"
+  },
+  {
+   "id": "fishing_shack_door",
+   "building": "fishing_shack",
+   "interior": "fishing_shack_int",
+   "pos": [
+    26.0,
+    0.0,
+    36.2
+   ],
+   "unlock": {
+    "type": "pending"
+   },
+   "locked_text": "The shack is padlocked.",
+   "area": "pallet_town"
+  }
+ ],
+ "spawn_zones": [],
+ "npc_anchors": []
+}

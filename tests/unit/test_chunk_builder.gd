@@ -64,3 +64,25 @@ func test_trees_are_solid() -> void:
 	var n := ChunkBuilder.new(_lib, 1).build(ChunkData.from_record(_record))
 	assert_eq(n.find_children("Tree*", "StaticBody3D", true, false).size(), 16, "row 0 has 16 tree cells")
 	n.free()
+
+
+func _blank_record() -> Dictionary:
+	var cells: Array = []
+	var heights: Array = []
+	for i in 16:
+		cells.append(".".repeat(16))
+		heights.append("0".repeat(16))
+	return {"id": "t", "region": "kanto", "coord": [0, 0], "area": "t", "cells": cells, "heights": heights}
+
+
+func test_stairs_ramp_rises_north() -> void:
+	var rec := _blank_record()
+	rec.cells[5] = "....S..........."
+	rec.heights[4] = "1".repeat(16)
+	var n := ChunkBuilder.new(_lib, 1).build(ChunkData.from_record(rec))
+	var ramp := n.find_child("Stairs_4_5", true, false) as StaticBody3D
+	assert_not_null(ramp)
+	assert_gt(ramp.rotation.x, 0.0, "north (-z) end raised")
+	assert_almost_eq(ramp.rotation.x, atan(1.0 / 4.0), 0.001)
+	assert_eq(n.get_node("Ground").get_cell_item(Vector3i(17, 0, 21)), GridMap.INVALID_CELL_ITEM, "no flat tile under the ramp")
+	n.free()

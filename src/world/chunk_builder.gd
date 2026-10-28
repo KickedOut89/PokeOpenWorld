@@ -62,6 +62,9 @@ func _build_cell(data: ChunkData, x: int, y: int, grid: GridMap, terrain: Static
 		return
 	var def: Dictionary = _tileset.get(ch, {})
 	var lvl := data.level(x, y)
+	if def.get("stairs", false):
+		props.add_child(_stairs(x, y, lvl, def))
+		return
 	var ids: PackedInt32Array = _items[ch]
 	for ty in 4:
 		for tx in 4:
@@ -90,6 +93,33 @@ func _build_cell(data: ChunkData, x: int, y: int, grid: GridMap, terrain: Static
 		col.position = Vector3(CELL * 0.5, 0.5, 0.15)
 		ledge.add_child(col)
 		props.add_child(ledge)
+
+
+## Ramp from this cell's level at its south edge up one level at its north edge.
+func _stairs(x: int, y: int, lvl: int, def: Dictionary) -> StaticBody3D:
+	var body := StaticBody3D.new()
+	body.name = "Stairs_%d_%d" % [x, y]
+	var angle := atan(ChunkData.LEVEL_M / CELL)
+	var length := sqrt(CELL * CELL + ChunkData.LEVEL_M * ChunkData.LEVEL_M)
+	body.position = Vector3(x * CELL + 2, lvl + ChunkData.LEVEL_M * 0.5, y * CELL + 2)
+	body.rotation.x = angle
+	var size := Vector3(CELL, 0.4, length)
+	var col := CollisionShape3D.new()
+	var s := BoxShape3D.new()
+	s.size = size
+	col.shape = s
+	col.position.y = -0.2
+	body.add_child(col)
+	var mi := MeshInstance3D.new()
+	var m := BoxMesh.new()
+	m.size = size
+	var mat := StandardMaterial3D.new()
+	mat.albedo_color = Color(def.get("color", "#b9a27a"))
+	m.material = mat
+	mi.mesh = m
+	mi.position.y = -0.2
+	body.add_child(mi)
+	return body
 
 
 func _add_box(body: StaticBody3D, center: Vector3, size: Vector3) -> void:

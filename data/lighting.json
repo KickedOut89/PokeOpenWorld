@@ -8,8 +8,8 @@
     "sky_top": "#0b1430",
     "sky_horizon": "#1c2a4a",
     "ambient_energy": 0.25,
-    "fog_density": 0.006,
-    "volumetric_density": 0.02,
+    "fog_density": 0.003,
+    "volumetric_density": 0.01,
     "exposure": 1.15,
     "grade": "night"
    },
@@ -19,8 +19,8 @@
     "sky_top": "#0f1836",
     "sky_horizon": "#282e4e",
     "ambient_energy": 0.2625,
-    "fog_density": 0.007,
-    "volumetric_density": 0.0238,
+    "fog_density": 0.0035,
+    "volumetric_density": 0.0119,
     "exposure": 1.1375,
     "grade": "night"
    },
@@ -30,8 +30,8 @@
     "sky_top": "#121c3c",
     "sky_horizon": "#333252",
     "ambient_energy": 0.275,
-    "fog_density": 0.008,
-    "volumetric_density": 0.0275,
+    "fog_density": 0.004,
+    "volumetric_density": 0.0138,
     "exposure": 1.125,
     "grade": "night"
    },
@@ -41,8 +41,8 @@
     "sky_top": "#162042",
     "sky_horizon": "#3e3656",
     "ambient_energy": 0.2875,
-    "fog_density": 0.009,
-    "volumetric_density": 0.0312,
+    "fog_density": 0.0045,
+    "volumetric_density": 0.0156,
     "exposure": 1.1125,
     "grade": "night"
    },
@@ -52,8 +52,8 @@
     "sky_top": "#1a2448",
     "sky_horizon": "#4a3a5a",
     "ambient_energy": 0.3,
-    "fog_density": 0.01,
-    "volumetric_density": 0.035,
+    "fog_density": 0.005,
+    "volumetric_density": 0.0175,
     "exposure": 1.1,
     "grade": "night"
    },
@@ -63,8 +63,8 @@
     "sky_top": "#344f80",
     "sky_horizon": "#9e7672",
     "ambient_energy": 0.425,
-    "fog_density": 0.011,
-    "volumetric_density": 0.0375,
+    "fog_density": 0.0055,
+    "volumetric_density": 0.0187,
     "exposure": 1.05,
     "grade": "night"
    },
@@ -74,8 +74,8 @@
     "sky_top": "#4d7ab8",
     "sky_horizon": "#f2b38a",
     "ambient_energy": 0.55,
-    "fog_density": 0.012,
-    "volumetric_density": 0.04,
+    "fog_density": 0.006,
+    "volumetric_density": 0.02,
     "exposure": 1.0,
     "grade": "morning"
    },
@@ -85,8 +85,8 @@
     "sky_top": "#5282c3",
     "sky_horizon": "#e1bfac",
     "ambient_energy": 0.6333,
-    "fog_density": 0.0093,
-    "volumetric_density": 0.0317,
+    "fog_density": 0.0046,
+    "volumetric_density": 0.0158,
     "exposure": 1.0,
     "grade": "morning"
    },
@@ -96,8 +96,8 @@
     "sky_top": "#588bcd",
     "sky_horizon": "#d0cccd",
     "ambient_energy": 0.7167,
-    "fog_density": 0.0067,
-    "volumetric_density": 0.0233,
+    "fog_density": 0.0034,
+    "volumetric_density": 0.0117,
     "exposure": 1.0,
     "grade": "morning"
    },
@@ -107,8 +107,8 @@
     "sky_top": "#5d93d8",
     "sky_horizon": "#bfd8ef",
     "ambient_energy": 0.8,
-    "fog_density": 0.004,
-    "volumetric_density": 0.015,
+    "fog_density": 0.002,
+    "volumetric_density": 0.0075,
     "exposure": 1.0,
     "grade": "morning"
    },
@@ -118,8 +118,8 @@
     "sky_top": "#5790d8",
     "sky_horizon": "#bdd7ef",
     "ambient_energy": 0.85,
-    "fog_density": 0.0033,
-    "volumetric_density": 0.0133,
+    "fog_density": 0.0016,
+    "volumetric_density": 0.0066,
     "exposure": 1.0,
     "grade": "morning"
    },
@@ -129,8 +129,8 @@
     "sky_top": "#508dd8",
     "sky_horizon": "#bad5f0",
     "ambient_energy": 0.9,
-    "fog_density": 0.0027,
-    "volumetric_density": 0.0117,
+    "fog_density": 0.0014,
+    "volumetric_density": 0.0059,
     "exposure": 1.0,
     "grade": "morning"
    },
@@ -140,8 +140,8 @@
     "sky_top": "#4a8ad8",
     "sky_horizon": "#b8d4f0",
     "ambient_energy": 0.95,
-    "fog_density": 0.002,
-    "volumetric_density": 0.01,
+    "fog_density": 0.001,
+    "volumetric_density": 0.005,
     "exposure": 1.0,
     "grade": "day"
    },
@@ -151,8 +151,8 @@
     "sky_top": "#4e8bd6",
     "sky_horizon": "#bcd5ee",
     "ambient_energy": 0.925,
-    "fog_density": 0.0023,
-    "volumetric_density": 0.0105,
+    "fog_density": 0.0011,
+    "volumetric_density": 0.0053,
     "exposure": 1.0,
     "grade": "day"
    },
@@ -162,8 +162,8 @@
     "sky_top": "#528cd4",
     "sky_horizon": "#c0d6ec",
     "ambient_energy": 0.9,
-    "fog_density": 0.0025,
-    "volumetric_density": 0.011,
+    "fog_density": 0.0013,
+    "volumetric_density": 0.0055,
     "exposure": 1.0,
     "grade": "day"
    },
@@ -173,8 +173,8 @@
     "sky_top": "#568ed2",
     "sky_horizon": "#c4d7ea",
     "ambient_energy": 0.875,
-    "fog_density": 0.0027,
-    "volumetric_density": 0.0115,
+    "fog_density": 0.0014,
+    "volumetric_density": 0.0057,
     "exposure": 1.0,
     "grade": "day"
    },
@@ -184,8 +184,8 @@
     "sky_top": "#5a8fd0",
     "sky_horizon": "#c8d8e8",
     "ambient_energy": 0.85,
-    "fog_density": 0.003,
-    "volumetric_density": 0.012,
+    "fog_density": 0.0015,
+    "volumetric_density": 0.006,
     "exposure": 1.0,
     "grade": "day"
    },
@@ -195,8 +195,8 @@
     "sky_top": "#5274b4",
     "sky_horizon": "#dcb09c",
     "ambient_energy": 0.725,
-    "fog_density": 0.0045,
-    "volumetric_density": 0.021,
+    "fog_density": 0.0022,
+    "volumetric_density": 0.0105,
     "exposure": 1.025,
     "grade": "day"
    },
@@ -206,8 +206,8 @@
     "sky_top": "#4a5a98",
     "sky_horizon": "#f08850",
     "ambient_energy": 0.6,
-    "fog_density": 0.006,
-    "volumetric_density": 0.03,
+    "fog_density": 0.003,
+    "volumetric_density": 0.015,
     "exposure": 1.05,
     "grade": "evening"
    },
@@ -217,8 +217,8 @@
     "sky_top": "#333d74",
     "sky_horizon": "#a56155",
     "ambient_energy": 0.475,
-    "fog_density": 0.006,
-    "volumetric_density": 0.0275,
+    "fog_density": 0.003,
+    "volumetric_density": 0.0138,
     "exposure": 1.075,
     "grade": "evening"
    },
@@ -228,8 +228,8 @@
     "sky_top": "#1c2050",
     "sky_horizon": "#5a3a5a",
     "ambient_energy": 0.35,
-    "fog_density": 0.006,
-    "volumetric_density": 0.025,
+    "fog_density": 0.003,
+    "volumetric_density": 0.0125,
     "exposure": 1.1,
     "grade": "night"
    },
@@ -239,8 +239,8 @@
     "sky_top": "#181d48",
     "sky_horizon": "#4a3656",
     "ambient_energy": 0.325,
-    "fog_density": 0.006,
-    "volumetric_density": 0.0238,
+    "fog_density": 0.003,
+    "volumetric_density": 0.0119,
     "exposure": 1.1125,
     "grade": "night"
    },
@@ -250,8 +250,8 @@
     "sky_top": "#141a40",
     "sky_horizon": "#3b3252",
     "ambient_energy": 0.3,
-    "fog_density": 0.006,
-    "volumetric_density": 0.0225,
+    "fog_density": 0.003,
+    "volumetric_density": 0.0112,
     "exposure": 1.125,
     "grade": "night"
    },
@@ -261,8 +261,8 @@
     "sky_top": "#0f1738",
     "sky_horizon": "#2c2e4e",
     "ambient_energy": 0.275,
-    "fog_density": 0.006,
-    "volumetric_density": 0.0213,
+    "fog_density": 0.003,
+    "volumetric_density": 0.0106,
     "exposure": 1.1375,
     "grade": "night"
    }
@@ -311,24 +311,24 @@
   },
   "grades": {
    "morning": [
-    "#3a3048",
-    "#d8b8a0",
-    "#fff0d8"
+    "#08080c",
+    "#827d78",
+    "#fff6ec"
    ],
    "day": [
-    "#28303a",
-    "#b8c0b8",
-    "#fffaf0"
+    "#000000",
+    "#7f8080",
+    "#ffffff"
    ],
    "evening": [
-    "#3a2838",
-    "#d89070",
-    "#ffe0b0"
+    "#0a0808",
+    "#847a74",
+    "#fff2e4"
    ],
    "night": [
-    "#0a1020",
-    "#506080",
-    "#c8d8ff"
+    "#000008",
+    "#56627c",
+    "#d8e4ff"
    ]
   },
   "moon_energy": 0.35

@@ -1,0 +1,111 @@
+{
+ "id": "kanto_2_12",
+ "region": "kanto",
+ "coord": [
+  2,
+  12
+ ],
+ "area": "route_1",
+ "cells": [
+  "TTT^^^SS^^^^^^^^",
+  "TTT...==========",
+  "TTT...==========",
+  "TTT...........==",
+  "TTT...........==",
+  "TTT.####......==",
+  "TTT.####......==",
+  "TTT.####......==",
+  "TTT...........==",
+  "TTTdddddddd...==",
+  "TTTdddddddd...==",
+  "TTTdddddddd...==",
+  "TTTdddddddd...==",
+  "TTTwwwwwwww...==",
+  "TTT...........==",
+  "TTT...........=="
+ ],
+ "heights": [
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000"
+ ],
+ "props": [
+  {
+   "id": "berry_farmer_cottage",
+   "kind": "building",
+   "template": "house_small",
+   "pos": [
+    24.0,
+    0.0,
+    26.0
+   ],
+   "rot": 0.0,
+   "footprint": [
+    15.0,
+    11.0
+   ],
+   "height": 4.5,
+   "area": "route_1"
+  },
+  {
+   "id": "route1_sign",
+   "kind": "sign",
+   "pos": [
+    54.0,
+    0.0,
+    54.0
+   ],
+   "rot": 0.0,
+   "footprint": [
+    0.8,
+    0.2
+   ],
+   "height": 1.4,
+   "color": "#8a6a45",
+   "area": "route_1"
+  }
+ ],
+ "doors": [
+  {
+   "id": "berry_farmer_cottage_door",
+   "building": "berry_farmer_cottage",
+   "interior": "berry_farmer_cottage_int",
+   "pos": [
+    24.0,
+    0.0,
+    32.2
+   ],
+   "unlock": {
+    "type": "pending"
+   },
+   "locked_text": "A note says: 'Out picking berries.'",
+   "area": "route_1"
+  }
+ ],
+ "spawn_zones": [],
+ "npc_anchors": [
+  {
+   "id": "berry_field",
+   "pos": [
+    26.0,
+    0.0,
+    42.0
+   ],
+   "kind": "work",
+   "area": "route_1"
+  }
+ ]
+}

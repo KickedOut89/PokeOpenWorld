@@ -3,8 +3,8 @@ extends Camera3D
 ## Fixed-pitch follow camera for the HD-2D look: narrow FOV, high angle, smooth follow.
 
 @export var pitch_deg: float = 35.0
-@export var distance: float = 22.0
-@export var combat_distance: float = 16.0
+@export var distance: float = 42.0
+@export var combat_distance: float = 32.0
 @export var follow_lerp: float = 8.0
 
 var target: Node3D

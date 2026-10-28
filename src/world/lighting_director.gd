@@ -56,16 +56,18 @@ func _build() -> void:
 	env.volumetric_fog_enabled = true
 	env.volumetric_fog_length = 96.0
 	env.adjustment_enabled = true
+	env.adjustment_saturation = 1.12
+	env.adjustment_contrast = 1.06
 	world_env = WorldEnvironment.new()
 	world_env.environment = env
 	var cam_attr := CameraAttributesPractical.new()
 	cam_attr.dof_blur_far_enabled = true
-	cam_attr.dof_blur_far_distance = 30.0
-	cam_attr.dof_blur_far_transition = 25.0
-	cam_attr.dof_blur_near_enabled = true
-	cam_attr.dof_blur_near_distance = 8.0
-	cam_attr.dof_blur_near_transition = 4.0
-	cam_attr.dof_blur_amount = 0.08
+	cam_attr.dof_blur_far_distance = 70.0
+	cam_attr.dof_blur_far_transition = 40.0
+	cam_attr.dof_blur_near_enabled = false
+	cam_attr.dof_blur_near_distance = 24.0
+	cam_attr.dof_blur_near_transition = 8.0
+	cam_attr.dof_blur_amount = 0.04
 	world_env.camera_attributes = cam_attr
 	add_child(world_env)
 	sun = DirectionalLight3D.new()
@@ -105,6 +107,7 @@ func _process(_delta: float) -> void:
 	_sky_mat.ground_horizon_color = s.sky_horizon
 	env.ambient_light_energy = s.ambient_energy
 	env.fog_density = s.fog_density
+	env.fog_light_color = s.sky_horizon.lerp(Color.GRAY, 0.3)
 	env.volumetric_fog_density = s.volumetric_density
 	env.tonemap_exposure = s.exposure
 	if _grades.has(s.lut):
@@ -112,7 +115,6 @@ func _process(_delta: float) -> void:
 	if world_env.camera_attributes is CameraAttributesPractical:
 		var ca := world_env.camera_attributes as CameraAttributesPractical
 		ca.dof_blur_far_enabled = GraphicsPresets.dof_enabled()
-		ca.dof_blur_near_enabled = GraphicsPresets.dof_enabled()
 	if s.lamps_on != lamps_on:
 		lamps_on = s.lamps_on
 		EventBus.lamps_changed.emit(lamps_on)

@@ -18,6 +18,7 @@ var _hopping: bool = false
 
 
 func _ready() -> void:
+	InputSetup.register()
 	add_to_group(&"player")
 	var assets := get_node_or_null(^"/root/Assets")
 	if assets != null:

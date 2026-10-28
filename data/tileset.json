@@ -1,14 +1,89 @@
 {
- ".": {"id": ".", "tile": "grass_short", "color": "#7cb35a", "variants": 3},
- "\"": {"id": "\"", "tile": "grass_tall", "color": "#4f9a3a", "variants": 2, "tall_grass": true},
- "T": {"id": "T", "tile": "forest_floor", "color": "#4d7a3a", "variants": 2, "tree": true, "solid": true},
- "~": {"id": "~", "tile": "water", "color": "#3f7fcf", "variants": 1, "water": true, "solid": true},
- "=": {"id": "=", "tile": "path", "color": "#cbb68a", "variants": 3},
- "#": {"id": "#", "tile": "pavement", "color": "#a9a39a", "variants": 2},
- "^": {"id": "^", "tile": "ledge", "color": "#8a6a45", "variants": 1, "ledge": true},
- "f": {"id": "f", "tile": "flowers", "color": "#b5c95a", "variants": 3},
- "s": {"id": "s", "tile": "sand", "color": "#e3d39b", "variants": 2},
- "d": {"id": "d", "tile": "dirt", "color": "#9a7a52", "variants": 2},
- "w": {"id": "w", "tile": "fence", "color": "#d8d0c0", "variants": 1, "solid": true},
- "r": {"id": "r", "tile": "rock", "color": "#8d8d86", "variants": 1, "solid": true}
+ ".": {
+  "id": ".",
+  "tile": "grass_short",
+  "color": "#7cb35a",
+  "variants": 3
+ },
+ "\"": {
+  "id": "\"",
+  "tile": "grass_tall",
+  "color": "#4f9a3a",
+  "variants": 2,
+  "tall_grass": true
+ },
+ "T": {
+  "id": "T",
+  "tile": "forest_floor",
+  "color": "#4d7a3a",
+  "variants": 2,
+  "tree": true,
+  "solid": true
+ },
+ "~": {
+  "id": "~",
+  "tile": "water",
+  "color": "#3f7fcf",
+  "variants": 1,
+  "water": true,
+  "solid": true
+ },
+ "=": {
+  "id": "=",
+  "tile": "path",
+  "color": "#cbb68a",
+  "variants": 3
+ },
+ "#": {
+  "id": "#",
+  "tile": "pavement",
+  "color": "#a9a39a",
+  "variants": 2
+ },
+ "^": {
+  "id": "^",
+  "tile": "ledge",
+  "color": "#8a6a45",
+  "variants": 1,
+  "ledge": true
+ },
+ "f": {
+  "id": "f",
+  "tile": "flowers",
+  "color": "#b5c95a",
+  "variants": 3
+ },
+ "s": {
+  "id": "s",
+  "tile": "sand",
+  "color": "#e3d39b",
+  "variants": 2
+ },
+ "d": {
+  "id": "d",
+  "tile": "dirt",
+  "color": "#9a7a52",
+  "variants": 2
+ },
+ "w": {
+  "id": "w",
+  "tile": "fence",
+  "color": "#d8d0c0",
+  "variants": 1,
+  "solid": true
+ },
+ "r": {
+  "id": "r",
+  "tile": "rock",
+  "color": "#8d8d86",
+  "variants": 1,
+  "solid": true
+ },
+ "S": {
+  "id": "S",
+  "tile": "stairs",
+  "color": "#b9a27a",
+  "variants": 1,
+  "stairs": true
+ }
 }

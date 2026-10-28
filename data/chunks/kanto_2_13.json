@@ -1,0 +1,235 @@
+{
+ "id": "kanto_2_13",
+ "region": "kanto",
+ "coord": [
+  2,
+  13
+ ],
+ "area": "pallet_town",
+ "cells": [
+  "TTTTTTTTTTTTTT==",
+  "TTTTTTTTTTTTTT==",
+  "TT.fffff.......=",
+  "TT.###ff.####..=",
+  "TT.###...####..=",
+  "TT.###...####..=",
+  "TT.............=",
+  "TTwwwww........=",
+  "TTdTdTd###.....=",
+  "TTTdTdT###.....=",
+  "TTwwwww###.....=",
+  "TT.............=",
+  "TT.=============",
+  "TT.............=",
+  "TT..####.......=",
+  "TT..####.......="
+ ],
+ "heights": [
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000",
+  "0000000000000000"
+ ],
+ "props": [
+  {
+   "id": "player_house",
+   "kind": "building",
+   "template": "house_small",
+   "pos": [
+    34.0,
+    0.0,
+    38.0
+   ],
+   "rot": 0.0,
+   "footprint": [
+    11.0,
+    11.0
+   ],
+   "height": 4.5,
+   "area": "pallet_town"
+  },
+  {
+   "id": "pallet_cafe",
+   "kind": "building",
+   "template": "shop",
+   "pos": [
+    24.0,
+    0.0,
+    62.0
+   ],
+   "rot": 0.0,
+   "footprint": [
+    15.0,
+    11.0
+   ],
+   "height": 4.5,
+   "area": "pallet_town"
+  },
+  {
+   "id": "pallet_house_1",
+   "kind": "building",
+   "template": "house_small",
+   "pos": [
+    18.0,
+    0.0,
+    18.0
+   ],
+   "rot": 0.0,
+   "footprint": [
+    11.0,
+    11.0
+   ],
+   "height": 4.5,
+   "area": "pallet_town"
+  },
+  {
+   "id": "pallet_barn",
+   "kind": "building",
+   "template": "barn",
+   "pos": [
+    44.0,
+    0.0,
+    18.0
+   ],
+   "rot": 0.0,
+   "footprint": [
+    15.0,
+    11.0
+   ],
+   "height": 5.5,
+   "area": "pallet_town"
+  },
+  {
+   "id": "pallet_lamp_0",
+   "kind": "lamp",
+   "pos": [
+    58.0,
+    0.0,
+    26.0
+   ],
+   "rot": 0.0,
+   "area": "pallet_town"
+  },
+  {
+   "id": "pallet_lamp_2",
+   "kind": "lamp",
+   "pos": [
+    58.0,
+    0.0,
+    54.0
+   ],
+   "rot": 0.0,
+   "area": "pallet_town"
+  },
+  {
+   "id": "pallet_lamp_5",
+   "kind": "lamp",
+   "pos": [
+    34.0,
+    0.0,
+    54.0
+   ],
+   "rot": 0.0,
+   "area": "pallet_town"
+  },
+  {
+   "id": "pallet_sign",
+   "kind": "sign",
+   "pos": [
+    54.0,
+    0.0,
+    10.0
+   ],
+   "rot": 0.0,
+   "footprint": [
+    0.8,
+    0.2
+   ],
+   "height": 1.4,
+   "color": "#8a6a45",
+   "area": "pallet_town"
+  }
+ ],
+ "doors": [
+  {
+   "id": "player_house_door",
+   "building": "player_house",
+   "interior": "player_house_int",
+   "pos": [
+    34.0,
+    0.0,
+    44.2
+   ],
+   "unlock": {
+    "type": "always"
+   },
+   "locked_text": "It's locked.",
+   "area": "pallet_town"
+  },
+  {
+   "id": "pallet_house_1_door",
+   "building": "pallet_house_1",
+   "interior": "pallet_house_1_int",
+   "pos": [
+    18.0,
+    0.0,
+    24.2
+   ],
+   "unlock": {
+    "type": "pending"
+   },
+   "locked_text": "No one's home.",
+   "area": "pallet_town"
+  },
+  {
+   "id": "pallet_barn_door",
+   "building": "pallet_barn",
+   "interior": "pallet_barn_int",
+   "pos": [
+    44.0,
+    0.0,
+    24.2
+   ],
+   "unlock": {
+    "type": "pending"
+   },
+   "locked_text": "The barn door is barred from inside.",
+   "area": "pallet_town"
+  }
+ ],
+ "spawn_zones": [],
+ "npc_anchors": [
+  {
+   "id": "player_spawn",
+   "pos": [
+    34.0,
+    0.0,
+    45.5
+   ],
+   "kind": "spawn",
+   "area": "pallet_town"
+  },
+  {
+   "id": "pallet_square",
+   "pos": [
+    62.0,
+    0.0,
+    50.0
+   ],
+   "kind": "spot",
+   "area": "pallet_town"
+  }
+ ]
+}
