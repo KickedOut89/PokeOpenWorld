@@ -1,3 +1,5 @@
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import Area
 
 # ---------------- Pallet Town: 32x32 cells at region cells (32, 208) ----------------
