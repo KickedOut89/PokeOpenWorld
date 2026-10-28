@@ -3,3 +3,4 @@ build/
 /user_assets/
 *.tmp
 .superpowers/
+__pycache__/
