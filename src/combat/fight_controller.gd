@@ -387,9 +387,12 @@ func _finish(r: StringName) -> void:
 				State.set_flag(StringName(trainer.get("defeated_flag", "")))
 			fight_won.emit(model, foes_c)
 		&"lost":
-			State.money = maxi(0, State.money - FightModel.blackout_money_loss(State.badges, State.party.highest_level()))
 			State.party.heal_all()
-			if not trainer.get("no_blackout", false):
+			if trainer.get("no_blackout", false):
+				State.set_flag(StringName(trainer.get("defeated_flag", "")))
+				EventBus.message.emit(trainer.get("win_line", "The battle is over."))
+			else:
+				State.money = maxi(0, State.money - FightModel.blackout_money_loss(State.badges, State.party.highest_level()))
 				var anchor := &"player_spawn" if State.last_center == &"pallet_home" else StringName(String(State.last_center) + "_front")
 				if world.has_method(&"teleport_to_anchor"):
 					world.teleport_to_anchor(anchor)

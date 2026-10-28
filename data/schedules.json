@@ -44,6 +44,10 @@
    }
   ]
  },
+ "rival_blue_day": {
+  "id": "rival_blue_day",
+  "blocks": []
+ },
  "lab_aide_ken_day": {
   "id": "lab_aide_ken_day",
   "blocks": [

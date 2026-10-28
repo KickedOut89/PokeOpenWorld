@@ -1,1 +1,26 @@
-{"id": "oaks_lab_int", "template": "lab", "furnishing": [{"kind": "ball_table", "pos": [0, 0, -0.5], "size": [3.0, 0.9, 1.0], "color": "#c8c8c8"}], "npcs": ["professor_oak", "lab_aide"], "lighting": "interior_cool"}
+{
+ "id": "oaks_lab_int",
+ "template": "lab",
+ "furnishing": [
+  {
+   "kind": "ball_table",
+   "pos": [
+    0,
+    0,
+    -0.5
+   ],
+   "size": [
+    3.0,
+    0.9,
+    1.0
+   ],
+   "color": "#c8c8c8"
+  }
+ ],
+ "npcs": [
+  "professor_oak",
+  "rival_blue",
+  "lab_aide_ken"
+ ],
+ "lighting": "interior_cool"
+}

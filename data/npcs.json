@@ -36,6 +36,15 @@
   "dialogue": "professor_oak",
   "sprite": "default"
  },
+ "rival_blue": {
+  "id": "rival_blue",
+  "name": "Blue",
+  "role": "resident",
+  "home": "rival_house_door",
+  "schedule": "rival_blue_day",
+  "dialogue": "rival_blue",
+  "sprite": "default"
+ },
  "lab_aide_ken": {
   "id": "lab_aide_ken",
   "name": "Lab Aide Ken",

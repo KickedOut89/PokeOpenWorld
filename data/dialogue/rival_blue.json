@@ -1,0 +1,57 @@
+{
+ "id": "rival_blue",
+ "barks": [
+  {
+   "text": "Smell ya later!"
+  },
+  {
+   "text": "Morning! Best part of the day.",
+   "when": {
+    "periods": [
+     "morning"
+    ]
+   }
+  },
+  {
+   "text": "Sun's going down. Time to head home soon.",
+   "when": {
+    "periods": [
+     "evening"
+    ]
+   }
+  },
+  {
+   "text": "Ugh, I'm soaked!",
+   "when": {
+    "weather": [
+     "rain"
+    ]
+   }
+  },
+  {
+   "text": "Pikachu love this weather. I don't.",
+   "when": {
+    "weather": [
+     "thunderstorm"
+    ]
+   }
+  }
+ ],
+ "talk": [
+  {
+   "text": "Gramps promised me a Pok\u00e9mon. I'm gonna be the best Trainer ever \u2014 way better than you!"
+  },
+  {
+   "text": "Is that your partner? It looks strong! Gramps promised me a Pok\u00e9mon. I'm gonna be the best Trainer ever \u2014 way better than you!",
+   "when": {
+    "flag": "got_starter"
+   }
+  },
+  {
+   "text": "A Pok\u00e9dex! Professor Oak must trust you.",
+   "when": {
+    "flag": "got_pokedex"
+   }
+  }
+ ]
+}

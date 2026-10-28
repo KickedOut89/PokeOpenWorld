@@ -59,6 +59,8 @@ npc('daisy', 'Daisy', 'resident', 'rival_house_door', [(10, 12, 'pallet_east_law
 npc('professor_oak', 'Professor Oak', 'resident', 'oaks_lab_door', [(6, 8, 'pallet_greenhouse_front', 'research')],
     "Ah, there you are! The world of Pokémon awaits. Come to my lab when you're ready.", "Hmm... fascinating behavior.",
     extra_talk=[{"text": "Have you delivered my parcel yet? The Mart in Viridian is holding it.", "when": {"flag": "got_starter", "not_flag": "got_pokedex"}}])
+npc('rival_blue', 'Blue', 'resident', 'rival_house_door', [],
+    "Gramps promised me a Pokémon. I'm gonna be the best Trainer ever — way better than you!", "Smell ya later!")
 npc('lab_aide_ken', 'Lab Aide Ken', 'resident', 'pallet_house_2_door', [(7, 9, 'pallet_pen', 'feeding'), (13, 15, 'pallet_pen', 'observing'), (19, 20, 'pallet_square', 'walk')],
     "The Pokémon in the pen are research partners. Don't startle them!", "Twelve Rattata counted. Or was it thirteen?", companion='pidgey', weather=U)
 npc('cafe_owner_mae', 'Mae', 'resident', 'pallet_cafe_door', [(7, 8, 'pallet_cafe_front', 'sweeping'), (20, 21, 'pallet_square', 'walk')],

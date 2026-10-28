@@ -24,6 +24,7 @@ var capture: CaptureController
 var prompts: PromptBox
 var progression: ProgressionUI
 var party_menu: PartyMenu
+var quests: QuestRunner
 var _npc_t: float = 0.0
 
 
@@ -116,6 +117,9 @@ func _ready() -> void:
 	progression.prompts = prompts
 	add_child(progression)
 	fights.fight_won.connect(func(m: FightModel, foes: Array) -> void: progression.on_fight_won(m, foes, m.kind == &"trainer"))
+	quests = QuestRunner.new()
+	quests.name = "Quests"
+	add_child(quests)
 	party_menu = PartyMenu.new()
 	party_menu.name = "PartyMenu"
 	add_child(party_menu)
@@ -145,7 +149,22 @@ func find_anchor(id: StringName) -> Vector3:
 	return Vector3.ZERO
 
 
+## Without a Pokémon, Oak stops you at Pallet Town's north edge.
+const PALLET_NORTH_Z := 843.0
+const PALLET_X := Vector2(128.0, 256.0)
+
+
+func _check_pallet_exit() -> void:
+	if State.has_flag(&"got_starter") or interiors.is_inside():
+		return
+	var p := player.global_position
+	if p.z < PALLET_NORTH_Z and p.z > PALLET_NORTH_Z - 20.0 and p.x > PALLET_X.x and p.x < PALLET_X.y:
+		player.global_position.z = PALLET_NORTH_Z + 5.0
+		EventBus.message.emit("Professor Oak: Hey! Wait! Don't go out! Wild Pokémon live in tall grass! You need your own Pokémon for protection.")
+
+
 func _physics_process(delta: float) -> void:
+	_check_pallet_exit()
 	_check_player_attack()
 	_npc_t -= delta
 	if _npc_t <= 0.0:
@@ -178,6 +197,8 @@ func _on_interact(target: Node) -> void:
 ## Opens the NPC's context-picked talk line (and its branch, if any).
 ## NPCs with a "service" (heal, mart) perform it instead of small talk.
 func talk_to(rec: Dictionary) -> void:
+	if _story_talk(rec):
+		return
 	match String(rec.get("service", "")):
 		"heal":
 			var center := StringName(rec.get("center", "viridian_center"))
@@ -223,9 +244,49 @@ func _check_player_attack() -> void:
 		fights.start_wild(best)
 
 
-## Quests (Task 29) can claim an NPC conversation first; false = carry on normally.
-func _quest_handles_talk(_npc_id: StringName) -> bool:
+## The Mart clerk hands over Oak's Parcel once you have a Pokémon.
+func _quest_handles_talk(npc_id: StringName) -> bool:
+	if npc_id == &"mart_clerk" and State.has_flag(&"got_starter") and not State.has_flag(&"got_parcel"):
+		EventBus.message.emit("Mart Clerk: You're from Pallet Town? Professor Oak ordered this. Would you take it to him?")
+		State.set_flag(&"got_parcel")
+		return true
 	return false
+
+
+## Story beats that override normal small talk. Returns true when handled.
+func _story_talk(rec: Dictionary) -> bool:
+	var id := StringName(rec.get("id", ""))
+	if id == &"professor_oak" and not State.has_flag(&"got_starter"):
+		prompts.ask("Professor Oak: Here, take one of these three Pokémon!", ["Bulbasaur", "Charmander", "Squirtle"],
+			func(i: int) -> void: choose_starter(Rival.STARTERS[i]))
+		return true
+	if id == &"professor_oak" and int(State.items.get(&"oaks_parcel", 0)) > 0:
+		if quests.on_talk(id):
+			EventBus.message.emit("Professor Oak: Ah, my custom Poké Ball parcel! Thanks! Take this Pokédex — and these five Poké Balls.")
+			return true
+	quests.on_talk(id)  # advance any talk_to stage, then carry on with normal dialogue
+	return false
+
+
+## Gives the chosen Lv 5 starter; the rival takes the counter-pick and challenges you.
+func choose_starter(species: StringName) -> void:
+	var rng := RandomNumberGenerator.new()
+	rng.randomize()
+	var c := Creature.create(species, 5, rng, Data.db)
+	State.give_pokemon(c)
+	State.pokedex_caught[species] = true
+	State.set_flag(StringName("starter_%s" % species))
+	State.set_flag(&"got_starter")
+	EventBus.message.emit("You received %s!" % c.display_name())
+	var rival := Data.db.get_record(&"trainers", &"rival_lab").duplicate(true)
+	rival.party = [{"species": String(Rival.counter(species)), "level": 5}]
+	var node: Node3D = null
+	for n in get_tree().get_nodes_in_group(&"npc"):
+		if (n as NPC).record.get("id", "") == "rival_blue":
+			node = n
+	if node == null:
+		node = player
+	fights.start_trainer(rival, node)
 
 
 func _open_mart(rec: Dictionary) -> void:
@@ -254,13 +315,12 @@ func snapshot_world() -> Dictionary:
 	return Saves.snapshot({"player": block, "spawns_respawn_timers": spawner.director.timers_to_dict(), "quests": quest_state()})
 
 
-## Quest progress for saving (Task 29 fills this in).
 func quest_state() -> Dictionary:
-	return {}
+	return quests.to_dict()
 
 
-func restore_quests(_d: Dictionary) -> void:
-	pass
+func restore_quests(d: Dictionary) -> void:
+	quests.from_dict(d)
 
 
 func autosave() -> void:
