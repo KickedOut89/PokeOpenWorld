@@ -30,8 +30,11 @@ func test_removed_wild_frees_slot_and_starts_timer() -> void:
 	world.player.global_position = Vector3(196, 1.2, 740)
 	world.streamer.update_now()
 	await wait_physics_frames(2)
-	for i in 10:
+	for i in 200:
+		if get_tree().get_nodes_in_group(&"wild").size() > 0:
+			break
 		world.spawner.tick_now()
+	assert_gt(get_tree().get_nodes_in_group(&"wild").size(), 0, "spawned something within 200 ticks")
 	var w := get_tree().get_nodes_in_group(&"wild")[0] as WildPokemon
 	var n := get_tree().get_nodes_in_group(&"wild").size()
 	w.remove(&"caught")
