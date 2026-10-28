@@ -72,6 +72,7 @@ spots = {
 }
 for k, (c, r) in spots.items(): v.anchor(k, c, r)
 v.anchor('viridian_center_counter', 39, 39, kind='work')
+v.anchor('viridian_center_front', 39, 40, kind='spot')
 v.write()
 
 # ---------------- Route 2 (south): 32x48 cells at region (32,64), level 2 ----------------

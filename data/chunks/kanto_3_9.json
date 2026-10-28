@@ -204,6 +204,16 @@
    ],
    "kind": "work",
    "area": "viridian_city"
+  },
+  {
+   "id": "viridian_center_front",
+   "pos": [
+    30.0,
+    2.0,
+    34.0
+   ],
+   "kind": "spot",
+   "area": "viridian_city"
   }
  ]
 }

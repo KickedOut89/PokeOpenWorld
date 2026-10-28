@@ -13,14 +13,12 @@ var money: int = 3000
 var last_center: StringName = &"pallet_home"
 ## The player's team. Saved separately by SaveService (Task 28), not in to_dict().
 var party := Party.new()
+var pc := PCStorage.new()
 
 
-## Adds a Pokémon to the party; returns &"party" (Task 27 adds PC overflow).
+## Adds a Pokémon to the party, overflowing into the PC. Returns &"party", &"box" or &"none".
 func give_pokemon(c: Creature) -> StringName:
-	if party.members.size() < Party.MAX:
-		party.members.append(c)
-		return &"party"
-	return &"none"
+	return party.add(c, pc)
 
 
 func set_flag(f: StringName) -> void:

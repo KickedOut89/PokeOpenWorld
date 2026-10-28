@@ -23,6 +23,9 @@ def pick(pool, key):
     return POOLS[pool][h % len(POOLS[pool])]
 
 npcs, schedules = {}, {}
+SERVICES = {"nurse_joy": {"service": "heal", "center": "viridian_center"},
+            "mom": {"service": "heal", "center": "pallet_home"},
+            "mart_clerk": {"service": "mart"}}
 
 def npc(nid, name, role, home, blocks, talk, bark, area_kind='town', companion=None, weather=None, night_owl=False, sprite='default', extra_talk=None, branches=None, umbrella=None):
     rec = {"id": nid, "name": name, "role": role, "home": home, "schedule": nid + "_day", "dialogue": nid, "sprite": sprite}
@@ -30,6 +33,7 @@ def npc(nid, name, role, home, blocks, talk, bark, area_kind='town', companion=N
     if weather: rec["weather_behavior"] = weather
     if night_owl: rec["night_owl"] = True
     if umbrella: rec["umbrella_color"] = umbrella
+    rec.update(SERVICES.get(nid, {}))
     npcs[nid] = rec
     schedules[nid + "_day"] = {"id": nid + "_day", "blocks": [{"from": b[0], "to": b[1], "at": b[2], "activity": b[3]} for b in blocks]}
     barks = [{"text": bark}]

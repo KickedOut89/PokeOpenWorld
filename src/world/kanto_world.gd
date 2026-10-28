@@ -21,6 +21,9 @@ var ambience: AmbiencePlayer
 var fights: FightController
 var trainer_sight: TrainerSight
 var capture: CaptureController
+var prompts: PromptBox
+var progression: ProgressionUI
+var party_menu: PartyMenu
 var _npc_t: float = 0.0
 
 
@@ -106,6 +109,16 @@ func _ready() -> void:
 	capture.name = "Capture"
 	capture.world = self
 	add_child(capture)
+	prompts = PromptBox.new()
+	prompts.name = "Prompts"
+	add_child(prompts)
+	progression = ProgressionUI.new()
+	progression.prompts = prompts
+	add_child(progression)
+	fights.fight_won.connect(func(m: FightModel, foes: Array) -> void: progression.on_fight_won(m, foes, m.kind == &"trainer"))
+	party_menu = PartyMenu.new()
+	party_menu.name = "PartyMenu"
+	add_child(party_menu)
 	spawner.wild_spawned.connect(func(w: WildPokemon) -> void: w.engaged.connect(func(x: WildPokemon) -> void: fights.start_wild(x)))
 	toast = MessageToast.new()
 	toast.name = "Toast"
@@ -159,7 +172,22 @@ func _on_interact(target: Node) -> void:
 
 
 ## Opens the NPC's context-picked talk line (and its branch, if any).
+## NPCs with a "service" (heal, mart) perform it instead of small talk.
 func talk_to(rec: Dictionary) -> void:
+	match String(rec.get("service", "")):
+		"heal":
+			var center := StringName(rec.get("center", "viridian_center"))
+			PokemonCenter.heal(State, center)
+			EventBus.message.emit("%s: Your Pokémon are fully healed! We hope to see you again!" % rec.get("name", ""))
+			EventBus.npc_talked.emit(StringName(rec.get("id", "")))
+			return
+		"mart":
+			if EventBus.has_signal(&"npc_talked"):
+				EventBus.npc_talked.emit(StringName(rec.get("id", "")))
+			if _quest_handles_talk(StringName(rec.get("id", ""))):
+				return
+			_open_mart(rec)
+			return
 	var dlg := Data.db.get_record(&"dialogue", StringName(rec.get("dialogue", "")))
 	var line := barks.selector.pick_line(dlg.get("talk", []), barks.context(), RandomNumberGenerator.new())
 	if line.is_empty():
@@ -189,3 +217,24 @@ func _check_player_attack() -> void:
 	if best != null:
 		best.attacked = true
 		fights.start_wild(best)
+
+
+## Quests (Task 29) can claim an NPC conversation first; false = carry on normally.
+func _quest_handles_talk(_npc_id: StringName) -> bool:
+	return false
+
+
+func _open_mart(rec: Dictionary) -> void:
+	var stock := Mart.stock(State)
+	var opts: Array = stock.map(func(id: StringName) -> String:
+		var it := Data.db.get_record(&"items", id)
+		return "%s  ₽%d" % [it.get("name", id), int(it.get("price", 0))])
+	opts.append("Leave")
+	prompts.ask("%s: Welcome! What would you like? (You have ₽%d)" % [rec.get("name", ""), State.money], opts,
+		func(i: int) -> void:
+			if i >= stock.size():
+				return
+			if Mart.buy(State, stock[i], 1, Data.db):
+				EventBus.message.emit("Bought a %s." % Data.db.get_record(&"items", stock[i]).get("name", stock[i]))
+			else:
+				EventBus.message.emit("You don't have enough money."))

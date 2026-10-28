@@ -9,7 +9,9 @@
   "sprite": "default",
   "weather_behavior": {
    "rain": "indoors"
-  }
+  },
+  "service": "heal",
+  "center": "pallet_home"
  },
  "daisy": {
   "id": "daisy",
@@ -252,7 +254,9 @@
   "home": "viridian_center_door",
   "schedule": "nurse_joy_day",
   "dialogue": "nurse_joy",
-  "sprite": "default"
+  "sprite": "default",
+  "service": "heal",
+  "center": "viridian_center"
  },
  "mart_clerk": {
   "id": "mart_clerk",
@@ -261,7 +265,8 @@
   "home": "viridian_mart_door",
   "schedule": "mart_clerk_day",
   "dialogue": "mart_clerk",
-  "sprite": "default"
+  "sprite": "default",
+  "service": "mart"
  },
  "teacher_ines": {
   "id": "teacher_ines",

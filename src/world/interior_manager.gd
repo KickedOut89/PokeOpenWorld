@@ -56,6 +56,7 @@ func enter(door: Dictionary, door_world_pos: Vector3) -> bool:
 	current_interior = InteriorBuilder.build(rec, tpl)
 	current_interior.position = INTERIOR_ORIGIN
 	_world.add_child(current_interior)
+	_spawn_interior_npcs(rec, tpl)
 	current_id = id
 	_door_world_pos = door_world_pos
 	var streamer := _streamer()
@@ -69,6 +70,22 @@ func enter(door: Dictionary, door_world_pos: Vector3) -> bool:
 	entered.emit(id)
 	await _fade_to(0.0)
 	return true
+
+
+## Interior residents stand at the template's npc_spots (default: behind the counter line).
+func _spawn_interior_npcs(rec: Dictionary, tpl: Dictionary) -> void:
+	var spots: Array = tpl.get("npc_spots", [[0, 0, -2.0], [-2.5, 0, -0.5], [2.5, 0, -0.5]])
+	var i := 0
+	for nid in rec.get("npcs", []):
+		var nrec := _db.get_record(&"npcs", StringName(nid))
+		if nrec.is_empty():
+			continue
+		var npc := NPC.make(nrec)
+		current_interior.add_child(npc)
+		var sp: Array = spots[i % spots.size()]
+		npc.position = Vector3(float(sp[0]), 0.1, float(sp[2]))
+		npc.goal = npc.global_position
+		i += 1
 
 
 func exit() -> void:

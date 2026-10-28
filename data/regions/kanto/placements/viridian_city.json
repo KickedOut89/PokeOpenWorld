@@ -1400,6 +1400,15 @@
     606.0
    ],
    "kind": "work"
+  },
+  {
+   "id": "viridian_center_front",
+   "pos": [
+    222.0,
+    2.0,
+    610.0
+   ],
+   "kind": "spot"
   }
  ]
 }
