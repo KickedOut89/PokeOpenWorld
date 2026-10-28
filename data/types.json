@@ -1,0 +1,87 @@
+{
+ "normal": {
+  "id": "normal",
+  "name": "Normal",
+  "chart": {}
+ },
+ "fire": {
+  "id": "fire",
+  "name": "Fire",
+  "chart": {}
+ },
+ "water": {
+  "id": "water",
+  "name": "Water",
+  "chart": {}
+ },
+ "electric": {
+  "id": "electric",
+  "name": "Electric",
+  "chart": {}
+ },
+ "grass": {
+  "id": "grass",
+  "name": "Grass",
+  "chart": {}
+ },
+ "ice": {
+  "id": "ice",
+  "name": "Ice",
+  "chart": {}
+ },
+ "fighting": {
+  "id": "fighting",
+  "name": "Fighting",
+  "chart": {}
+ },
+ "poison": {
+  "id": "poison",
+  "name": "Poison",
+  "chart": {}
+ },
+ "ground": {
+  "id": "ground",
+  "name": "Ground",
+  "chart": {}
+ },
+ "flying": {
+  "id": "flying",
+  "name": "Flying",
+  "chart": {}
+ },
+ "psychic": {
+  "id": "psychic",
+  "name": "Psychic",
+  "chart": {}
+ },
+ "bug": {
+  "id": "bug",
+  "name": "Bug",
+  "chart": {}
+ },
+ "rock": {
+  "id": "rock",
+  "name": "Rock",
+  "chart": {}
+ },
+ "ghost": {
+  "id": "ghost",
+  "name": "Ghost",
+  "chart": {}
+ },
+ "dragon": {
+  "id": "dragon",
+  "name": "Dragon",
+  "chart": {}
+ },
+ "dark": {
+  "id": "dark",
+  "name": "Dark",
+  "chart": {}
+ },
+ "steel": {
+  "id": "steel",
+  "name": "Steel",
+  "chart": {}
+ }
+}

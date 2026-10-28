@@ -1,0 +1,7 @@
+{
+ "required": {
+  "id": "string",
+  "interior": "string",
+  "unlock": "dict"
+ }
+}

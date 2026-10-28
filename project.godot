@@ -22,3 +22,7 @@ enabled=PackedStringArray("res://addons/gut/plugin.cfg")
 
 renderer/rendering_method="forward_plus"
 textures/canvas_textures/default_texture_filter=0
+
+[autoload]
+
+Data="*res://src/core/data_autoload.gd"

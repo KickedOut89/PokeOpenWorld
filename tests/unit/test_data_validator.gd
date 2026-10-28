@@ -1,0 +1,35 @@
+extends GutTest
+
+const GOOD := "res://tests/fixtures/data_good"
+const BAD := "res://tests/fixtures/data_bad"
+
+
+func _has_error(errors: PackedStringArray, parts: Array) -> bool:
+	for e in errors:
+		var all := true
+		for p in parts:
+			if not e.contains(p):
+				all = false
+		if all:
+			return true
+	return false
+
+
+func test_validator_passes_good_fixture() -> void:
+	var errors := DataValidator.validate(DataDB.load_dir(GOOD))
+	assert_eq(errors.size(), 0, "\n".join(errors))
+
+
+func test_validator_flags_unknown_move_in_learnset() -> void:
+	var errors := DataValidator.validate(DataDB.load_dir(BAD))
+	assert_true(_has_error(errors, ["spearow", "peck"]), "\n".join(errors))
+
+
+func test_validator_flags_door_to_missing_interior() -> void:
+	var errors := DataValidator.validate(DataDB.load_dir(BAD))
+	assert_true(_has_error(errors, ["lost_door", "nowhere_int"]), "\n".join(errors))
+
+
+func test_validator_flags_missing_required_field() -> void:
+	var errors := DataValidator.validate(DataDB.load_dir(BAD))
+	assert_true(_has_error(errors, ["nameless", "name"]), "\n".join(errors))
