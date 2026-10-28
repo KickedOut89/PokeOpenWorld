@@ -1,0 +1,57 @@
+{
+ "id": "jogger_1",
+ "barks": [
+  {
+   "text": "Can't stop!"
+  },
+  {
+   "text": "Fresh air, fresh start.",
+   "when": {
+    "periods": [
+     "morning"
+    ]
+   }
+  },
+  {
+   "text": "Long day. Good day, though.",
+   "when": {
+    "periods": [
+     "evening"
+    ]
+   }
+  },
+  {
+   "text": "Rain again? Figures.",
+   "when": {
+    "weather": [
+     "rain"
+    ]
+   }
+  },
+  {
+   "text": "Thunder! Get inside!",
+   "when": {
+    "weather": [
+     "thunderstorm"
+    ]
+   }
+  }
+ ],
+ "talk": [
+  {
+   "text": "Route 2 makes a great run if you dodge the Weedle."
+  },
+  {
+   "text": "Oh! You've got a Pok\u00e9mon now! Route 2 makes a great run if you dodge the Weedle.",
+   "when": {
+    "flag": "got_starter"
+   }
+  },
+  {
+   "text": "Filling that Pok\u00e9dex? Good luck!",
+   "when": {
+    "flag": "got_pokedex"
+   }
+  }
+ ]
+}

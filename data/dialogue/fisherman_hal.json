@@ -1,0 +1,57 @@
+{
+ "id": "fisherman_hal",
+ "barks": [
+  {
+   "text": "Shh. You'll scare the fish."
+  },
+  {
+   "text": "Coffee first, then everything else.",
+   "when": {
+    "periods": [
+     "morning"
+    ]
+   }
+  },
+  {
+   "text": "Lamps are coming on.",
+   "when": {
+    "periods": [
+     "evening"
+    ]
+   }
+  },
+  {
+   "text": "At least the dust settles.",
+   "when": {
+    "weather": [
+     "rain"
+    ]
+   }
+  },
+  {
+   "text": "Hold on to your hat!",
+   "when": {
+    "weather": [
+     "thunderstorm"
+    ]
+   }
+  }
+ ],
+ "talk": [
+  {
+   "text": "Nothing bites in this water without a rod. Someday I'll get you one."
+  },
+  {
+   "text": "Take good care of your partner. Nothing bites in this water without a rod. Someday I'll get you one.",
+   "when": {
+    "flag": "got_starter"
+   }
+  },
+  {
+   "text": "A Pok\u00e9dex! Professor Oak must trust you.",
+   "when": {
+    "flag": "got_pokedex"
+   }
+  }
+ ]
+}

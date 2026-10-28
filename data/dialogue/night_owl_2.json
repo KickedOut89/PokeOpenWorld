@@ -1,0 +1,57 @@
+{
+ "id": "night_owl_2",
+ "barks": [
+  {
+   "text": "Shh, listen."
+  },
+  {
+   "text": "Watch your step in the dark.",
+   "when": {
+    "periods": [
+     "night"
+    ]
+   }
+  },
+  {
+   "text": "Can't see a thing in this fog.",
+   "when": {
+    "weather": [
+     "fog"
+    ]
+   }
+  },
+  {
+   "text": "At least the dust settles.",
+   "when": {
+    "weather": [
+     "rain"
+    ]
+   }
+  },
+  {
+   "text": "Hold on to your hat!",
+   "when": {
+    "weather": [
+     "thunderstorm"
+    ]
+   }
+  }
+ ],
+ "talk": [
+  {
+   "text": "The lamps hum at night. Did you ever notice?"
+  },
+  {
+   "text": "Take good care of your partner. The lamps hum at night. Did you ever notice?",
+   "when": {
+    "flag": "got_starter"
+   }
+  },
+  {
+   "text": "A Pok\u00e9dex! Professor Oak must trust you.",
+   "when": {
+    "flag": "got_pokedex"
+   }
+  }
+ ]
+}

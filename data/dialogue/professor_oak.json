@@ -1,0 +1,64 @@
+{
+ "id": "professor_oak",
+ "barks": [
+  {
+   "text": "Hmm... fascinating behavior."
+  },
+  {
+   "text": "Fresh air, fresh start.",
+   "when": {
+    "periods": [
+     "morning"
+    ]
+   }
+  },
+  {
+   "text": "Long day. Good day, though.",
+   "when": {
+    "periods": [
+     "evening"
+    ]
+   }
+  },
+  {
+   "text": "Rain again? Figures.",
+   "when": {
+    "weather": [
+     "rain"
+    ]
+   }
+  },
+  {
+   "text": "Hold on to your hat!",
+   "when": {
+    "weather": [
+     "thunderstorm"
+    ]
+   }
+  }
+ ],
+ "talk": [
+  {
+   "text": "Ah, there you are! The world of Pok\u00e9mon awaits. Come to my lab when you're ready."
+  },
+  {
+   "text": "Take good care of your partner. Ah, there you are! The world of Pok\u00e9mon awaits. Come to my lab when you're ready.",
+   "when": {
+    "flag": "got_starter"
+   }
+  },
+  {
+   "text": "A Pok\u00e9dex! Professor Oak must trust you.",
+   "when": {
+    "flag": "got_pokedex"
+   }
+  },
+  {
+   "text": "Have you delivered my parcel yet? The Mart in Viridian is holding it.",
+   "when": {
+    "flag": "got_starter",
+    "not_flag": "got_pokedex"
+   }
+  }
+ ]
+}

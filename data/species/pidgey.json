@@ -1,0 +1,66 @@
+{
+ "id": "pidgey",
+ "name": "Pidgey",
+ "dex": 16,
+ "types": [
+  "normal",
+  "flying"
+ ],
+ "base": {
+  "hp": 40,
+  "atk": 45,
+  "def": 40,
+  "spa": 35,
+  "spd": 35,
+  "spe": 56
+ },
+ "catch_rate": 255,
+ "base_exp": 50,
+ "growth": "medium_slow",
+ "ev_yield": {
+  "spe": 1
+ },
+ "learnset": [
+  [
+   1,
+   "tackle"
+  ],
+  [
+   5,
+   "sand_attack"
+  ],
+  [
+   9,
+   "gust"
+  ],
+  [
+   13,
+   "quick_attack"
+  ],
+  [
+   17,
+   "whirlwind"
+  ],
+  [
+   21,
+   "twister"
+  ],
+  [
+   25,
+   "feather_dance"
+  ],
+  [
+   29,
+   "agility"
+  ]
+ ],
+ "evolves": [
+  {
+   "to": "pidgeotto",
+   "level": 18
+  }
+ ],
+ "temperament": "timid",
+ "gender_ratio": 4,
+ "source": "PokeAPI (Gen 5 Black/White learnset)"
+}

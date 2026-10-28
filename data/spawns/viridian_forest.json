@@ -1,0 +1,73 @@
+{
+ "id": "viridian_forest",
+ "entries": [
+  {
+   "species": "caterpie",
+   "min_lvl": 3,
+   "max_lvl": 5,
+   "weight": 25,
+   "periods": "all",
+   "weather_mult": {
+    "rain": 0.5
+   }
+  },
+  {
+   "species": "metapod",
+   "min_lvl": 4,
+   "max_lvl": 6,
+   "weight": 15,
+   "periods": "all",
+   "weather_mult": {
+    "rain": 0.5
+   }
+  },
+  {
+   "species": "weedle",
+   "min_lvl": 3,
+   "max_lvl": 5,
+   "weight": 25,
+   "periods": "all",
+   "weather_mult": {
+    "rain": 0.5
+   }
+  },
+  {
+   "species": "kakuna",
+   "min_lvl": 4,
+   "max_lvl": 6,
+   "weight": 15,
+   "periods": "all",
+   "weather_mult": {
+    "rain": 0.5
+   }
+  },
+  {
+   "species": "pikachu",
+   "min_lvl": 3,
+   "max_lvl": 7,
+   "weight": 5,
+   "periods": "all",
+   "weather_mult": {
+    "thunderstorm": 3.0
+   }
+  },
+  {
+   "species": "hoothoot",
+   "min_lvl": 4,
+   "max_lvl": 7,
+   "weight": 15,
+   "periods": [
+    "night"
+   ]
+  },
+  {
+   "species": "oddish",
+   "min_lvl": 4,
+   "max_lvl": 7,
+   "weight": 15,
+   "periods": [
+    "night"
+   ]
+  }
+ ]
+}

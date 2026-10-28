@@ -1,0 +1,12 @@
+{"ambience": {"id": "ambience",
+ "types": {
+  "town": {"morning": {"birds": -10, "chatter": -18}, "day": {"birds": -12, "chatter": -10}, "evening": {"chatter": -14, "crickets": -20}, "night": {"crickets": -12}},
+  "route": {"morning": {"birds": -6, "wind": -18}, "day": {"birds": -8, "wind": -14}, "evening": {"crickets": -14, "wind": -16}, "night": {"crickets": -8, "owls": -18}},
+  "forest": {"morning": {"birds": -4, "leaves": -14}, "day": {"birds": -6, "bugs": -12, "leaves": -12}, "evening": {"bugs": -10, "crickets": -12}, "night": {"crickets": -6, "owls": -14, "leaves": -16}}
+ },
+ "weather": {
+  "rain": {"add": {"rain": -6}, "duck": {"birds": -12, "chatter": -8, "crickets": -10}},
+  "thunderstorm": {"add": {"rain": -2}, "duck": {"birds": -30, "chatter": -20, "crickets": -20}},
+  "fog": {"duck": {"birds": -6}},
+  "cloudy": {"duck": {"birds": -3}}
+ }}}

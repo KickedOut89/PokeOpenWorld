@@ -1,0 +1,6 @@
+{
+ "props": [{"id": "sign_1", "kind": "sign", "pos": [70.0, 0.0, 10.0], "rot": 0, "footprint": [1, 1]}],
+ "doors": [{"id": "test_door", "interior": "test_int", "pos": [10.0, 0.0, 50.0], "unlock": {"type": "pending"}}],
+ "spawn_zones": [{"id": "test_grass", "table": "route_1", "rect": [12.0, 32.0, 16.0, 12.0]}],
+ "npc_anchors": [{"id": "test_anchor", "pos": [100.0, 0.0, 20.0], "kind": "spot"}]
+}

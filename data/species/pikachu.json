@@ -1,0 +1,64 @@
+{
+ "id": "pikachu",
+ "name": "Pikachu",
+ "dex": 25,
+ "types": [
+  "electric"
+ ],
+ "base": {
+  "hp": 35,
+  "atk": 55,
+  "def": 30,
+  "spa": 50,
+  "spd": 40,
+  "spe": 90
+ },
+ "catch_rate": 190,
+ "base_exp": 112,
+ "growth": "medium_fast",
+ "ev_yield": {
+  "spe": 2
+ },
+ "learnset": [
+  [
+   1,
+   "growl"
+  ],
+  [
+   1,
+   "thunder_shock"
+  ],
+  [
+   5,
+   "tail_whip"
+  ],
+  [
+   10,
+   "thunder_wave"
+  ],
+  [
+   13,
+   "quick_attack"
+  ],
+  [
+   18,
+   "electro_ball"
+  ],
+  [
+   21,
+   "double_team"
+  ],
+  [
+   26,
+   "slam"
+  ],
+  [
+   29,
+   "thunderbolt"
+  ]
+ ],
+ "evolves": [],
+ "temperament": "timid",
+ "gender_ratio": 4,
+ "source": "PokeAPI (Gen 5 Black/White learnset)"
+}

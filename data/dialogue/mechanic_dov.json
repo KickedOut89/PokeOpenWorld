@@ -1,0 +1,57 @@
+{
+ "id": "mechanic_dov",
+ "barks": [
+  {
+   "text": "Pass me that wrench."
+  },
+  {
+   "text": "Fresh air, fresh start.",
+   "when": {
+    "periods": [
+     "morning"
+    ]
+   }
+  },
+  {
+   "text": "Long day. Good day, though.",
+   "when": {
+    "periods": [
+     "evening"
+    ]
+   }
+  },
+  {
+   "text": "Rain again? Figures.",
+   "when": {
+    "weather": [
+     "rain"
+    ]
+   }
+  },
+  {
+   "text": "Pikachu love this weather. I don't.",
+   "when": {
+    "weather": [
+     "thunderstorm"
+    ]
+   }
+  }
+ ],
+ "talk": [
+  {
+   "text": "Bikes, carts, Pok\u00e9 Ball latches \u2014 if it's broken, I fix it. Eventually."
+  },
+  {
+   "text": "Is that your partner? It looks strong! Bikes, carts, Pok\u00e9 Ball latches \u2014 if it's broken, I fix it. Eventually.",
+   "when": {
+    "flag": "got_starter"
+   }
+  },
+  {
+   "text": "Filling that Pok\u00e9dex? Good luck!",
+   "when": {
+    "flag": "got_pokedex"
+   }
+  }
+ ]
+}

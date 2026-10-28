@@ -1,0 +1,57 @@
+{
+ "id": "kid_2",
+ "barks": [
+  {
+   "text": "Battle me!"
+  },
+  {
+   "text": "Coffee first, then everything else.",
+   "when": {
+    "periods": [
+     "morning"
+    ]
+   }
+  },
+  {
+   "text": "Lamps are coming on.",
+   "when": {
+    "periods": [
+     "evening"
+    ]
+   }
+  },
+  {
+   "text": "At least the dust settles.",
+   "when": {
+    "weather": [
+     "rain"
+    ]
+   }
+  },
+  {
+   "text": "Hold on to your hat!",
+   "when": {
+    "weather": [
+     "thunderstorm"
+    ]
+   }
+  }
+ ],
+ "talk": [
+  {
+   "text": "My Rattata can beat your Pok\u00e9mon!"
+  },
+  {
+   "text": "Take good care of your partner. My Rattata can beat your Pok\u00e9mon!",
+   "when": {
+    "flag": "got_starter"
+   }
+  },
+  {
+   "text": "A Pok\u00e9dex! Professor Oak must trust you.",
+   "when": {
+    "flag": "got_pokedex"
+   }
+  }
+ ]
+}

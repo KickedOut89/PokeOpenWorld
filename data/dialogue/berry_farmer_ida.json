@@ -1,0 +1,57 @@
+{
+ "id": "berry_farmer_ida",
+ "barks": [
+  {
+   "text": "Ripe ones are the softest."
+  },
+  {
+   "text": "Up with the Pidgey, as always.",
+   "when": {
+    "periods": [
+     "morning"
+    ]
+   }
+  },
+  {
+   "text": "Look at that sky \u2014 all orange.",
+   "when": {
+    "periods": [
+     "evening"
+    ]
+   }
+  },
+  {
+   "text": "The berries will love this rain.",
+   "when": {
+    "weather": [
+     "rain"
+    ]
+   }
+  },
+  {
+   "text": "Hold on to your hat!",
+   "when": {
+    "weather": [
+     "thunderstorm"
+    ]
+   }
+  }
+ ],
+ "talk": [
+  {
+   "text": "Pecha, Oran, Cheri... the soil on Route 1 grows them all."
+  },
+  {
+   "text": "Take good care of your partner. Pecha, Oran, Cheri... the soil on Route 1 grows them all.",
+   "when": {
+    "flag": "got_starter"
+   }
+  },
+  {
+   "text": "A Pok\u00e9dex! Professor Oak must trust you.",
+   "when": {
+    "flag": "got_pokedex"
+   }
+  }
+ ]
+}

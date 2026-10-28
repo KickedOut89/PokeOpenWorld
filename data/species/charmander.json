@@ -1,0 +1,65 @@
+{
+ "id": "charmander",
+ "name": "Charmander",
+ "dex": 4,
+ "types": [
+  "fire"
+ ],
+ "base": {
+  "hp": 39,
+  "atk": 52,
+  "def": 43,
+  "spa": 60,
+  "spd": 50,
+  "spe": 65
+ },
+ "catch_rate": 45,
+ "base_exp": 62,
+ "growth": "medium_slow",
+ "ev_yield": {
+  "spe": 1
+ },
+ "learnset": [
+  [
+   1,
+   "growl"
+  ],
+  [
+   1,
+   "scratch"
+  ],
+  [
+   7,
+   "ember"
+  ],
+  [
+   10,
+   "smokescreen"
+  ],
+  [
+   16,
+   "dragon_rage"
+  ],
+  [
+   19,
+   "scary_face"
+  ],
+  [
+   25,
+   "fire_fang"
+  ],
+  [
+   28,
+   "flame_burst"
+  ]
+ ],
+ "evolves": [
+  {
+   "to": "charmeleon",
+   "level": 16
+  }
+ ],
+ "temperament": "aggressive",
+ "gender_ratio": 1,
+ "source": "PokeAPI (Gen 5 Black/White learnset)"
+}

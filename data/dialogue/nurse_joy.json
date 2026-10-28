@@ -1,0 +1,57 @@
+{
+ "id": "nurse_joy",
+ "barks": [
+  {
+   "text": "Have a healthy day!"
+  },
+  {
+   "text": "Coffee first, then everything else.",
+   "when": {
+    "periods": [
+     "morning"
+    ]
+   }
+  },
+  {
+   "text": "Lamps are coming on.",
+   "when": {
+    "periods": [
+     "evening"
+    ]
+   }
+  },
+  {
+   "text": "At least the dust settles.",
+   "when": {
+    "weather": [
+     "rain"
+    ]
+   }
+  },
+  {
+   "text": "Thunder! Get inside!",
+   "when": {
+    "weather": [
+     "thunderstorm"
+    ]
+   }
+  }
+ ],
+ "talk": [
+  {
+   "text": "Welcome to the Pok\u00e9mon Center! We heal Pok\u00e9mon free of charge."
+  },
+  {
+   "text": "Oh! You've got a Pok\u00e9mon now! Welcome to the Pok\u00e9mon Center! We heal Pok\u00e9mon free of charge.",
+   "when": {
+    "flag": "got_starter"
+   }
+  },
+  {
+   "text": "A Pok\u00e9dex! Professor Oak must trust you.",
+   "when": {
+    "flag": "got_pokedex"
+   }
+  }
+ ]
+}

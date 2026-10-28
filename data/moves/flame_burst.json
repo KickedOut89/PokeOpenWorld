@@ -1,0 +1,17 @@
+{
+ "id": "flame_burst",
+ "name": "Flame Burst",
+ "type": "fire",
+ "category": "special",
+ "power": 70,
+ "pp": 15,
+ "accuracy": 100,
+ "priority": 0,
+ "shape": "projectile",
+ "range": 12.0,
+ "active_s": 0.15,
+ "source": "PokeAPI (Gen 5 values)",
+ "speed": 15.0,
+ "radius": 0.7,
+ "tuned": true
+}

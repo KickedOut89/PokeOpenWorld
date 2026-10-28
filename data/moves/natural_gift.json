@@ -1,0 +1,16 @@
+{
+ "id": "natural_gift",
+ "name": "Natural Gift",
+ "type": "normal",
+ "category": "physical",
+ "power": 0,
+ "pp": 15,
+ "accuracy": 100,
+ "priority": 0,
+ "shape": "melee_arc",
+ "range": 2.5,
+ "active_s": 0.15,
+ "source": "PokeAPI (Gen 5 values)",
+ "arc_deg": 100.0,
+ "tuned": true
+}

@@ -1,0 +1,57 @@
+{
+ "id": "hiker_gord",
+ "barks": [
+  {
+   "text": "One foot, then the other."
+  },
+  {
+   "text": "The dew's still on the grass.",
+   "when": {
+    "periods": [
+     "morning"
+    ]
+   }
+  },
+  {
+   "text": "Evenings are my favorite here.",
+   "when": {
+    "periods": [
+     "evening"
+    ]
+   }
+  },
+  {
+   "text": "Puddles everywhere!",
+   "when": {
+    "weather": [
+     "rain"
+    ]
+   }
+  },
+  {
+   "text": "Thunder! Get inside!",
+   "when": {
+    "weather": [
+     "thunderstorm"
+    ]
+   }
+  }
+ ],
+ "talk": [
+  {
+   "text": "Pewter's past the forest. Rock-hard place, rock-hard people."
+  },
+  {
+   "text": "Oh! You've got a Pok\u00e9mon now! Pewter's past the forest. Rock-hard place, rock-hard people.",
+   "when": {
+    "flag": "got_starter"
+   }
+  },
+  {
+   "text": "A Pok\u00e9dex! Professor Oak must trust you.",
+   "when": {
+    "flag": "got_pokedex"
+   }
+  }
+ ]
+}

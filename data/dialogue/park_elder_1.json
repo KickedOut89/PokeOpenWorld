@@ -1,0 +1,57 @@
+{
+ "id": "park_elder_1",
+ "barks": [
+  {
+   "text": "Lovely weather for the ducks."
+  },
+  {
+   "text": "Up with the Pidgey, as always.",
+   "when": {
+    "periods": [
+     "morning"
+    ]
+   }
+  },
+  {
+   "text": "Look at that sky \u2014 all orange.",
+   "when": {
+    "periods": [
+     "evening"
+    ]
+   }
+  },
+  {
+   "text": "The berries will love this rain.",
+   "when": {
+    "weather": [
+     "rain"
+    ]
+   }
+  },
+  {
+   "text": "Hold on to your hat!",
+   "when": {
+    "weather": [
+     "thunderstorm"
+    ]
+   }
+  }
+ ],
+ "talk": [
+  {
+   "text": "The Gym Leader is never around anymore. Strange fellow."
+  },
+  {
+   "text": "Take good care of your partner. The Gym Leader is never around anymore. Strange fellow.",
+   "when": {
+    "flag": "got_starter"
+   }
+  },
+  {
+   "text": "Filling that Pok\u00e9dex? Good luck!",
+   "when": {
+    "flag": "got_pokedex"
+   }
+  }
+ ]
+}

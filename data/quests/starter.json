@@ -1,0 +1,5 @@
+{"id": "starter", "title": "A Pokémon of Your Own",
+ "stages": [
+  {"id": "meet_oak", "objective_text": "Visit Professor Oak in his lab.", "complete_when": {"flag": "got_starter"}},
+  {"id": "rival", "objective_text": "Battle your rival.", "complete_when": {"flag": "rival_lab_done"}}
+ ]}

@@ -1,0 +1,81 @@
+{
+ "id": "old_man_ezra",
+ "barks": [
+  {
+   "text": "Not before my coffee!"
+  },
+  {
+   "text": "Up with the Pidgey, as always.",
+   "when": {
+    "periods": [
+     "morning"
+    ]
+   }
+  },
+  {
+   "text": "Look at that sky \u2014 all orange.",
+   "when": {
+    "periods": [
+     "evening"
+    ]
+   }
+  },
+  {
+   "text": "The berries will love this rain.",
+   "when": {
+    "weather": [
+     "rain"
+    ]
+   }
+  },
+  {
+   "text": "Hold on to your hat!",
+   "when": {
+    "weather": [
+     "thunderstorm"
+    ]
+   }
+  }
+ ],
+ "talk": [
+  {
+   "text": "Ahh, I've had my coffee now and I feel great! ...Wait, did you want something?"
+  },
+  {
+   "text": "Take good care of your partner. Ahh, I've had my coffee now and I feel great! ...Wait, did you want something?",
+   "when": {
+    "flag": "got_starter"
+   }
+  },
+  {
+   "text": "Filling that Pok\u00e9dex? Good luck!",
+   "when": {
+    "flag": "got_pokedex"
+   }
+  },
+  {
+   "text": "You look like a new Trainer.",
+   "branch": "ezra_catch",
+   "when": {
+    "flag": "got_starter",
+    "not_flag": "heard_catch_tip"
+   }
+  }
+ ],
+ "branches": {
+  "ezra_catch": {
+   "text": "Want to know how to catch a Pok\u00e9mon?",
+   "choices": [
+    {
+     "text": "Yes, please!",
+     "reply": "Weaken it first, then aim and throw. Asleep is even better. Easy!",
+     "set_flag": "heard_catch_tip"
+    },
+    {
+     "text": "No thanks.",
+     "reply": "Hmph. Kids these days."
+    }
+   ]
+  }
+ }
+}

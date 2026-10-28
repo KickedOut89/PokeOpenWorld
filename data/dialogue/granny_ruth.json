@@ -1,0 +1,57 @@
+{
+ "id": "granny_ruth",
+ "barks": [
+  {
+   "text": "My knees know when rain is coming."
+  },
+  {
+   "text": "Fresh air, fresh start.",
+   "when": {
+    "periods": [
+     "morning"
+    ]
+   }
+  },
+  {
+   "text": "Long day. Good day, though.",
+   "when": {
+    "periods": [
+     "evening"
+    ]
+   }
+  },
+  {
+   "text": "Rain again? Figures.",
+   "when": {
+    "weather": [
+     "rain"
+    ]
+   }
+  },
+  {
+   "text": "Hold on to your hat!",
+   "when": {
+    "weather": [
+     "thunderstorm"
+    ]
+   }
+  }
+ ],
+ "talk": [
+  {
+   "text": "I watched Professor Oak grow up. He was a troublemaker, you know."
+  },
+  {
+   "text": "Take good care of your partner. I watched Professor Oak grow up. He was a troublemaker, you know.",
+   "when": {
+    "flag": "got_starter"
+   }
+  },
+  {
+   "text": "Filling that Pok\u00e9dex? Good luck!",
+   "when": {
+    "flag": "got_pokedex"
+   }
+  }
+ ]
+}

@@ -1,0 +1,174 @@
+class_name PropFactory
+extends RefCounted
+## Builds placeholder nodes for authored props (buildings, lamps, signs...).
+## Lamps join group "lamp" and carry an OmniLight3D toggled by lamps_changed.
+
+const BUILDING_COLORS := {
+	"house_small": Color("e8dcc4"), "house_large": Color("ddd2bb"), "lab": Color("f2f2f2"),
+	"center": Color("f0c8c8"), "mart": Color("c8d8f0"), "gym": Color("c9b98f"),
+	"shop": Color("efe0b0"), "apartment": Color("d4ccc4"), "barn": Color("b5543c"),
+	"greenhouse": Color("cfe8d8"), "gatehouse": Color("d8d0b8"),
+}
+const ROOF_COLORS := {
+	"center": Color("d04040"), "mart": Color("3a6ad0"), "lab": Color("7a8a9a"),
+}
+
+
+static var _mats: Dictionary = {}
+static var _tree_parts: Dictionary = {}
+
+
+static func make(prop: Dictionary) -> Node3D:
+	var kind: String = prop.get("kind", "generic")
+	var node: Node3D
+	match kind:
+		"building":
+			node = _building(prop)
+		"lamp":
+			node = _lamp()
+		"tree":
+			node = tree(Vector3.ZERO, 1.0)
+		"flock":
+			node = FlockNode.make(int(prop.get("count", 4)), hash(prop.get("id", "")))
+		"drifters":
+			var d := Drifters.new()
+			d.count = int(prop.get("count", 3))
+			node = d
+		"laundry":
+			node = ClothSway.new()
+		_:
+			node = _box(Vector3(float(prop.get("footprint", [1, 1])[0]), float(prop.get("height", 1.2)), float(prop.get("footprint", [1, 1])[1])), Color(prop.get("color", "#b08a5a")), prop.get("solid", true))
+	node.name = "Prop_%s" % prop.get("id", "unnamed")
+	var p: Array = prop.get("pos", [0, 0, 0])
+	node.position = Vector3(float(p[0]), float(p[1]), float(p[2]))
+	node.rotation_degrees.y = float(prop.get("rot", 0))
+	node.set_meta(&"prop", prop)
+	return node
+
+
+## Trees share one trunk mesh, canopy mesh and collision shape; size varies by node scale.
+static func tree(pos: Vector3, scale: float) -> StaticBody3D:
+	if _tree_parts.is_empty():
+		var tm := CylinderMesh.new()
+		tm.top_radius = 0.25
+		tm.bottom_radius = 0.35
+		tm.height = 2.0
+		tm.radial_segments = 8
+		tm.material = _mat(Color("6b4a2b"))
+		var cm := SphereMesh.new()
+		cm.radius = 1.6
+		cm.height = 3.0
+		cm.radial_segments = 12
+		cm.rings = 6
+		cm.material = _mat(Color("2f6b2f"))
+		var shape := CylinderShape3D.new()
+		shape.radius = 0.9
+		shape.height = 3.0
+		_tree_parts = {"trunk": tm, "canopy": cm, "shape": shape}
+	var body := StaticBody3D.new()
+	body.position = pos
+	var visual := Node3D.new()
+	visual.scale = Vector3.ONE * scale
+	body.add_child(visual)
+	var trunk := MeshInstance3D.new()
+	trunk.mesh = _tree_parts.trunk
+	trunk.position.y = 1.0
+	visual.add_child(trunk)
+	var canopy := MeshInstance3D.new()
+	canopy.mesh = _tree_parts.canopy
+	canopy.position.y = 3.0
+	visual.add_child(canopy)
+	var col := CollisionShape3D.new()
+	col.shape = _tree_parts.shape
+	col.position.y = 1.5
+	body.add_child(col)
+	return body
+
+
+static func _building(prop: Dictionary) -> Node3D:
+	var fp: Array = prop.get("footprint", [8, 6])
+	var size := Vector3(float(fp[0]), float(prop.get("height", 4.0)), float(fp[1]))
+	var template: String = prop.get("template", "house_small")
+	var body := _box(size, BUILDING_COLORS.get(template, Color("e0d8c8")), true)
+	var roof := MeshInstance3D.new()
+	var rm := PrismMesh.new()
+	rm.size = Vector3(size.x + 0.6, 1.8, size.z + 0.6)
+	rm.material = _mat(ROOF_COLORS.get(template, Color("8c3b2e")))
+	roof.mesh = rm
+	roof.position.y = size.y + 0.9
+	body.add_child(roof)
+	# Windows on the south (front) face; they glow when lamps are on.
+	var win := MeshInstance3D.new()
+	var wm := QuadMesh.new()
+	wm.size = Vector2(1.0, 0.8)
+	var wmat := StandardMaterial3D.new()
+	wmat.albedo_color = Color("2a3a4a")
+	wmat.emission_enabled = true
+	wmat.emission = Color("ffcf7a")
+	wmat.emission_energy_multiplier = 0.0
+	wm.material = wmat
+	win.mesh = wm
+	win.position = Vector3(size.x * 0.25, size.y * 0.6, size.z * 0.5 + 0.01)
+	win.add_to_group(&"window")
+	body.add_child(win)
+	# A third of lit windows show a resident's silhouette at night.
+	if absi(hash(prop.get("id", ""))) % 3 == 0:
+		var sil := MeshInstance3D.new()
+		var sq := QuadMesh.new()
+		sq.size = Vector2(0.35, 0.6)
+		var sm := StandardMaterial3D.new()
+		sm.albedo_color = Color(0.05, 0.05, 0.08)
+		sm.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+		sq.material = sm
+		sil.mesh = sq
+		sil.position = win.position + Vector3(0.15, -0.05, 0.01)
+		sil.visible = false
+		sil.add_to_group(&"silhouette")
+		body.add_child(sil)
+	if template.begins_with("house") or template == "barn":
+		var smoke := ChimneySmoke.new()
+		smoke.position = Vector3(size.x * 0.3, size.y + 1.8, -size.z * 0.2)
+		body.add_child(smoke)
+	return body
+
+
+static func _lamp() -> Node3D:
+	var root := _box(Vector3(0.2, 3.2, 0.2), Color("3a3a3a"), true)
+	var light := OmniLight3D.new()
+	light.position.y = 3.3
+	light.omni_range = 9.0
+	light.light_color = Color("ffd59a")
+	light.light_energy = 0.0
+	light.shadow_enabled = false
+	root.add_child(light)
+	root.add_to_group(&"lamp")
+	return root
+
+
+static func _box(size: Vector3, color: Color, solid: bool) -> Node3D:
+	var root: Node3D = StaticBody3D.new() if solid else Node3D.new()
+	var mi := MeshInstance3D.new()
+	var m := BoxMesh.new()
+	m.size = size
+	m.material = _mat(color)
+	mi.mesh = m
+	mi.position.y = size.y * 0.5
+	root.add_child(mi)
+	if solid:
+		var col := CollisionShape3D.new()
+		var s := BoxShape3D.new()
+		s.size = size
+		col.shape = s
+		col.position.y = size.y * 0.5
+		root.add_child(col)
+	return root
+
+
+static func _mat(c: Color) -> StandardMaterial3D:
+	var key := c.to_html()
+	if not _mats.has(key):
+		var m := StandardMaterial3D.new()
+		m.albedo_color = c
+		m.roughness = 0.85
+		_mats[key] = m
+	return _mats[key]

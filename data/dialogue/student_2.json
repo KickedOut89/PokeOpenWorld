@@ -1,0 +1,57 @@
+{
+ "id": "student_2",
+ "barks": [
+  {
+   "text": "Wanna see my notes?"
+  },
+  {
+   "text": "Fresh air, fresh start.",
+   "when": {
+    "periods": [
+     "morning"
+    ]
+   }
+  },
+  {
+   "text": "Long day. Good day, though.",
+   "when": {
+    "periods": [
+     "evening"
+    ]
+   }
+  },
+  {
+   "text": "Rain again? Figures.",
+   "when": {
+    "weather": [
+     "rain"
+    ]
+   }
+  },
+  {
+   "text": "Thunder! Get inside!",
+   "when": {
+    "weather": [
+     "thunderstorm"
+    ]
+   }
+  }
+ ],
+ "talk": [
+  {
+   "text": "Status moves don't miss, but you still have to aim them."
+  },
+  {
+   "text": "Oh! You've got a Pok\u00e9mon now! Status moves don't miss, but you still have to aim them.",
+   "when": {
+    "flag": "got_starter"
+   }
+  },
+  {
+   "text": "Filling that Pok\u00e9dex? Good luck!",
+   "when": {
+    "flag": "got_pokedex"
+   }
+  }
+ ]
+}

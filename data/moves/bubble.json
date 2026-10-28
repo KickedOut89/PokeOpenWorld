@@ -1,0 +1,22 @@
+{
+ "id": "bubble",
+ "name": "Bubble",
+ "type": "water",
+ "category": "special",
+ "power": 20,
+ "pp": 30,
+ "accuracy": 100,
+ "priority": 0,
+ "shape": "projectile",
+ "range": 12.0,
+ "active_s": 0.15,
+ "source": "PokeAPI (Gen 5 values)",
+ "stat_change": {
+  "target": "foe",
+  "stat": "spe",
+  "stages": -1
+ },
+ "speed": 15.0,
+ "radius": 0.7,
+ "tuned": true
+}

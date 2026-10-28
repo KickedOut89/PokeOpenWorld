@@ -1,0 +1,45 @@
+{
+ "id": "caterpie",
+ "name": "Caterpie",
+ "dex": 10,
+ "types": [
+  "bug"
+ ],
+ "base": {
+  "hp": 45,
+  "atk": 30,
+  "def": 35,
+  "spa": 20,
+  "spd": 20,
+  "spe": 45
+ },
+ "catch_rate": 255,
+ "base_exp": 39,
+ "growth": "medium_fast",
+ "ev_yield": {
+  "hp": 1
+ },
+ "learnset": [
+  [
+   1,
+   "string_shot"
+  ],
+  [
+   1,
+   "tackle"
+  ],
+  [
+   15,
+   "bug_bite"
+  ]
+ ],
+ "evolves": [
+  {
+   "to": "metapod",
+   "level": 7
+  }
+ ],
+ "temperament": "passive",
+ "gender_ratio": 4,
+ "source": "PokeAPI (Gen 5 Black/White learnset)"
+}

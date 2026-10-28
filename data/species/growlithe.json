@@ -1,0 +1,65 @@
+{
+ "id": "growlithe",
+ "name": "Growlithe",
+ "dex": 58,
+ "types": [
+  "fire"
+ ],
+ "base": {
+  "hp": 55,
+  "atk": 70,
+  "def": 45,
+  "spa": 70,
+  "spd": 50,
+  "spe": 60
+ },
+ "catch_rate": 190,
+ "base_exp": 70,
+ "growth": "slow",
+ "ev_yield": {
+  "atk": 1
+ },
+ "learnset": [
+  [
+   1,
+   "bite"
+  ],
+  [
+   1,
+   "roar"
+  ],
+  [
+   6,
+   "ember"
+  ],
+  [
+   9,
+   "leer"
+  ],
+  [
+   14,
+   "odor_sleuth"
+  ],
+  [
+   17,
+   "helping_hand"
+  ],
+  [
+   20,
+   "flame_wheel"
+  ],
+  [
+   25,
+   "reversal"
+  ],
+  [
+   28,
+   "fire_fang"
+  ]
+ ],
+ "evolves": [],
+ "temperament": "territorial",
+ "gender_ratio": 2,
+ "source": "PokeAPI (Gen 5 Black/White learnset)",
+ "ambient_only": true
+}

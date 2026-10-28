@@ -1,0 +1,219 @@
+{
+ "id": "kanto_3_9",
+ "region": "kanto",
+ "coord": [
+  3,
+  9
+ ],
+ "area": "viridian_city",
+ "cells": [
+  "================",
+  "================",
+  "==..............",
+  "==..#######.....",
+  "==..#######.....",
+  "==..#######.....",
+  "==..#######.####",
+  "==..........####",
+  "==.####.....####",
+  "==.####.....####",
+  "==.####.........",
+  "==..............",
+  "==========......",
+  "==========......",
+  "==========TTTTTT",
+  "==========TTTTTT"
+ ],
+ "heights": [
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222"
+ ],
+ "props": [
+  {
+   "id": "viridian_center",
+   "kind": "building",
+   "template": "center",
+   "pos": [
+    30.0,
+    2.0,
+    20.0
+   ],
+   "rot": 0.0,
+   "footprint": [
+    27.0,
+    15.0
+   ],
+   "height": 5.0,
+   "area": "viridian_city"
+  },
+  {
+   "id": "police_box",
+   "kind": "building",
+   "template": "shop",
+   "pos": [
+    20.0,
+    2.0,
+    38.0
+   ],
+   "rot": 0.0,
+   "footprint": [
+    15.0,
+    11.0
+   ],
+   "height": 3.5,
+   "area": "viridian_city"
+  },
+  {
+   "id": "viridian_house_12",
+   "kind": "building",
+   "template": "house_small",
+   "pos": [
+    58.0,
+    2.0,
+    32.0
+   ],
+   "rot": 0.0,
+   "footprint": [
+    19.0,
+    15.0
+   ],
+   "height": 4.5,
+   "area": "viridian_city"
+  },
+  {
+   "id": "viridian_lamp_5",
+   "kind": "lamp",
+   "pos": [
+    10.0,
+    2.0,
+    10.0
+   ],
+   "rot": 0.0,
+   "area": "viridian_city"
+  }
+ ],
+ "doors": [
+  {
+   "id": "viridian_center_door",
+   "building": "viridian_center",
+   "interior": "viridian_center_int",
+   "pos": [
+    30.0,
+    2.0,
+    28.2
+   ],
+   "unlock": {
+    "type": "always"
+   },
+   "locked_text": "It's locked.",
+   "area": "viridian_city"
+  },
+  {
+   "id": "police_box_door",
+   "building": "police_box",
+   "interior": "police_box_int",
+   "pos": [
+    20.0,
+    2.0,
+    44.2
+   ],
+   "unlock": {
+    "type": "pending"
+   },
+   "locked_text": "Officer Jenny is out on patrol.",
+   "area": "viridian_city"
+  },
+  {
+   "id": "viridian_house_12_door",
+   "building": "viridian_house_12",
+   "interior": "viridian_house_12_int",
+   "pos": [
+    58.0,
+    2.0,
+    40.2
+   ],
+   "unlock": {
+    "type": "always"
+   },
+   "locked_text": "It's locked.",
+   "area": "viridian_city"
+  }
+ ],
+ "spawn_zones": [],
+ "npc_anchors": [
+  {
+   "id": "v_center_front",
+   "pos": [
+    30.0,
+    2.0,
+    30.0
+   ],
+   "kind": "spot",
+   "area": "viridian_city"
+  },
+  {
+   "id": "v_south_gate",
+   "pos": [
+    14.0,
+    2.0,
+    54.0
+   ],
+   "kind": "spot",
+   "area": "viridian_city"
+  },
+  {
+   "id": "v_police_post",
+   "pos": [
+    18.0,
+    2.0,
+    46.0
+   ],
+   "kind": "spot",
+   "area": "viridian_city"
+  },
+  {
+   "id": "v_lamp_corner",
+   "pos": [
+    50.0,
+    2.0,
+    2.0
+   ],
+   "kind": "spot",
+   "area": "viridian_city"
+  },
+  {
+   "id": "viridian_center_counter",
+   "pos": [
+    30.0,
+    2.0,
+    30.0
+   ],
+   "kind": "work",
+   "area": "viridian_city"
+  },
+  {
+   "id": "viridian_center_front",
+   "pos": [
+    30.0,
+    2.0,
+    34.0
+   ],
+   "kind": "spot",
+   "area": "viridian_city"
+  }
+ ]
+}

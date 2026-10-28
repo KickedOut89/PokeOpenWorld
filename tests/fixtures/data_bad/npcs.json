@@ -1,0 +1,2 @@
+{"mute": {"id": "mute", "name": "Mute", "role": "resident", "home": "chunk_door", "schedule": "none_sched", "dialogue": "missing_dialogue"},
+ "terse": {"id": "terse", "name": "Terse", "role": "resident", "home": "chunk_door", "schedule": "none_sched", "dialogue": "terse_lines"}}

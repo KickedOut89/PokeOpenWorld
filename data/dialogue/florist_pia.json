@@ -1,0 +1,57 @@
+{
+ "id": "florist_pia",
+ "barks": [
+  {
+   "text": "Smell these!"
+  },
+  {
+   "text": "The dew's still on the grass.",
+   "when": {
+    "periods": [
+     "morning"
+    ]
+   }
+  },
+  {
+   "text": "Evenings are my favorite here.",
+   "when": {
+    "periods": [
+     "evening"
+    ]
+   }
+  },
+  {
+   "text": "Puddles everywhere!",
+   "when": {
+    "weather": [
+     "rain"
+    ]
+   }
+  },
+  {
+   "text": "Thunder! Get inside!",
+   "when": {
+    "weather": [
+     "thunderstorm"
+    ]
+   }
+  }
+ ],
+ "talk": [
+  {
+   "text": "Oddish pollen makes the best fertilizer. Don't tell anyone."
+  },
+  {
+   "text": "Oh! You've got a Pok\u00e9mon now! Oddish pollen makes the best fertilizer. Don't tell anyone.",
+   "when": {
+    "flag": "got_starter"
+   }
+  },
+  {
+   "text": "Filling that Pok\u00e9dex? Good luck!",
+   "when": {
+    "flag": "got_pokedex"
+   }
+  }
+ ]
+}

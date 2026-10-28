@@ -1,0 +1,65 @@
+{
+ "id": "meowth",
+ "name": "Meowth",
+ "dex": 52,
+ "types": [
+  "normal"
+ ],
+ "base": {
+  "hp": 40,
+  "atk": 45,
+  "def": 35,
+  "spa": 40,
+  "spd": 40,
+  "spe": 90
+ },
+ "catch_rate": 255,
+ "base_exp": 58,
+ "growth": "medium_fast",
+ "ev_yield": {
+  "spe": 1
+ },
+ "learnset": [
+  [
+   1,
+   "growl"
+  ],
+  [
+   1,
+   "scratch"
+  ],
+  [
+   6,
+   "bite"
+  ],
+  [
+   9,
+   "fake_out"
+  ],
+  [
+   14,
+   "fury_swipes"
+  ],
+  [
+   17,
+   "screech"
+  ],
+  [
+   22,
+   "feint_attack"
+  ],
+  [
+   25,
+   "taunt"
+  ],
+  [
+   30,
+   "pay_day"
+  ]
+ ],
+ "evolves": [],
+ "temperament": "timid",
+ "gender_ratio": 4,
+ "source": "PokeAPI (Gen 5 Black/White learnset)",
+ "ambient_only": true
+}

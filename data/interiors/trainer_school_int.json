@@ -1,0 +1,9 @@
+{
+ "id": "trainer_school_int",
+ "template": "house_large",
+ "furnishing": [],
+ "npcs": [
+  "teacher_ines"
+ ],
+ "lighting": "interior_warm"
+}

@@ -1,0 +1,14 @@
+{
+ "required": {
+  "id": "string",
+  "name": "string",
+  "types": "array",
+  "base": "dict",
+  "catch_rate": "number",
+  "base_exp": "number",
+  "growth": "string",
+  "learnset": "array",
+  "evolves": "array",
+  "temperament": "string"
+ }
+}

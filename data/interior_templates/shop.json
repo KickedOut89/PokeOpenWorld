@@ -1,0 +1,4 @@
+{"id": "shop", "size": [12, 9], "floor": "#c8b890", "wall": "#efe0b0", "light": "#ffe8c0",
+ "furniture": [{"kind": "counter", "pos": [0, 0, -2.5], "size": [5, 1.0, 1.0], "color": "#8a6a45"},
+  {"kind": "shelf", "pos": [-5.2, 0, 0], "size": [0.6, 2.0, 5.0], "color": "#6b4a2b"},
+  {"kind": "shelf", "pos": [5.2, 0, 0], "size": [0.6, 2.0, 5.0], "color": "#6b4a2b"}]}

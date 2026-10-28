@@ -1,0 +1,9 @@
+{
+ "id": "ranger_outpost_int",
+ "template": "house_small",
+ "furnishing": [],
+ "npcs": [
+  "ranger_maple"
+ ],
+ "lighting": "interior_warm"
+}

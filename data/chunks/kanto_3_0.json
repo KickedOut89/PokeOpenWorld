@@ -1,0 +1,61 @@
+{
+ "id": "kanto_3_0",
+ "region": "kanto",
+ "coord": [
+  3,
+  0
+ ],
+ "area": "viridian_forest",
+ "cells": [
+  "TTTTTTTTTTTTTTTT",
+  "TTTTTTTTTTTTTTTT",
+  "TTTTTTTTTTTTTTTT",
+  "TTTTTTTTTTTTTTTT",
+  "TTTTTTTTTTTTTTTT",
+  "TTTTTTTTTTTTTTTT",
+  "TTTTTTTTTTTTTTTT",
+  "TTTTTTTTTTTTTTTT",
+  "TTTTTTTTTTTTTTTT",
+  "TTTTTTTTTTTTTTTT",
+  "dddddddddddddTTT",
+  "dddddddddddddTTT",
+  "dddddddddddddTTT",
+  "TTTTTTTTTTdddTTT",
+  "TTTT\"\"\"\"\"\"\"\"\"TTT",
+  "TTTT\"\"\"\"\"\"\"\"\"TTT"
+ ],
+ "heights": [
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222"
+ ],
+ "props": [],
+ "doors": [],
+ "spawn_zones": [
+  {
+   "id": "forest_grass_ne",
+   "table": "viridian_forest",
+   "rect": [
+    16.0,
+    56.0,
+    36.0,
+    36.0
+   ],
+   "area": "viridian_forest"
+  }
+ ],
+ "npc_anchors": []
+}

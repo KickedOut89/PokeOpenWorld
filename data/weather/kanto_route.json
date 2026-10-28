@@ -1,0 +1,1 @@
+{"id": "kanto_route", "weights": {"clear": 50, "cloudy": 25, "rain": 18, "thunderstorm": 7}, "reroll_hours": 3}

@@ -1,0 +1,57 @@
+{
+ "id": "barista_tomo",
+ "barks": [
+  {
+   "text": "One latte, coming up."
+  },
+  {
+   "text": "Morning! Best part of the day.",
+   "when": {
+    "periods": [
+     "morning"
+    ]
+   }
+  },
+  {
+   "text": "Sun's going down. Time to head home soon.",
+   "when": {
+    "periods": [
+     "evening"
+    ]
+   }
+  },
+  {
+   "text": "Ugh, I'm soaked!",
+   "when": {
+    "weather": [
+     "rain"
+    ]
+   }
+  },
+  {
+   "text": "Hold on to your hat!",
+   "when": {
+    "weather": [
+     "thunderstorm"
+    ]
+   }
+  }
+ ],
+ "talk": [
+  {
+   "text": "The caf\u00e9's open till ten. Night owls are our best customers."
+  },
+  {
+   "text": "Take good care of your partner. The caf\u00e9's open till ten. Night owls are our best customers.",
+   "when": {
+    "flag": "got_starter"
+   }
+  },
+  {
+   "text": "A Pok\u00e9dex! Professor Oak must trust you.",
+   "when": {
+    "flag": "got_pokedex"
+   }
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+{
+ "id": "vendor_benny",
+ "barks": [
+  {
+   "text": "Bargains today!"
+  },
+  {
+   "text": "Coffee first, then everything else.",
+   "when": {
+    "periods": [
+     "morning"
+    ]
+   }
+  },
+  {
+   "text": "Lamps are coming on.",
+   "when": {
+    "periods": [
+     "evening"
+    ]
+   }
+  },
+  {
+   "text": "At least the dust settles.",
+   "when": {
+    "weather": [
+     "rain"
+    ]
+   }
+  },
+  {
+   "text": "Pikachu love this weather. I don't.",
+   "when": {
+    "weather": [
+     "thunderstorm"
+    ]
+   }
+  }
+ ],
+ "talk": [
+  {
+   "text": "Handmade Pok\u00e9 Ball cases! ...They're just cases."
+  },
+  {
+   "text": "Is that your partner? It looks strong! Handmade Pok\u00e9 Ball cases! ...They're just cases.",
+   "when": {
+    "flag": "got_starter"
+   }
+  },
+  {
+   "text": "Filling that Pok\u00e9dex? Good luck!",
+   "when": {
+    "flag": "got_pokedex"
+   }
+  }
+ ]
+}

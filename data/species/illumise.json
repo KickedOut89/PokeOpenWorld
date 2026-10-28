@@ -1,0 +1,62 @@
+{
+ "id": "illumise",
+ "name": "Illumise",
+ "dex": 314,
+ "types": [
+  "bug"
+ ],
+ "base": {
+  "hp": 65,
+  "atk": 47,
+  "def": 55,
+  "spa": 73,
+  "spd": 75,
+  "spe": 85
+ },
+ "catch_rate": 150,
+ "base_exp": 151,
+ "growth": "fluctuating",
+ "ev_yield": {
+  "spe": 1
+ },
+ "learnset": [
+  [
+   1,
+   "tackle"
+  ],
+  [
+   5,
+   "sweet_scent"
+  ],
+  [
+   9,
+   "charm"
+  ],
+  [
+   13,
+   "moonlight"
+  ],
+  [
+   17,
+   "quick_attack"
+  ],
+  [
+   21,
+   "wish"
+  ],
+  [
+   25,
+   "encore"
+  ],
+  [
+   29,
+   "flatter"
+  ]
+ ],
+ "evolves": [],
+ "temperament": "passive",
+ "gender_ratio": 8,
+ "source": "PokeAPI (Gen 5 Black/White learnset)",
+ "nocturnal": true,
+ "ambient_only": true
+}

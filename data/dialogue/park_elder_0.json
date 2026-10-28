@@ -1,0 +1,57 @@
+{
+ "id": "park_elder_0",
+ "barks": [
+  {
+   "text": "Back in my day..."
+  },
+  {
+   "text": "The dew's still on the grass.",
+   "when": {
+    "periods": [
+     "morning"
+    ]
+   }
+  },
+  {
+   "text": "Evenings are my favorite here.",
+   "when": {
+    "periods": [
+     "evening"
+    ]
+   }
+  },
+  {
+   "text": "Puddles everywhere!",
+   "when": {
+    "weather": [
+     "rain"
+    ]
+   }
+  },
+  {
+   "text": "Hold on to your hat!",
+   "when": {
+    "weather": [
+     "thunderstorm"
+    ]
+   }
+  }
+ ],
+ "talk": [
+  {
+   "text": "We used to battle at the Gym, back when it was open every day."
+  },
+  {
+   "text": "Take good care of your partner. We used to battle at the Gym, back when it was open every day.",
+   "when": {
+    "flag": "got_starter"
+   }
+  },
+  {
+   "text": "A Pok\u00e9dex! Professor Oak must trust you.",
+   "when": {
+    "flag": "got_pokedex"
+   }
+  }
+ ]
+}

@@ -1,0 +1,9 @@
+{
+ "id": "viridian_center_int",
+ "template": "center",
+ "furnishing": [],
+ "npcs": [
+  "nurse_joy"
+ ],
+ "lighting": "interior_warm"
+}

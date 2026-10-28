@@ -1,0 +1,4 @@
+{"id": "rival_lab", "npc": "rival_blue", "class": "Rival", "party": [{"species": "charmander", "level": 5}],
+ "skill": 0.7, "sight_range": 0, "reward_money": 175, "defeated_flag": "rival_lab_done", "no_blackout": true,
+ "intro": "Wait! Let's check out our Pokémon! Come on, I'll take you on!",
+ "lose_line": "WHAT? Unbelievable! I picked the wrong Pokémon!", "win_line": "Yeah! Am I great or what?"}

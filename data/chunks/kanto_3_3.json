@@ -1,0 +1,94 @@
+{
+ "id": "kanto_3_3",
+ "region": "kanto",
+ "coord": [
+  3,
+  3
+ ],
+ "area": "viridian_forest",
+ "cells": [
+  "TTTTTTTTTTTTTTTT",
+  "TTTTTTTTTTTTTTTT",
+  "TTTTTTTTTTTTTTTT",
+  "TTTTTTTTTTTTTTTT",
+  "TTTTTTTTTTTTTTTT",
+  "TTTTTTTTTTTTTTTT",
+  "ddTTTTTTTTTTTTTT",
+  "ddTTTTTTTTTTTTTT",
+  "ddTTTTTTTTTTTTTT",
+  "ddTT.#####..TTTT",
+  "ddddd#####..TTTT",
+  "ddddd#####..TTTT",
+  "ddddddddddddTTTT",
+  "ddTT........TTTT",
+  "ddTTTTTTTTTTTTTT",
+  "ddTTTTTTTTTTTTTT"
+ ],
+ "heights": [
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222"
+ ],
+ "props": [
+  {
+   "id": "ranger_outpost",
+   "kind": "building",
+   "template": "house_small",
+   "pos": [
+    30.0,
+    2.0,
+    42.0
+   ],
+   "rot": 0.0,
+   "footprint": [
+    19.0,
+    11.0
+   ],
+   "height": 4.5,
+   "area": "viridian_forest"
+  }
+ ],
+ "doors": [
+  {
+   "id": "ranger_outpost_door",
+   "building": "ranger_outpost",
+   "interior": "ranger_outpost_int",
+   "pos": [
+    30.0,
+    2.0,
+    48.2
+   ],
+   "unlock": {
+    "type": "always"
+   },
+   "locked_text": "It's locked.",
+   "area": "viridian_forest"
+  }
+ ],
+ "spawn_zones": [],
+ "npc_anchors": [
+  {
+   "id": "f_ranger_desk",
+   "pos": [
+    30.0,
+    2.0,
+    50.0
+   ],
+   "kind": "spot",
+   "area": "viridian_forest"
+  }
+ ]
+}

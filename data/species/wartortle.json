@@ -1,0 +1,73 @@
+{
+ "id": "wartortle",
+ "name": "Wartortle",
+ "dex": 8,
+ "types": [
+  "water"
+ ],
+ "base": {
+  "hp": 59,
+  "atk": 63,
+  "def": 80,
+  "spa": 65,
+  "spd": 80,
+  "spe": 58
+ },
+ "catch_rate": 45,
+ "base_exp": 142,
+ "growth": "medium_slow",
+ "ev_yield": {
+  "def": 1,
+  "spd": 1
+ },
+ "learnset": [
+  [
+   1,
+   "bubble"
+  ],
+  [
+   1,
+   "tackle"
+  ],
+  [
+   1,
+   "tail_whip"
+  ],
+  [
+   4,
+   "tail_whip"
+  ],
+  [
+   7,
+   "bubble"
+  ],
+  [
+   10,
+   "withdraw"
+  ],
+  [
+   13,
+   "water_gun"
+  ],
+  [
+   16,
+   "bite"
+  ],
+  [
+   20,
+   "rapid_spin"
+  ],
+  [
+   24,
+   "protect"
+  ],
+  [
+   28,
+   "water_pulse"
+  ]
+ ],
+ "evolves": [],
+ "temperament": "territorial",
+ "gender_ratio": 1,
+ "source": "PokeAPI (Gen 5 Black/White learnset)"
+}

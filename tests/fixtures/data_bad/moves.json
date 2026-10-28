@@ -1,0 +1,4 @@
+{
+  "tackle": {"id": "tackle", "name": "Tackle", "type": "normal", "power": 50, "pp": 35},
+  "growl": {"id": "growl", "name": "Growl", "type": "normal", "power": 0, "pp": 40}
+}

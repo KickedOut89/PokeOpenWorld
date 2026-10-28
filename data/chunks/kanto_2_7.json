@@ -1,0 +1,254 @@
+{
+ "id": "kanto_2_7",
+ "region": "kanto",
+ "coord": [
+  2,
+  7
+ ],
+ "area": "viridian_city",
+ "cells": [
+  "TTTTTTTTTTTTTT==",
+  "TTTTTTTTTTTTTT==",
+  "..............==",
+  "##..####.####.==",
+  "##..####.####.==",
+  "##..####.####.==",
+  "##..####.####.==",
+  "..............==",
+  "###..####.....==",
+  "###..####.....==",
+  "###..####.....==",
+  "###..####.....==",
+  "###...........==",
+  "..............==",
+  "================",
+  "================"
+ ],
+ "heights": [
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222"
+ ],
+ "props": [
+  {
+   "id": "viridian_house_1",
+   "kind": "building",
+   "template": "house_small",
+   "pos": [
+    0.0,
+    2.0,
+    20.0
+   ],
+   "rot": 0.0,
+   "footprint": [
+    15.0,
+    15.0
+   ],
+   "height": 4.5,
+   "area": "viridian_city"
+  },
+  {
+   "id": "viridian_house_2",
+   "kind": "building",
+   "template": "house_small",
+   "pos": [
+    24.0,
+    2.0,
+    20.0
+   ],
+   "rot": 0.0,
+   "footprint": [
+    15.0,
+    15.0
+   ],
+   "height": 4.5,
+   "area": "viridian_city"
+  },
+  {
+   "id": "viridian_house_3",
+   "kind": "building",
+   "template": "house_small",
+   "pos": [
+    44.0,
+    2.0,
+    20.0
+   ],
+   "rot": 0.0,
+   "footprint": [
+    15.0,
+    15.0
+   ],
+   "height": 4.5,
+   "area": "viridian_city"
+  },
+  {
+   "id": "viridian_house_5",
+   "kind": "building",
+   "template": "house_large",
+   "pos": [
+    2.0,
+    2.0,
+    42.0
+   ],
+   "rot": 0.0,
+   "footprint": [
+    19.0,
+    19.0
+   ],
+   "height": 5.0,
+   "area": "viridian_city"
+  },
+  {
+   "id": "viridian_house_6",
+   "kind": "building",
+   "template": "house_small",
+   "pos": [
+    28.0,
+    2.0,
+    40.0
+   ],
+   "rot": 0.0,
+   "footprint": [
+    15.0,
+    15.0
+   ],
+   "height": 4.5,
+   "area": "viridian_city"
+  },
+  {
+   "id": "viridian_lamp_0",
+   "kind": "lamp",
+   "pos": [
+    54.0,
+    2.0,
+    18.0
+   ],
+   "rot": 0.0,
+   "area": "viridian_city"
+  },
+  {
+   "id": "viridian_lamp_7",
+   "kind": "lamp",
+   "pos": [
+    18.0,
+    2.0,
+    54.0
+   ],
+   "rot": 0.0,
+   "area": "viridian_city"
+  }
+ ],
+ "doors": [
+  {
+   "id": "viridian_house_1_door",
+   "building": "viridian_house_1",
+   "interior": "viridian_house_1_int",
+   "pos": [
+    0.0,
+    2.0,
+    28.2
+   ],
+   "unlock": {
+    "type": "always"
+   },
+   "locked_text": "It's locked.",
+   "area": "viridian_city"
+  },
+  {
+   "id": "viridian_house_2_door",
+   "building": "viridian_house_2",
+   "interior": "viridian_house_2_int",
+   "pos": [
+    24.0,
+    2.0,
+    28.2
+   ],
+   "unlock": {
+    "type": "pending"
+   },
+   "locked_text": "Do not disturb.",
+   "area": "viridian_city"
+  },
+  {
+   "id": "viridian_house_3_door",
+   "building": "viridian_house_3",
+   "interior": "viridian_house_3_int",
+   "pos": [
+    44.0,
+    2.0,
+    28.2
+   ],
+   "unlock": {
+    "type": "always"
+   },
+   "locked_text": "It's locked.",
+   "area": "viridian_city"
+  },
+  {
+   "id": "viridian_house_5_door",
+   "building": "viridian_house_5",
+   "interior": "viridian_house_5_int",
+   "pos": [
+    2.0,
+    2.0,
+    52.2
+   ],
+   "unlock": {
+    "type": "always"
+   },
+   "locked_text": "It's locked.",
+   "area": "viridian_city"
+  },
+  {
+   "id": "viridian_house_6_door",
+   "building": "viridian_house_6",
+   "interior": "viridian_house_6_int",
+   "pos": [
+    28.0,
+    2.0,
+    48.2
+   ],
+   "unlock": {
+    "type": "pending"
+   },
+   "locked_text": "Do not disturb.",
+   "area": "viridian_city"
+  }
+ ],
+ "spawn_zones": [],
+ "npc_anchors": [
+  {
+   "id": "v_plaza_n",
+   "pos": [
+    62.0,
+    2.0,
+    58.0
+   ],
+   "kind": "spot",
+   "area": "viridian_city"
+  },
+  {
+   "id": "v_north_gate",
+   "pos": [
+    62.0,
+    2.0,
+    10.0
+   ],
+   "kind": "spot",
+   "area": "viridian_city"
+  }
+ ]
+}

@@ -1,0 +1,11 @@
+{
+ "required": {
+  "id": "string",
+  "name": "string",
+  "type": "string",
+  "category": "string",
+  "power": "number",
+  "pp": "number",
+  "shape": "string"
+ }
+}

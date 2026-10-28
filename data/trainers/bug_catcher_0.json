@@ -1,0 +1,21 @@
+{
+ "id": "bug_catcher_0",
+ "npc": "bug_catcher_0",
+ "class": "Bug Catcher",
+ "party": [
+  {
+   "species": "weedle",
+   "level": 6
+  },
+  {
+   "species": "caterpie",
+   "level": 6
+  }
+ ],
+ "skill": 0.5,
+ "sight_range": 6,
+ "reward_money": 96,
+ "defeated_flag": "defeated_bug_catcher_0",
+ "intro": "You're in my bug territory!",
+ "lose_line": "My bugs... they lost!"
+}

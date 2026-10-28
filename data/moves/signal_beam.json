@@ -1,0 +1,16 @@
+{
+ "id": "signal_beam",
+ "name": "Signal Beam",
+ "type": "bug",
+ "category": "special",
+ "power": 75,
+ "pp": 15,
+ "accuracy": 100,
+ "priority": 0,
+ "shape": "beam",
+ "range": 11.0,
+ "active_s": 0.15,
+ "source": "PokeAPI (Gen 5 values)",
+ "radius": 0.6,
+ "tuned": true
+}

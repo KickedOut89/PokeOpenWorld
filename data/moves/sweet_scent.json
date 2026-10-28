@@ -1,0 +1,21 @@
+{
+ "id": "sweet_scent",
+ "name": "Sweet Scent",
+ "type": "normal",
+ "category": "status",
+ "power": 0,
+ "pp": 20,
+ "accuracy": 100,
+ "priority": 0,
+ "shape": "area",
+ "range": 3.5,
+ "active_s": 0.15,
+ "source": "PokeAPI (Gen 5 values)",
+ "stat_change": {
+  "target": "foe",
+  "stat": "evasion",
+  "stages": -2
+ },
+ "radius": 2.5,
+ "tuned": true
+}

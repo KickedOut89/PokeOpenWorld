@@ -1,0 +1,57 @@
+{
+ "id": "delivery_bo",
+ "barks": [
+  {
+   "text": "Delivery!"
+  },
+  {
+   "text": "Up with the Pidgey, as always.",
+   "when": {
+    "periods": [
+     "morning"
+    ]
+   }
+  },
+  {
+   "text": "Look at that sky \u2014 all orange.",
+   "when": {
+    "periods": [
+     "evening"
+    ]
+   }
+  },
+  {
+   "text": "The berries will love this rain.",
+   "when": {
+    "weather": [
+     "rain"
+    ]
+   }
+  },
+  {
+   "text": "Thunder! Get inside!",
+   "when": {
+    "weather": [
+     "thunderstorm"
+    ]
+   }
+  }
+ ],
+ "talk": [
+  {
+   "text": "I deliver for the Mart. Parcels, potions, the occasional confused Rattata."
+  },
+  {
+   "text": "Oh! You've got a Pok\u00e9mon now! I deliver for the Mart. Parcels, potions, the occasional confused Rattata.",
+   "when": {
+    "flag": "got_starter"
+   }
+  },
+  {
+   "text": "A Pok\u00e9dex! Professor Oak must trust you.",
+   "when": {
+    "flag": "got_pokedex"
+   }
+  }
+ ]
+}

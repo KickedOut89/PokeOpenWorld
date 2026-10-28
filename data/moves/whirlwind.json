@@ -1,0 +1,16 @@
+{
+ "id": "whirlwind",
+ "name": "Whirlwind",
+ "type": "normal",
+ "category": "status",
+ "power": 0,
+ "pp": 20,
+ "accuracy": 100,
+ "priority": -6,
+ "shape": "area",
+ "range": 0.0,
+ "active_s": 0.15,
+ "source": "PokeAPI (Gen 5 values)",
+ "radius": 4.0,
+ "tuned": true
+}

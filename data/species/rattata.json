@@ -1,0 +1,77 @@
+{
+ "id": "rattata",
+ "name": "Rattata",
+ "dex": 19,
+ "types": [
+  "normal"
+ ],
+ "base": {
+  "hp": 30,
+  "atk": 56,
+  "def": 35,
+  "spa": 25,
+  "spd": 35,
+  "spe": 72
+ },
+ "catch_rate": 255,
+ "base_exp": 51,
+ "growth": "medium_fast",
+ "ev_yield": {
+  "spe": 1
+ },
+ "learnset": [
+  [
+   1,
+   "tackle"
+  ],
+  [
+   1,
+   "tail_whip"
+  ],
+  [
+   4,
+   "quick_attack"
+  ],
+  [
+   7,
+   "focus_energy"
+  ],
+  [
+   10,
+   "bite"
+  ],
+  [
+   13,
+   "pursuit"
+  ],
+  [
+   16,
+   "hyper_fang"
+  ],
+  [
+   19,
+   "sucker_punch"
+  ],
+  [
+   22,
+   "crunch"
+  ],
+  [
+   25,
+   "assurance"
+  ],
+  [
+   28,
+   "super_fang"
+  ]
+ ],
+ "evolves": [
+  {
+   "to": "raticate",
+   "level": 20
+  }
+ ],
+ "temperament": "aggressive",
+ "gender_ratio": 4,
+ "source": "PokeAPI (Gen 5 Black/White learnset)"
+}

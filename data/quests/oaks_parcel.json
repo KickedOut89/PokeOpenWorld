@@ -1,0 +1,6 @@
+{"id": "oaks_parcel", "title": "Oak's Parcel", "requires_flag": "got_starter",
+ "stages": [
+  {"id": "get_parcel", "objective_text": "Visit the Poké Mart in Viridian City.", "complete_when": {"flag": "got_parcel"}, "on_complete": {"give_items": {"oaks_parcel": 1}}},
+  {"id": "deliver", "objective_text": "Deliver Oak's Parcel to Professor Oak.", "complete_when": {"talk_to": "professor_oak", "item": "oaks_parcel"},
+   "on_complete": {"take_items": {"oaks_parcel": 1}, "give_items": {"poke_ball": 5}, "set_flags": ["got_pokedex"]}}
+ ]}

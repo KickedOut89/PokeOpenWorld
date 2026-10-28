@@ -1,0 +1,336 @@
+{
+ "periods": {
+  "id": "periods",
+  "hours": {
+   "0": {
+    "sun_color": "#ffffff",
+    "sun_energy": 0.0,
+    "sky_top": "#0b1430",
+    "sky_horizon": "#1c2a4a",
+    "ambient_energy": 0.25,
+    "fog_density": 0.003,
+    "volumetric_density": 0.01,
+    "exposure": 1.15,
+    "grade": "night"
+   },
+   "1": {
+    "sun_color": "#ffe6da",
+    "sun_energy": 0.0,
+    "sky_top": "#0f1836",
+    "sky_horizon": "#282e4e",
+    "ambient_energy": 0.2625,
+    "fog_density": 0.0035,
+    "volumetric_density": 0.0119,
+    "exposure": 1.1375,
+    "grade": "night"
+   },
+   "2": {
+    "sun_color": "#ffccb4",
+    "sun_energy": 0.0,
+    "sky_top": "#121c3c",
+    "sky_horizon": "#333252",
+    "ambient_energy": 0.275,
+    "fog_density": 0.004,
+    "volumetric_density": 0.0138,
+    "exposure": 1.125,
+    "grade": "night"
+   },
+   "3": {
+    "sun_color": "#ffb38f",
+    "sun_energy": 0.0,
+    "sky_top": "#162042",
+    "sky_horizon": "#3e3656",
+    "ambient_energy": 0.2875,
+    "fog_density": 0.0045,
+    "volumetric_density": 0.0156,
+    "exposure": 1.1125,
+    "grade": "night"
+   },
+   "4": {
+    "sun_color": "#ff9a6a",
+    "sun_energy": 0.0,
+    "sky_top": "#1a2448",
+    "sky_horizon": "#4a3a5a",
+    "ambient_energy": 0.3,
+    "fog_density": 0.005,
+    "volumetric_density": 0.0175,
+    "exposure": 1.1,
+    "grade": "night"
+   },
+   "5": {
+    "sun_color": "#ffa772",
+    "sun_energy": 0.45,
+    "sky_top": "#344f80",
+    "sky_horizon": "#9e7672",
+    "ambient_energy": 0.425,
+    "fog_density": 0.0055,
+    "volumetric_density": 0.0187,
+    "exposure": 1.05,
+    "grade": "night"
+   },
+   "6": {
+    "sun_color": "#ffb47a",
+    "sun_energy": 0.9,
+    "sky_top": "#4d7ab8",
+    "sky_horizon": "#f2b38a",
+    "ambient_energy": 0.55,
+    "fog_density": 0.006,
+    "volumetric_density": 0.02,
+    "exposure": 1.0,
+    "grade": "morning"
+   },
+   "7": {
+    "sun_color": "#ffc899",
+    "sun_energy": 1.1333,
+    "sky_top": "#5282c3",
+    "sky_horizon": "#e1bfac",
+    "ambient_energy": 0.6333,
+    "fog_density": 0.0046,
+    "volumetric_density": 0.0158,
+    "exposure": 1.0,
+    "grade": "morning"
+   },
+   "8": {
+    "sun_color": "#ffdcb7",
+    "sun_energy": 1.3667,
+    "sky_top": "#588bcd",
+    "sky_horizon": "#d0cccd",
+    "ambient_energy": 0.7167,
+    "fog_density": 0.0034,
+    "volumetric_density": 0.0117,
+    "exposure": 1.0,
+    "grade": "morning"
+   },
+   "9": {
+    "sun_color": "#fff0d6",
+    "sun_energy": 1.6,
+    "sky_top": "#5d93d8",
+    "sky_horizon": "#bfd8ef",
+    "ambient_energy": 0.8,
+    "fog_density": 0.002,
+    "volumetric_density": 0.0075,
+    "exposure": 1.0,
+    "grade": "morning"
+   },
+   "10": {
+    "sun_color": "#fff3df",
+    "sun_energy": 1.7333,
+    "sky_top": "#5790d8",
+    "sky_horizon": "#bdd7ef",
+    "ambient_energy": 0.85,
+    "fog_density": 0.0016,
+    "volumetric_density": 0.0066,
+    "exposure": 1.0,
+    "grade": "morning"
+   },
+   "11": {
+    "sun_color": "#fff7e7",
+    "sun_energy": 1.8667,
+    "sky_top": "#508dd8",
+    "sky_horizon": "#bad5f0",
+    "ambient_energy": 0.9,
+    "fog_density": 0.0014,
+    "volumetric_density": 0.0059,
+    "exposure": 1.0,
+    "grade": "morning"
+   },
+   "12": {
+    "sun_color": "#fffaf0",
+    "sun_energy": 2.0,
+    "sky_top": "#4a8ad8",
+    "sky_horizon": "#b8d4f0",
+    "ambient_energy": 0.95,
+    "fog_density": 0.001,
+    "volumetric_density": 0.005,
+    "exposure": 1.0,
+    "grade": "day"
+   },
+   "13": {
+    "sun_color": "#fff8ea",
+    "sun_energy": 1.925,
+    "sky_top": "#4e8bd6",
+    "sky_horizon": "#bcd5ee",
+    "ambient_energy": 0.925,
+    "fog_density": 0.0011,
+    "volumetric_density": 0.0053,
+    "exposure": 1.0,
+    "grade": "day"
+   },
+   "14": {
+    "sun_color": "#fff5e4",
+    "sun_energy": 1.85,
+    "sky_top": "#528cd4",
+    "sky_horizon": "#c0d6ec",
+    "ambient_energy": 0.9,
+    "fog_density": 0.0013,
+    "volumetric_density": 0.0055,
+    "exposure": 1.0,
+    "grade": "day"
+   },
+   "15": {
+    "sun_color": "#fff2de",
+    "sun_energy": 1.775,
+    "sky_top": "#568ed2",
+    "sky_horizon": "#c4d7ea",
+    "ambient_energy": 0.875,
+    "fog_density": 0.0014,
+    "volumetric_density": 0.0057,
+    "exposure": 1.0,
+    "grade": "day"
+   },
+   "16": {
+    "sun_color": "#f4eee3",
+    "sun_energy": 1.7,
+    "sky_top": "#6390c7",
+    "sky_horizon": "#ced8e2",
+    "ambient_energy": 0.85,
+    "fog_density": 0.0012,
+    "volumetric_density": 0.0036,
+    "exposure": 1.0,
+    "grade": "day"
+   },
+   "17": {
+    "sun_color": "#e2c7b1",
+    "sun_energy": 1.4,
+    "sky_top": "#5976ad",
+    "sky_horizon": "#cfb5a9",
+    "ambient_energy": 0.725,
+    "fog_density": 0.0018,
+    "volumetric_density": 0.0063,
+    "exposure": 1.025,
+    "grade": "day"
+   },
+   "18": {
+    "sun_color": "#cfa180",
+    "sun_energy": 1.1,
+    "sky_top": "#505d92",
+    "sky_horizon": "#d09270",
+    "ambient_energy": 0.6,
+    "fog_density": 0.002,
+    "volumetric_density": 0.009,
+    "exposure": 1.05,
+    "grade": "evening"
+   },
+   "19": {
+    "sun_color": "#cd967a",
+    "sun_energy": 0.55,
+    "sky_top": "#38406f",
+    "sky_horizon": "#956c65",
+    "ambient_energy": 0.475,
+    "fog_density": 0.002,
+    "volumetric_density": 0.0083,
+    "exposure": 1.075,
+    "grade": "evening"
+   },
+   "20": {
+    "sun_color": "#ca8a75",
+    "sun_energy": 0.0,
+    "sky_top": "#20234c",
+    "sky_horizon": "#544054",
+    "ambient_energy": 0.35,
+    "fog_density": 0.002,
+    "volumetric_density": 0.0075,
+    "exposure": 1.1,
+    "grade": "night"
+   },
+   "21": {
+    "sun_color": "#ff9470",
+    "sun_energy": 0.0,
+    "sky_top": "#181d48",
+    "sky_horizon": "#4a3656",
+    "ambient_energy": 0.325,
+    "fog_density": 0.003,
+    "volumetric_density": 0.0119,
+    "exposure": 1.1125,
+    "grade": "night"
+   },
+   "22": {
+    "sun_color": "#ffb8a0",
+    "sun_energy": 0.0,
+    "sky_top": "#141a40",
+    "sky_horizon": "#3b3252",
+    "ambient_energy": 0.3,
+    "fog_density": 0.003,
+    "volumetric_density": 0.0112,
+    "exposure": 1.125,
+    "grade": "night"
+   },
+   "23": {
+    "sun_color": "#ffdbcf",
+    "sun_energy": 0.0,
+    "sky_top": "#0f1738",
+    "sky_horizon": "#2c2e4e",
+    "ambient_energy": 0.275,
+    "fog_density": 0.003,
+    "volumetric_density": 0.0106,
+    "exposure": 1.1375,
+    "grade": "night"
+   }
+  },
+  "weather": {
+   "clear": {
+    "sun_energy": 1.0,
+    "ambient_energy": 1.0,
+    "fog_density": 1.0,
+    "volumetric_density": 1.0,
+    "exposure": 1.0,
+    "sky_mul": "#ffffff"
+   },
+   "cloudy": {
+    "sun_energy": 0.55,
+    "ambient_energy": 0.9,
+    "fog_density": 1.6,
+    "volumetric_density": 1.3,
+    "exposure": 1.05,
+    "sky_mul": "#c8ccd4"
+   },
+   "rain": {
+    "sun_energy": 0.25,
+    "ambient_energy": 0.75,
+    "fog_density": 3.0,
+    "volumetric_density": 2.0,
+    "exposure": 1.1,
+    "sky_mul": "#8c94a0"
+   },
+   "thunderstorm": {
+    "sun_energy": 0.12,
+    "ambient_energy": 0.6,
+    "fog_density": 3.5,
+    "volumetric_density": 2.5,
+    "exposure": 1.15,
+    "sky_mul": "#5c6470"
+   },
+   "fog": {
+    "sun_energy": 0.45,
+    "ambient_energy": 0.95,
+    "fog_density": 9.0,
+    "volumetric_density": 5.0,
+    "exposure": 1.05,
+    "sky_mul": "#d0d4d8"
+   }
+  },
+  "grades": {
+   "morning": [
+    "#08080c",
+    "#827d78",
+    "#fff6ec"
+   ],
+   "day": [
+    "#000000",
+    "#7f8080",
+    "#ffffff"
+   ],
+   "evening": [
+    "#0a0909",
+    "#807c7a",
+    "#fff6ee"
+   ],
+   "night": [
+    "#000008",
+    "#56627c",
+    "#d8e4ff"
+   ]
+  },
+  "moon_energy": 0.35
+ }
+}

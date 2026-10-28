@@ -1,0 +1,20 @@
+{
+ "id": "sleep_powder",
+ "name": "Sleep Powder",
+ "type": "grass",
+ "category": "status",
+ "power": 0,
+ "pp": 15,
+ "accuracy": 75,
+ "priority": 0,
+ "shape": "area",
+ "range": 3.5,
+ "active_s": 0.15,
+ "source": "PokeAPI (Gen 5 values)",
+ "status": {
+  "id": "slp",
+  "chance": 1.0
+ },
+ "radius": 2.5,
+ "tuned": true
+}

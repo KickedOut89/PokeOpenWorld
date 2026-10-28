@@ -1,0 +1,57 @@
+{
+ "id": "farmer_kid_tess",
+ "barks": [
+  {
+   "text": "Bet I can run faster than you!"
+  },
+  {
+   "text": "The dew's still on the grass.",
+   "when": {
+    "periods": [
+     "morning"
+    ]
+   }
+  },
+  {
+   "text": "Evenings are my favorite here.",
+   "when": {
+    "periods": [
+     "evening"
+    ]
+   }
+  },
+  {
+   "text": "Puddles everywhere!",
+   "when": {
+    "weather": [
+     "rain"
+    ]
+   }
+  },
+  {
+   "text": "Pikachu love this weather. I don't.",
+   "when": {
+    "weather": [
+     "thunderstorm"
+    ]
+   }
+  }
+ ],
+ "talk": [
+  {
+   "text": "When I'm older I'm going to catch a Pikachu in Viridian Forest!"
+  },
+  {
+   "text": "Is that your partner? It looks strong! When I'm older I'm going to catch a Pikachu in Viridian Forest!",
+   "when": {
+    "flag": "got_starter"
+   }
+  },
+  {
+   "text": "Filling that Pok\u00e9dex? Good luck!",
+   "when": {
+    "flag": "got_pokedex"
+   }
+  }
+ ]
+}

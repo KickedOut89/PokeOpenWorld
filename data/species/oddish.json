@@ -1,0 +1,66 @@
+{
+ "id": "oddish",
+ "name": "Oddish",
+ "dex": 43,
+ "types": [
+  "grass",
+  "poison"
+ ],
+ "base": {
+  "hp": 45,
+  "atk": 50,
+  "def": 55,
+  "spa": 75,
+  "spd": 65,
+  "spe": 30
+ },
+ "catch_rate": 255,
+ "base_exp": 64,
+ "growth": "medium_slow",
+ "ev_yield": {
+  "spa": 1
+ },
+ "learnset": [
+  [
+   1,
+   "absorb"
+  ],
+  [
+   5,
+   "sweet_scent"
+  ],
+  [
+   9,
+   "acid"
+  ],
+  [
+   13,
+   "poison_powder"
+  ],
+  [
+   15,
+   "stun_spore"
+  ],
+  [
+   17,
+   "sleep_powder"
+  ],
+  [
+   21,
+   "mega_drain"
+  ],
+  [
+   25,
+   "lucky_chant"
+  ],
+  [
+   29,
+   "natural_gift"
+  ]
+ ],
+ "evolves": [],
+ "temperament": "passive",
+ "gender_ratio": 4,
+ "source": "PokeAPI (Gen 5 Black/White learnset)",
+ "nocturnal": true
+}

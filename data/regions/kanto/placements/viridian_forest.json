@@ -1,0 +1,273 @@
+{
+ "props": [
+  {
+   "id": "ranger_outpost",
+   "kind": "building",
+   "template": "house_small",
+   "pos": [
+    222.0,
+    2.0,
+    234.0
+   ],
+   "rot": 0,
+   "footprint": [
+    19.0,
+    11.0
+   ],
+   "height": 4.5
+  },
+  {
+   "id": "bug_catcher_hideout",
+   "kind": "building",
+   "template": "house_small",
+   "pos": [
+    86.0,
+    2.0,
+    38.0
+   ],
+   "rot": 0,
+   "footprint": [
+    19.0,
+    11.0
+   ],
+   "height": 3.5
+  },
+  {
+   "id": "forest_north_sign",
+   "kind": "sign",
+   "pos": [
+    118.0,
+    2.0,
+    6.0
+   ],
+   "rot": 0,
+   "footprint": [
+    0.8,
+    0.2
+   ],
+   "height": 1.4,
+   "color": "#8a6a45"
+  },
+  {
+   "id": "forest_drifters_a",
+   "kind": "drifters",
+   "pos": [
+    146.0,
+    2.0,
+    202.0
+   ],
+   "rot": 0,
+   "count": 4
+  },
+  {
+   "id": "forest_drifters_b",
+   "kind": "drifters",
+   "pos": [
+    226.0,
+    2.0,
+    74.0
+   ],
+   "rot": 0,
+   "count": 4
+  },
+  {
+   "id": "forest_flock",
+   "kind": "flock",
+   "pos": [
+    106.0,
+    2.0,
+    182.0
+   ],
+   "rot": 0,
+   "count": 4
+  }
+ ],
+ "doors": [
+  {
+   "id": "ranger_outpost_door",
+   "building": "ranger_outpost",
+   "interior": "ranger_outpost_int",
+   "pos": [
+    222.0,
+    2.0,
+    240.2
+   ],
+   "unlock": {
+    "type": "always"
+   },
+   "locked_text": "It's locked."
+  },
+  {
+   "id": "bug_catcher_hideout_door",
+   "building": "bug_catcher_hideout",
+   "interior": "bug_catcher_hideout_int",
+   "pos": [
+    86.0,
+    2.0,
+    44.2
+   ],
+   "unlock": {
+    "type": "reward",
+    "reward": {
+     "kind": "pokedex_caught",
+     "count": 10
+    }
+   },
+   "locked_text": "A sign: 'BUG CATCHERS ONLY. Show your best bug!'"
+  }
+ ],
+ "spawn_zones": [
+  {
+   "id": "forest_grass_south",
+   "table": "viridian_forest",
+   "rect": [
+    128.0,
+    188.0,
+    44.0,
+    28.0
+   ]
+  },
+  {
+   "id": "forest_grass_east",
+   "table": "viridian_forest",
+   "rect": [
+    200.0,
+    136.0,
+    16.0,
+    44.0
+   ]
+  },
+  {
+   "id": "forest_grass_mid",
+   "table": "viridian_forest",
+   "rect": [
+    156.0,
+    88.0,
+    48.0,
+    28.0
+   ]
+  },
+  {
+   "id": "forest_grass_west",
+   "table": "viridian_forest",
+   "rect": [
+    100.0,
+    40.0,
+    28.0,
+    28.0
+   ]
+  },
+  {
+   "id": "forest_grass_ne",
+   "table": "viridian_forest",
+   "rect": [
+    208.0,
+    56.0,
+    36.0,
+    36.0
+   ]
+  },
+  {
+   "id": "forest_grass_far",
+   "table": "viridian_forest",
+   "rect": [
+    72.0,
+    120.0,
+    36.0,
+    16.0
+   ]
+  }
+ ],
+ "npc_anchors": [
+  {
+   "id": "f_ranger_desk",
+   "pos": [
+    222.0,
+    2.0,
+    242.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "f_trail_south",
+   "pos": [
+    190.0,
+    2.0,
+    234.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "f_trail_mid",
+   "pos": [
+    186.0,
+    2.0,
+    126.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "f_trail_west",
+   "pos": [
+    94.0,
+    2.0,
+    58.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "f_bug_spot_a",
+   "pos": [
+    150.0,
+    2.0,
+    182.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "f_bug_spot_b",
+   "pos": [
+    222.0,
+    2.0,
+    154.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "f_bug_spot_c",
+   "pos": [
+    150.0,
+    2.0,
+    102.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "f_bug_spot_d",
+   "pos": [
+    94.0,
+    2.0,
+    78.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "f_hideout_door",
+   "pos": [
+    86.0,
+    2.0,
+    50.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "f_north_gate",
+   "pos": [
+    126.0,
+    2.0,
+    10.0
+   ],
+   "kind": "spot"
+  }
+ ]
+}

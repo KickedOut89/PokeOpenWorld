@@ -1,0 +1,1119 @@
+{
+ "mom_day": {
+  "id": "mom_day",
+  "blocks": [
+   {
+    "from": 9,
+    "to": 11,
+    "at": "pallet_flowers",
+    "activity": "garden"
+   },
+   {
+    "from": 15,
+    "to": 16,
+    "at": "pallet_cafe_front",
+    "activity": "shopping"
+   }
+  ]
+ },
+ "daisy_day": {
+  "id": "daisy_day",
+  "blocks": [
+   {
+    "from": 10,
+    "to": 12,
+    "at": "pallet_east_lawn",
+    "activity": "reading"
+   },
+   {
+    "from": 16,
+    "to": 18,
+    "at": "pallet_shore",
+    "activity": "walk"
+   }
+  ]
+ },
+ "professor_oak_day": {
+  "id": "professor_oak_day",
+  "blocks": [
+   {
+    "from": 6,
+    "to": 8,
+    "at": "pallet_greenhouse_front",
+    "activity": "research"
+   }
+  ]
+ },
+ "rival_blue_day": {
+  "id": "rival_blue_day",
+  "blocks": []
+ },
+ "lab_aide_ken_day": {
+  "id": "lab_aide_ken_day",
+  "blocks": [
+   {
+    "from": 7,
+    "to": 9,
+    "at": "pallet_pen",
+    "activity": "feeding"
+   },
+   {
+    "from": 13,
+    "to": 15,
+    "at": "pallet_pen",
+    "activity": "observing"
+   },
+   {
+    "from": 19,
+    "to": 20,
+    "at": "pallet_square",
+    "activity": "walk"
+   }
+  ]
+ },
+ "cafe_owner_mae_day": {
+  "id": "cafe_owner_mae_day",
+  "blocks": [
+   {
+    "from": 7,
+    "to": 8,
+    "at": "pallet_cafe_front",
+    "activity": "sweeping"
+   },
+   {
+    "from": 20,
+    "to": 21,
+    "at": "pallet_square",
+    "activity": "walk"
+   }
+  ]
+ },
+ "farmer_joe_day": {
+  "id": "farmer_joe_day",
+  "blocks": [
+   {
+    "from": 5,
+    "to": 12,
+    "at": "pallet_farm",
+    "activity": "farming"
+   },
+   {
+    "from": 14,
+    "to": 18,
+    "at": "pallet_farm",
+    "activity": "farming"
+   }
+  ]
+ },
+ "farmer_kid_tess_day": {
+  "id": "farmer_kid_tess_day",
+  "blocks": [
+   {
+    "from": 9,
+    "to": 12,
+    "at": "pallet_west_lawn",
+    "activity": "playing"
+   },
+   {
+    "from": 14,
+    "to": 17,
+    "at": "pallet_farm",
+    "activity": "chores"
+   }
+  ]
+ },
+ "fisherman_hal_day": {
+  "id": "fisherman_hal_day",
+  "blocks": [
+   {
+    "from": 5,
+    "to": 11,
+    "at": "pallet_pier_end",
+    "activity": "fishing"
+   },
+   {
+    "from": 16,
+    "to": 19,
+    "at": "pallet_pier_end",
+    "activity": "fishing"
+   }
+  ]
+ },
+ "granny_ruth_day": {
+  "id": "granny_ruth_day",
+  "blocks": [
+   {
+    "from": 8,
+    "to": 10,
+    "at": "pallet_square",
+    "activity": "walk"
+   },
+   {
+    "from": 14,
+    "to": 16,
+    "at": "pallet_west_lawn",
+    "activity": "resting"
+   }
+  ]
+ },
+ "jogger_lin_day": {
+  "id": "jogger_lin_day",
+  "blocks": [
+   {
+    "from": 6,
+    "to": 8,
+    "at": "pallet_north_path",
+    "activity": "jogging"
+   },
+   {
+    "from": 18,
+    "to": 19,
+    "at": "pallet_shore",
+    "activity": "jogging"
+   }
+  ]
+ },
+ "painter_sol_day": {
+  "id": "painter_sol_day",
+  "blocks": [
+   {
+    "from": 10,
+    "to": 16,
+    "at": "pallet_shore",
+    "activity": "painting"
+   }
+  ]
+ },
+ "boy_milo_day": {
+  "id": "boy_milo_day",
+  "blocks": [
+   {
+    "from": 10,
+    "to": 12,
+    "at": "pallet_lab_front",
+    "activity": "watching"
+   },
+   {
+    "from": 15,
+    "to": 17,
+    "at": "pallet_square",
+    "activity": "playing"
+   }
+  ]
+ },
+ "gardener_bea_day": {
+  "id": "gardener_bea_day",
+  "blocks": [
+   {
+    "from": 8,
+    "to": 12,
+    "at": "pallet_greenhouse_front",
+    "activity": "gardening"
+   },
+   {
+    "from": 14,
+    "to": 17,
+    "at": "pallet_flowers",
+    "activity": "gardening"
+   }
+  ]
+ },
+ "vendor_gus_day": {
+  "id": "vendor_gus_day",
+  "blocks": [
+   {
+    "from": 8,
+    "to": 18,
+    "at": "route1_vendor",
+    "activity": "vending"
+   }
+  ]
+ },
+ "berry_farmer_ida_day": {
+  "id": "berry_farmer_ida_day",
+  "blocks": [
+   {
+    "from": 6,
+    "to": 11,
+    "at": "berry_field",
+    "activity": "harvesting"
+   },
+   {
+    "from": 14,
+    "to": 17,
+    "at": "berry_field",
+    "activity": "harvesting"
+   }
+  ]
+ },
+ "berry_farmer_ned_day": {
+  "id": "berry_farmer_ned_day",
+  "blocks": [
+   {
+    "from": 9,
+    "to": 12,
+    "at": "route1_cottage_yard",
+    "activity": "fixing"
+   },
+   {
+    "from": 15,
+    "to": 18,
+    "at": "berry_field",
+    "activity": "harvesting"
+   }
+  ]
+ },
+ "traveler_rosa_day": {
+  "id": "traveler_rosa_day",
+  "blocks": [
+   {
+    "from": 9,
+    "to": 12,
+    "at": "route1_ledge_view",
+    "activity": "resting"
+   },
+   {
+    "from": 12,
+    "to": 15,
+    "at": "route1_south_end",
+    "activity": "travelling"
+   }
+  ]
+ },
+ "traveler_kurt_day": {
+  "id": "traveler_kurt_day",
+  "blocks": [
+   {
+    "from": 10,
+    "to": 13,
+    "at": "route1_grass_edge",
+    "activity": "travelling"
+   },
+   {
+    "from": 13,
+    "to": 16,
+    "at": "route1_north_end",
+    "activity": "travelling"
+   }
+  ]
+ },
+ "youngster_joey_day": {
+  "id": "youngster_joey_day",
+  "blocks": [
+   {
+    "from": 9,
+    "to": 17,
+    "at": "route1_grass_edge",
+    "activity": "training"
+   }
+  ]
+ },
+ "birdwatcher_ana_day": {
+  "id": "birdwatcher_ana_day",
+  "blocks": [
+   {
+    "from": 5,
+    "to": 9,
+    "at": "route1_ledge_view",
+    "activity": "watching"
+   },
+   {
+    "from": 16,
+    "to": 19,
+    "at": "route1_grass_edge",
+    "activity": "watching"
+   }
+  ]
+ },
+ "nurse_joy_day": {
+  "id": "nurse_joy_day",
+  "blocks": []
+ },
+ "mart_clerk_day": {
+  "id": "mart_clerk_day",
+  "blocks": []
+ },
+ "teacher_ines_day": {
+  "id": "teacher_ines_day",
+  "blocks": [
+   {
+    "from": 8,
+    "to": 9,
+    "at": "v_school_yard",
+    "activity": "greeting"
+   }
+  ]
+ },
+ "student_0_day": {
+  "id": "student_0_day",
+  "blocks": [
+   {
+    "from": 7,
+    "to": 8,
+    "at": "v_bus_stop",
+    "activity": "waiting"
+   },
+   {
+    "from": 15,
+    "to": 17,
+    "at": "v_park_pond",
+    "activity": "playing"
+   }
+  ]
+ },
+ "student_1_day": {
+  "id": "student_1_day",
+  "blocks": [
+   {
+    "from": 7,
+    "to": 8,
+    "at": "v_bus_stop",
+    "activity": "waiting"
+   },
+   {
+    "from": 15,
+    "to": 17,
+    "at": "v_park_bench",
+    "activity": "playing"
+   }
+  ]
+ },
+ "student_2_day": {
+  "id": "student_2_day",
+  "blocks": [
+   {
+    "from": 7,
+    "to": 8,
+    "at": "v_bus_stop",
+    "activity": "waiting"
+   },
+   {
+    "from": 15,
+    "to": 17,
+    "at": "v_park_pond",
+    "activity": "playing"
+   }
+  ]
+ },
+ "student_3_day": {
+  "id": "student_3_day",
+  "blocks": [
+   {
+    "from": 7,
+    "to": 8,
+    "at": "v_bus_stop",
+    "activity": "waiting"
+   },
+   {
+    "from": 15,
+    "to": 17,
+    "at": "v_park_bench",
+    "activity": "playing"
+   }
+  ]
+ },
+ "vendor_olga_day": {
+  "id": "vendor_olga_day",
+  "blocks": [
+   {
+    "from": 7,
+    "to": 8,
+    "at": "v_plaza_n",
+    "activity": "setting up"
+   },
+   {
+    "from": 8,
+    "to": 17,
+    "at": "v_market_a",
+    "activity": "vending"
+   },
+   {
+    "from": 17,
+    "to": 18,
+    "at": "v_plaza_s",
+    "activity": "packing up"
+   }
+  ]
+ },
+ "vendor_benny_day": {
+  "id": "vendor_benny_day",
+  "blocks": [
+   {
+    "from": 7,
+    "to": 8,
+    "at": "v_plaza_n",
+    "activity": "setting up"
+   },
+   {
+    "from": 8,
+    "to": 17,
+    "at": "v_market_b",
+    "activity": "vending"
+   },
+   {
+    "from": 17,
+    "to": 18,
+    "at": "v_plaza_s",
+    "activity": "packing up"
+   }
+  ]
+ },
+ "vendor_suki_day": {
+  "id": "vendor_suki_day",
+  "blocks": [
+   {
+    "from": 7,
+    "to": 8,
+    "at": "v_plaza_n",
+    "activity": "setting up"
+   },
+   {
+    "from": 8,
+    "to": 17,
+    "at": "v_market_c",
+    "activity": "vending"
+   },
+   {
+    "from": 17,
+    "to": 18,
+    "at": "v_plaza_s",
+    "activity": "packing up"
+   }
+  ]
+ },
+ "vendor_hector_day": {
+  "id": "vendor_hector_day",
+  "blocks": [
+   {
+    "from": 7,
+    "to": 8,
+    "at": "v_plaza_n",
+    "activity": "setting up"
+   },
+   {
+    "from": 8,
+    "to": 17,
+    "at": "v_market_d",
+    "activity": "vending"
+   },
+   {
+    "from": 17,
+    "to": 18,
+    "at": "v_plaza_s",
+    "activity": "packing up"
+   }
+  ]
+ },
+ "vendor_lena_day": {
+  "id": "vendor_lena_day",
+  "blocks": [
+   {
+    "from": 7,
+    "to": 8,
+    "at": "v_plaza_n",
+    "activity": "setting up"
+   },
+   {
+    "from": 8,
+    "to": 17,
+    "at": "v_market_e",
+    "activity": "vending"
+   },
+   {
+    "from": 17,
+    "to": 18,
+    "at": "v_plaza_s",
+    "activity": "packing up"
+   }
+  ]
+ },
+ "barista_tomo_day": {
+  "id": "barista_tomo_day",
+  "blocks": [
+   {
+    "from": 6,
+    "to": 7,
+    "at": "v_cafe_tables",
+    "activity": "opening"
+   }
+  ]
+ },
+ "florist_pia_day": {
+  "id": "florist_pia_day",
+  "blocks": [
+   {
+    "from": 8,
+    "to": 9,
+    "at": "v_flower_front",
+    "activity": "watering"
+   },
+   {
+    "from": 17,
+    "to": 18,
+    "at": "v_flower_front",
+    "activity": "watering"
+   }
+  ]
+ },
+ "officer_jenny_day": {
+  "id": "officer_jenny_day",
+  "blocks": [
+   {
+    "from": 8,
+    "to": 20,
+    "at": "v_police_post",
+    "activity": "patrolling"
+   }
+  ]
+ },
+ "mechanic_dov_day": {
+  "id": "mechanic_dov_day",
+  "blocks": [
+   {
+    "from": 9,
+    "to": 17,
+    "at": "v_workshop_yard",
+    "activity": "repairing"
+   }
+  ]
+ },
+ "old_man_ezra_day": {
+  "id": "old_man_ezra_day",
+  "blocks": [
+   {
+    "from": 7,
+    "to": 11,
+    "at": "v_old_man_porch",
+    "activity": "sitting"
+   },
+   {
+    "from": 15,
+    "to": 18,
+    "at": "v_old_man_porch",
+    "activity": "sitting"
+   }
+  ]
+ },
+ "granddaughter_lu_day": {
+  "id": "granddaughter_lu_day",
+  "blocks": [
+   {
+    "from": 9,
+    "to": 12,
+    "at": "v_park_pond",
+    "activity": "playing"
+   },
+   {
+    "from": 14,
+    "to": 16,
+    "at": "v_old_man_porch",
+    "activity": "helping"
+   }
+  ]
+ },
+ "commuter_0_day": {
+  "id": "commuter_0_day",
+  "blocks": [
+   {
+    "from": 7,
+    "to": 9,
+    "at": "v_bus_stop",
+    "activity": "waiting"
+   },
+   {
+    "from": 17,
+    "to": 19,
+    "at": "v_east_street",
+    "activity": "walking home"
+   }
+  ]
+ },
+ "commuter_1_day": {
+  "id": "commuter_1_day",
+  "blocks": [
+   {
+    "from": 7,
+    "to": 9,
+    "at": "v_bus_stop",
+    "activity": "waiting"
+   },
+   {
+    "from": 17,
+    "to": 19,
+    "at": "v_west_street",
+    "activity": "walking home"
+   }
+  ]
+ },
+ "commuter_2_day": {
+  "id": "commuter_2_day",
+  "blocks": [
+   {
+    "from": 7,
+    "to": 9,
+    "at": "v_bus_stop",
+    "activity": "waiting"
+   },
+   {
+    "from": 17,
+    "to": 19,
+    "at": "v_alley_east",
+    "activity": "walking home"
+   }
+  ]
+ },
+ "jogger_0_day": {
+  "id": "jogger_0_day",
+  "blocks": [
+   {
+    "from": 6,
+    "to": 8,
+    "at": "v_avenue_mid",
+    "activity": "jogging"
+   },
+   {
+    "from": 18,
+    "to": 20,
+    "at": "v_north_gate",
+    "activity": "jogging"
+   }
+  ]
+ },
+ "jogger_1_day": {
+  "id": "jogger_1_day",
+  "blocks": [
+   {
+    "from": 6,
+    "to": 8,
+    "at": "v_south_gate",
+    "activity": "jogging"
+   },
+   {
+    "from": 18,
+    "to": 20,
+    "at": "v_west_street",
+    "activity": "jogging"
+   }
+  ]
+ },
+ "park_elder_0_day": {
+  "id": "park_elder_0_day",
+  "blocks": [
+   {
+    "from": 9,
+    "to": 12,
+    "at": "v_park_bench",
+    "activity": "chatting"
+   },
+   {
+    "from": 14,
+    "to": 17,
+    "at": "v_park_pond",
+    "activity": "feeding birds"
+   }
+  ]
+ },
+ "park_elder_1_day": {
+  "id": "park_elder_1_day",
+  "blocks": [
+   {
+    "from": 9,
+    "to": 12,
+    "at": "v_park_bench",
+    "activity": "chatting"
+   },
+   {
+    "from": 14,
+    "to": 17,
+    "at": "v_park_pond",
+    "activity": "feeding birds"
+   }
+  ]
+ },
+ "kid_0_day": {
+  "id": "kid_0_day",
+  "blocks": [
+   {
+    "from": 10,
+    "to": 12,
+    "at": "v_park_pond",
+    "activity": "playing"
+   },
+   {
+    "from": 15,
+    "to": 18,
+    "at": "v_plaza_n",
+    "activity": "playing"
+   }
+  ]
+ },
+ "kid_1_day": {
+  "id": "kid_1_day",
+  "blocks": [
+   {
+    "from": 10,
+    "to": 12,
+    "at": "v_plaza_s",
+    "activity": "playing"
+   },
+   {
+    "from": 15,
+    "to": 18,
+    "at": "v_park_bench",
+    "activity": "playing"
+   }
+  ]
+ },
+ "kid_2_day": {
+  "id": "kid_2_day",
+  "blocks": [
+   {
+    "from": 10,
+    "to": 12,
+    "at": "v_school_yard",
+    "activity": "playing"
+   },
+   {
+    "from": 15,
+    "to": 18,
+    "at": "v_park_pond",
+    "activity": "playing"
+   }
+  ]
+ },
+ "apartment_0_day": {
+  "id": "apartment_0_day",
+  "blocks": [
+   {
+    "from": 8,
+    "to": 10,
+    "at": "v_apartment_steps",
+    "activity": "errands"
+   },
+   {
+    "from": 16,
+    "to": 18,
+    "at": "v_cafe_tables",
+    "activity": "relaxing"
+   }
+  ]
+ },
+ "apartment_1_day": {
+  "id": "apartment_1_day",
+  "blocks": [
+   {
+    "from": 9,
+    "to": 11,
+    "at": "v_plaza_n",
+    "activity": "errands"
+   },
+   {
+    "from": 16,
+    "to": 18,
+    "at": "v_bus_stop",
+    "activity": "relaxing"
+   }
+  ]
+ },
+ "apartment_2_day": {
+  "id": "apartment_2_day",
+  "blocks": [
+   {
+    "from": 10,
+    "to": 12,
+    "at": "v_mart_front",
+    "activity": "errands"
+   },
+   {
+    "from": 16,
+    "to": 18,
+    "at": "v_park_bench",
+    "activity": "relaxing"
+   }
+  ]
+ },
+ "apartment_3_day": {
+  "id": "apartment_3_day",
+  "blocks": [
+   {
+    "from": 11,
+    "to": 13,
+    "at": "v_center_front",
+    "activity": "errands"
+   },
+   {
+    "from": 16,
+    "to": 18,
+    "at": "v_market_c",
+    "activity": "relaxing"
+   }
+  ]
+ },
+ "night_owl_0_day": {
+  "id": "night_owl_0_day",
+  "blocks": [
+   {
+    "from": 21,
+    "to": 3,
+    "at": "v_night_bench",
+    "activity": "night walk"
+   }
+  ]
+ },
+ "night_owl_1_day": {
+  "id": "night_owl_1_day",
+  "blocks": [
+   {
+    "from": 21,
+    "to": 3,
+    "at": "v_lamp_corner",
+    "activity": "night walk"
+   }
+  ]
+ },
+ "night_owl_2_day": {
+  "id": "night_owl_2_day",
+  "blocks": [
+   {
+    "from": 21,
+    "to": 3,
+    "at": "v_plaza_s",
+    "activity": "night walk"
+   }
+  ]
+ },
+ "couple_ana_li_day": {
+  "id": "couple_ana_li_day",
+  "blocks": [
+   {
+    "from": 11,
+    "to": 13,
+    "at": "v_cafe_tables",
+    "activity": "date"
+   },
+   {
+    "from": 18,
+    "to": 20,
+    "at": "v_park_pond",
+    "activity": "stroll"
+   }
+  ]
+ },
+ "delivery_bo_day": {
+  "id": "delivery_bo_day",
+  "blocks": [
+   {
+    "from": 7,
+    "to": 12,
+    "at": "v_mart_front",
+    "activity": "delivering"
+   },
+   {
+    "from": 13,
+    "to": 17,
+    "at": "v_east_street",
+    "activity": "delivering"
+   }
+  ]
+ },
+ "musician_cal_day": {
+  "id": "musician_cal_day",
+  "blocks": [
+   {
+    "from": 12,
+    "to": 20,
+    "at": "v_plaza_n",
+    "activity": "busking"
+   }
+  ]
+ },
+ "painter_ivy_day": {
+  "id": "painter_ivy_day",
+  "blocks": [
+   {
+    "from": 9,
+    "to": 16,
+    "at": "v_gym_front",
+    "activity": "painting"
+   }
+  ]
+ },
+ "dogwalker_finn_day": {
+  "id": "dogwalker_finn_day",
+  "blocks": [
+   {
+    "from": 7,
+    "to": 9,
+    "at": "v_west_street",
+    "activity": "walking"
+   },
+   {
+    "from": 17,
+    "to": 19,
+    "at": "v_route22_fence",
+    "activity": "walking"
+   }
+  ]
+ },
+ "gym_fan_rudy_day": {
+  "id": "gym_fan_rudy_day",
+  "blocks": [
+   {
+    "from": 10,
+    "to": 18,
+    "at": "v_gym_front",
+    "activity": "waiting"
+   }
+  ]
+ },
+ "gate_guard_ray_day": {
+  "id": "gate_guard_ray_day",
+  "blocks": [
+   {
+    "from": 8,
+    "to": 18,
+    "at": "r2_gate_front",
+    "activity": "guarding"
+   }
+  ]
+ },
+ "ranger_maple_day": {
+  "id": "ranger_maple_day",
+  "blocks": [
+   {
+    "from": 7,
+    "to": 12,
+    "at": "f_trail_south",
+    "activity": "patrolling"
+   },
+   {
+    "from": 13,
+    "to": 18,
+    "at": "f_ranger_desk",
+    "activity": "logging"
+   }
+  ]
+ },
+ "ranger_cedar_day": {
+  "id": "ranger_cedar_day",
+  "blocks": [
+   {
+    "from": 9,
+    "to": 17,
+    "at": "f_trail_mid",
+    "activity": "patrolling"
+   }
+  ]
+ },
+ "camper_jon_day": {
+  "id": "camper_jon_day",
+  "blocks": [
+   {
+    "from": 7,
+    "to": 21,
+    "at": "r2_camp",
+    "activity": "camping"
+   }
+  ]
+ },
+ "camper_sia_day": {
+  "id": "camper_sia_day",
+  "blocks": [
+   {
+    "from": 9,
+    "to": 12,
+    "at": "r2_lookout",
+    "activity": "sketching"
+   },
+   {
+    "from": 17,
+    "to": 22,
+    "at": "r2_camp",
+    "activity": "camping"
+   }
+  ]
+ },
+ "hiker_gord_day": {
+  "id": "hiker_gord_day",
+  "blocks": [
+   {
+    "from": 8,
+    "to": 16,
+    "at": "r2_path_mid",
+    "activity": "hiking"
+   }
+  ]
+ },
+ "lass_poppy_day": {
+  "id": "lass_poppy_day",
+  "blocks": [
+   {
+    "from": 11,
+    "to": 15,
+    "at": "r2_lookout",
+    "activity": "picnic"
+   }
+  ]
+ },
+ "birdwatcher_tal_day": {
+  "id": "birdwatcher_tal_day",
+  "blocks": [
+   {
+    "from": 5,
+    "to": 10,
+    "at": "f_trail_west",
+    "activity": "watching"
+   },
+   {
+    "from": 18,
+    "to": 21,
+    "at": "f_trail_mid",
+    "activity": "watching"
+   }
+  ]
+ },
+ "bug_catcher_0_day": {
+  "id": "bug_catcher_0_day",
+  "blocks": [
+   {
+    "from": 0,
+    "to": 24,
+    "at": "f_bug_spot_a",
+    "activity": "searching"
+   }
+  ]
+ },
+ "bug_catcher_1_day": {
+  "id": "bug_catcher_1_day",
+  "blocks": [
+   {
+    "from": 0,
+    "to": 24,
+    "at": "f_bug_spot_b",
+    "activity": "searching"
+   }
+  ]
+ },
+ "bug_catcher_2_day": {
+  "id": "bug_catcher_2_day",
+  "blocks": [
+   {
+    "from": 0,
+    "to": 24,
+    "at": "f_bug_spot_c",
+    "activity": "searching"
+   }
+  ]
+ },
+ "bug_catcher_3_day": {
+  "id": "bug_catcher_3_day",
+  "blocks": [
+   {
+    "from": 0,
+    "to": 24,
+    "at": "f_bug_spot_d",
+    "activity": "searching"
+   }
+  ]
+ }
+}

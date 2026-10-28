@@ -1,0 +1,62 @@
+{
+ "id": "beedrill",
+ "name": "Beedrill",
+ "dex": 15,
+ "types": [
+  "bug",
+  "poison"
+ ],
+ "base": {
+  "hp": 65,
+  "atk": 80,
+  "def": 40,
+  "spa": 45,
+  "spd": 80,
+  "spe": 75
+ },
+ "catch_rate": 45,
+ "base_exp": 178,
+ "growth": "medium_fast",
+ "ev_yield": {
+  "atk": 2,
+  "spd": 1
+ },
+ "learnset": [
+  [
+   1,
+   "fury_attack"
+  ],
+  [
+   10,
+   "fury_attack"
+  ],
+  [
+   13,
+   "focus_energy"
+  ],
+  [
+   16,
+   "twineedle"
+  ],
+  [
+   19,
+   "rage"
+  ],
+  [
+   22,
+   "pursuit"
+  ],
+  [
+   25,
+   "toxic_spikes"
+  ],
+  [
+   28,
+   "pin_missile"
+  ]
+ ],
+ "evolves": [],
+ "temperament": "aggressive",
+ "gender_ratio": 4,
+ "source": "PokeAPI (Gen 5 Black/White learnset)"
+}

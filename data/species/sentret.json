@@ -1,0 +1,64 @@
+{
+ "id": "sentret",
+ "name": "Sentret",
+ "dex": 161,
+ "types": [
+  "normal"
+ ],
+ "base": {
+  "hp": 35,
+  "atk": 46,
+  "def": 34,
+  "spa": 35,
+  "spd": 45,
+  "spe": 20
+ },
+ "catch_rate": 255,
+ "base_exp": 43,
+ "growth": "medium_fast",
+ "ev_yield": {
+  "atk": 1
+ },
+ "learnset": [
+  [
+   1,
+   "foresight"
+  ],
+  [
+   1,
+   "scratch"
+  ],
+  [
+   4,
+   "defense_curl"
+  ],
+  [
+   7,
+   "quick_attack"
+  ],
+  [
+   13,
+   "fury_swipes"
+  ],
+  [
+   16,
+   "helping_hand"
+  ],
+  [
+   19,
+   "follow_me"
+  ],
+  [
+   25,
+   "slam"
+  ],
+  [
+   28,
+   "rest"
+  ]
+ ],
+ "evolves": [],
+ "temperament": "timid",
+ "gender_ratio": 4,
+ "source": "PokeAPI (Gen 5 Black/White learnset)"
+}

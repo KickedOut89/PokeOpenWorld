@@ -1,0 +1,78 @@
+{
+ "id": "ivysaur",
+ "name": "Ivysaur",
+ "dex": 2,
+ "types": [
+  "grass",
+  "poison"
+ ],
+ "base": {
+  "hp": 60,
+  "atk": 62,
+  "def": 63,
+  "spa": 80,
+  "spd": 80,
+  "spe": 60
+ },
+ "catch_rate": 45,
+ "base_exp": 142,
+ "growth": "medium_slow",
+ "ev_yield": {
+  "spa": 1,
+  "spd": 1
+ },
+ "learnset": [
+  [
+   1,
+   "growl"
+  ],
+  [
+   1,
+   "leech_seed"
+  ],
+  [
+   1,
+   "tackle"
+  ],
+  [
+   3,
+   "growl"
+  ],
+  [
+   7,
+   "leech_seed"
+  ],
+  [
+   9,
+   "vine_whip"
+  ],
+  [
+   13,
+   "poison_powder"
+  ],
+  [
+   13,
+   "sleep_powder"
+  ],
+  [
+   15,
+   "take_down"
+  ],
+  [
+   20,
+   "razor_leaf"
+  ],
+  [
+   23,
+   "sweet_scent"
+  ],
+  [
+   28,
+   "growth"
+  ]
+ ],
+ "evolves": [],
+ "temperament": "territorial",
+ "gender_ratio": 1,
+ "source": "PokeAPI (Gen 5 Black/White learnset)"
+}

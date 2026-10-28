@@ -1,0 +1,169 @@
+{
+ "id": "kanto_1_9",
+ "region": "kanto",
+ "coord": [
+  1,
+  9
+ ],
+ "area": "viridian_city",
+ "cells": [
+  "TT==============",
+  "TT==============",
+  "TT..............",
+  "TT..............",
+  "TT.#####........",
+  "TT.#####........",
+  "TT.#####........",
+  "TT.#####..#####.",
+  "TT........#####.",
+  "TT.#####..#####.",
+  "TT.#####..#####.",
+  "TT.#####........",
+  "TT.#####........",
+  "TT..............",
+  "TTTTTTTTTTTTTTTT",
+  "TTTTTTTTTTTTTTTT"
+ ],
+ "heights": [
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222",
+  "2222222222222222"
+ ],
+ "props": [
+  {
+   "id": "old_mans_house",
+   "kind": "building",
+   "template": "house_small",
+   "pos": [
+    50.0,
+    2.0,
+    36.0
+   ],
+   "rot": 0.0,
+   "footprint": [
+    19.0,
+    15.0
+   ],
+   "height": 4.5,
+   "area": "viridian_city"
+  },
+  {
+   "id": "viridian_house_10",
+   "kind": "building",
+   "template": "house_small",
+   "pos": [
+    22.0,
+    2.0,
+    24.0
+   ],
+   "rot": 0.0,
+   "footprint": [
+    19.0,
+    15.0
+   ],
+   "height": 4.5,
+   "area": "viridian_city"
+  },
+  {
+   "id": "viridian_house_11",
+   "kind": "building",
+   "template": "house_small",
+   "pos": [
+    22.0,
+    2.0,
+    44.0
+   ],
+   "rot": 0.0,
+   "footprint": [
+    19.0,
+    15.0
+   ],
+   "height": 4.5,
+   "area": "viridian_city"
+  },
+  {
+   "id": "viridian_laundry_a",
+   "kind": "laundry",
+   "pos": [
+    34.0,
+    2.0,
+    46.0
+   ],
+   "rot": 0.0,
+   "area": "viridian_city"
+  }
+ ],
+ "doors": [
+  {
+   "id": "old_mans_house_door",
+   "building": "old_mans_house",
+   "interior": "old_mans_house_int",
+   "pos": [
+    50.0,
+    2.0,
+    44.2
+   ],
+   "unlock": {
+    "type": "always"
+   },
+   "locked_text": "It's locked.",
+   "area": "viridian_city"
+  },
+  {
+   "id": "viridian_house_10_door",
+   "building": "viridian_house_10",
+   "interior": "viridian_house_10_int",
+   "pos": [
+    22.0,
+    2.0,
+    32.2
+   ],
+   "unlock": {
+    "type": "always"
+   },
+   "locked_text": "It's locked.",
+   "area": "viridian_city"
+  },
+  {
+   "id": "viridian_house_11_door",
+   "building": "viridian_house_11",
+   "interior": "viridian_house_11_int",
+   "pos": [
+    22.0,
+    2.0,
+    52.2
+   ],
+   "unlock": {
+    "type": "pending"
+   },
+   "locked_text": "The door won't budge.",
+   "area": "viridian_city"
+  }
+ ],
+ "spawn_zones": [],
+ "npc_anchors": [
+  {
+   "id": "v_old_man_porch",
+   "pos": [
+    50.0,
+    2.0,
+    46.0
+   ],
+   "kind": "spot",
+   "area": "viridian_city"
+  }
+ ]
+}

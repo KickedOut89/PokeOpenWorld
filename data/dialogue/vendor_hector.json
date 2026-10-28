@@ -1,0 +1,57 @@
+{
+ "id": "vendor_hector",
+ "barks": [
+  {
+   "text": "Maps! Maps!"
+  },
+  {
+   "text": "Up with the Pidgey, as always.",
+   "when": {
+    "periods": [
+     "morning"
+    ]
+   }
+  },
+  {
+   "text": "Look at that sky \u2014 all orange.",
+   "when": {
+    "periods": [
+     "evening"
+    ]
+   }
+  },
+  {
+   "text": "The berries will love this rain.",
+   "when": {
+    "weather": [
+     "rain"
+    ]
+   }
+  },
+  {
+   "text": "Hold on to your hat!",
+   "when": {
+    "weather": [
+     "thunderstorm"
+    ]
+   }
+  }
+ ],
+ "talk": [
+  {
+   "text": "Maps of Kanto \u2014 slightly out of date."
+  },
+  {
+   "text": "Take good care of your partner. Maps of Kanto \u2014 slightly out of date.",
+   "when": {
+    "flag": "got_starter"
+   }
+  },
+  {
+   "text": "Filling that Pok\u00e9dex? Good luck!",
+   "when": {
+    "flag": "got_pokedex"
+   }
+  }
+ ]
+}

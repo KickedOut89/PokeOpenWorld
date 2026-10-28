@@ -1,0 +1,642 @@
+{
+ "props": [
+  {
+   "id": "player_house",
+   "kind": "building",
+   "template": "house_small",
+   "pos": [
+    162.0,
+    0.0,
+    870.0
+   ],
+   "rot": 0,
+   "footprint": [
+    11.0,
+    11.0
+   ],
+   "height": 4.5
+  },
+  {
+   "id": "rival_house",
+   "kind": "building",
+   "template": "house_small",
+   "pos": [
+    218.0,
+    0.0,
+    870.0
+   ],
+   "rot": 0,
+   "footprint": [
+    11.0,
+    11.0
+   ],
+   "height": 4.5
+  },
+  {
+   "id": "oaks_lab",
+   "kind": "building",
+   "template": "lab",
+   "pos": [
+    214.0,
+    0.0,
+    896.0
+   ],
+   "rot": 0,
+   "footprint": [
+    27.0,
+    15.0
+   ],
+   "height": 6.0
+  },
+  {
+   "id": "oak_greenhouse",
+   "kind": "building",
+   "template": "greenhouse",
+   "pos": [
+    238.0,
+    0.0,
+    894.0
+   ],
+   "rot": 0,
+   "footprint": [
+    11.0,
+    11.0
+   ],
+   "height": 4.0
+  },
+  {
+   "id": "pallet_cafe",
+   "kind": "building",
+   "template": "shop",
+   "pos": [
+    152.0,
+    0.0,
+    894.0
+   ],
+   "rot": 0,
+   "footprint": [
+    15.0,
+    11.0
+   ],
+   "height": 4.5
+  },
+  {
+   "id": "pallet_house_1",
+   "kind": "building",
+   "template": "house_small",
+   "pos": [
+    146.0,
+    0.0,
+    850.0
+   ],
+   "rot": 0,
+   "footprint": [
+    11.0,
+    11.0
+   ],
+   "height": 4.5
+  },
+  {
+   "id": "pallet_barn",
+   "kind": "building",
+   "template": "barn",
+   "pos": [
+    172.0,
+    0.0,
+    850.0
+   ],
+   "rot": 0,
+   "footprint": [
+    15.0,
+    11.0
+   ],
+   "height": 5.5
+  },
+  {
+   "id": "pallet_house_2",
+   "kind": "building",
+   "template": "house_small",
+   "pos": [
+    230.0,
+    0.0,
+    850.0
+   ],
+   "rot": 0,
+   "footprint": [
+    11.0,
+    11.0
+   ],
+   "height": 4.5
+  },
+  {
+   "id": "pallet_house_3",
+   "kind": "building",
+   "template": "house_large",
+   "pos": [
+    148.0,
+    0.0,
+    910.0
+   ],
+   "rot": 0,
+   "footprint": [
+    15.0,
+    11.0
+   ],
+   "height": 5.0
+  },
+  {
+   "id": "pallet_house_4",
+   "kind": "building",
+   "template": "house_small",
+   "pos": [
+    170.0,
+    0.0,
+    910.0
+   ],
+   "rot": 0,
+   "footprint": [
+    11.0,
+    11.0
+   ],
+   "height": 4.5
+  },
+  {
+   "id": "fishing_shack",
+   "kind": "building",
+   "template": "house_small",
+   "pos": [
+    218.0,
+    0.0,
+    928.0
+   ],
+   "rot": 0,
+   "footprint": [
+    11.0,
+    7.0
+   ],
+   "height": 3.5
+  },
+  {
+   "id": "pallet_lamp_0",
+   "kind": "lamp",
+   "pos": [
+    186.0,
+    0.0,
+    858.0
+   ],
+   "rot": 0
+  },
+  {
+   "id": "pallet_lamp_1",
+   "kind": "lamp",
+   "pos": [
+    198.0,
+    0.0,
+    878.0
+   ],
+   "rot": 0
+  },
+  {
+   "id": "pallet_lamp_2",
+   "kind": "lamp",
+   "pos": [
+    186.0,
+    0.0,
+    886.0
+   ],
+   "rot": 0
+  },
+  {
+   "id": "pallet_lamp_3",
+   "kind": "lamp",
+   "pos": [
+    198.0,
+    0.0,
+    918.0
+   ],
+   "rot": 0
+  },
+  {
+   "id": "pallet_lamp_4",
+   "kind": "lamp",
+   "pos": [
+    186.0,
+    0.0,
+    926.0
+   ],
+   "rot": 0
+  },
+  {
+   "id": "pallet_lamp_5",
+   "kind": "lamp",
+   "pos": [
+    162.0,
+    0.0,
+    886.0
+   ],
+   "rot": 0
+  },
+  {
+   "id": "pallet_lamp_6",
+   "kind": "lamp",
+   "pos": [
+    218.0,
+    0.0,
+    886.0
+   ],
+   "rot": 0
+  },
+  {
+   "id": "pallet_lamp_7",
+   "kind": "lamp",
+   "pos": [
+    162.0,
+    0.0,
+    918.0
+   ],
+   "rot": 0
+  },
+  {
+   "id": "pallet_lamp_8",
+   "kind": "lamp",
+   "pos": [
+    218.0,
+    0.0,
+    918.0
+   ],
+   "rot": 0
+  },
+  {
+   "id": "pallet_sign",
+   "kind": "sign",
+   "pos": [
+    182.0,
+    0.0,
+    842.0
+   ],
+   "rot": 0,
+   "footprint": [
+    0.8,
+    0.2
+   ],
+   "height": 1.4,
+   "color": "#8a6a45"
+  },
+  {
+   "id": "pier_post_a",
+   "kind": "post",
+   "pos": [
+    186.0,
+    0.0,
+    950.0
+   ],
+   "rot": 0,
+   "footprint": [
+    0.4,
+    0.4
+   ],
+   "height": 1.0,
+   "color": "#6b4a2b"
+  },
+  {
+   "id": "pier_post_b",
+   "kind": "post",
+   "pos": [
+    198.0,
+    0.0,
+    950.0
+   ],
+   "rot": 0,
+   "footprint": [
+    0.4,
+    0.4
+   ],
+   "height": 1.0,
+   "color": "#6b4a2b"
+  },
+  {
+   "id": "pallet_flock_square",
+   "kind": "flock",
+   "pos": [
+    206.0,
+    0.0,
+    878.0
+   ],
+   "rot": 0,
+   "count": 5
+  },
+  {
+   "id": "pallet_flock_shore",
+   "kind": "flock",
+   "pos": [
+    154.0,
+    0.0,
+    930.0
+   ],
+   "rot": 0,
+   "count": 4
+  },
+  {
+   "id": "pallet_laundry",
+   "kind": "laundry",
+   "pos": [
+    142.0,
+    0.0,
+    918.0
+   ],
+   "rot": 0
+  },
+  {
+   "id": "pallet_drifters_flowers",
+   "kind": "drifters",
+   "pos": [
+    146.0,
+    0.0,
+    842.0
+   ],
+   "rot": 0,
+   "count": 3
+  }
+ ],
+ "doors": [
+  {
+   "id": "player_house_door",
+   "building": "player_house",
+   "interior": "player_house_int",
+   "pos": [
+    162.0,
+    0.0,
+    876.2
+   ],
+   "unlock": {
+    "type": "always"
+   },
+   "locked_text": "It's locked."
+  },
+  {
+   "id": "rival_house_door",
+   "building": "rival_house",
+   "interior": "rival_house_int",
+   "pos": [
+    218.0,
+    0.0,
+    876.2
+   ],
+   "unlock": {
+    "type": "always"
+   },
+   "locked_text": "It's locked."
+  },
+  {
+   "id": "oaks_lab_door",
+   "building": "oaks_lab",
+   "interior": "oaks_lab_int",
+   "pos": [
+    214.0,
+    0.0,
+    904.2
+   ],
+   "unlock": {
+    "type": "always"
+   },
+   "locked_text": "It's locked."
+  },
+  {
+   "id": "oak_greenhouse_door",
+   "building": "oak_greenhouse",
+   "interior": "oak_greenhouse_int",
+   "pos": [
+    238.0,
+    0.0,
+    900.2
+   ],
+   "unlock": {
+    "type": "flag",
+    "flag": "got_pokedex"
+   },
+   "locked_text": "The greenhouse is locked. Professor Oak keeps the key."
+  },
+  {
+   "id": "pallet_cafe_door",
+   "building": "pallet_cafe",
+   "interior": "pallet_cafe_int",
+   "pos": [
+    152.0,
+    0.0,
+    900.2
+   ],
+   "unlock": {
+    "type": "time"
+   },
+   "locked_text": "The caf\u00e9 hasn't opened yet.",
+   "hours": [
+    8,
+    20
+   ]
+  },
+  {
+   "id": "pallet_house_1_door",
+   "building": "pallet_house_1",
+   "interior": "pallet_house_1_int",
+   "pos": [
+    146.0,
+    0.0,
+    856.2
+   ],
+   "unlock": {
+    "type": "pending"
+   },
+   "locked_text": "No one's home."
+  },
+  {
+   "id": "pallet_barn_door",
+   "building": "pallet_barn",
+   "interior": "pallet_barn_int",
+   "pos": [
+    172.0,
+    0.0,
+    856.2
+   ],
+   "unlock": {
+    "type": "pending"
+   },
+   "locked_text": "The barn door is barred from inside."
+  },
+  {
+   "id": "pallet_house_2_door",
+   "building": "pallet_house_2",
+   "interior": "pallet_house_2_int",
+   "pos": [
+    230.0,
+    0.0,
+    856.2
+   ],
+   "unlock": {
+    "type": "always"
+   },
+   "locked_text": "It's locked."
+  },
+  {
+   "id": "pallet_house_3_door",
+   "building": "pallet_house_3",
+   "interior": "pallet_house_3_int",
+   "pos": [
+    148.0,
+    0.0,
+    916.2
+   ],
+   "unlock": {
+    "type": "pending"
+   },
+   "locked_text": "Do not disturb."
+  },
+  {
+   "id": "pallet_house_4_door",
+   "building": "pallet_house_4",
+   "interior": "pallet_house_4_int",
+   "pos": [
+    170.0,
+    0.0,
+    916.2
+   ],
+   "unlock": {
+    "type": "always"
+   },
+   "locked_text": "It's locked."
+  },
+  {
+   "id": "fishing_shack_door",
+   "building": "fishing_shack",
+   "interior": "fishing_shack_int",
+   "pos": [
+    218.0,
+    0.0,
+    932.2
+   ],
+   "unlock": {
+    "type": "pending"
+   },
+   "locked_text": "The shack is padlocked."
+  }
+ ],
+ "spawn_zones": [],
+ "npc_anchors": [
+  {
+   "id": "player_spawn",
+   "pos": [
+    162.0,
+    0.0,
+    877.5
+   ],
+   "kind": "spawn"
+  },
+  {
+   "id": "pallet_square",
+   "pos": [
+    190.0,
+    0.0,
+    882.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "pallet_pier_end",
+   "pos": [
+    190.0,
+    0.0,
+    954.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "pallet_farm",
+   "pos": [
+    146.0,
+    0.0,
+    866.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "pallet_pen",
+   "pos": [
+    238.0,
+    0.0,
+    914.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "pallet_shore",
+   "pos": [
+    162.0,
+    0.0,
+    934.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "pallet_flowers",
+   "pos": [
+    150.0,
+    0.0,
+    842.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "pallet_cafe_front",
+   "pos": [
+    154.0,
+    0.0,
+    902.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "pallet_lab_front",
+   "pos": [
+    214.0,
+    0.0,
+    906.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "pallet_north_path",
+   "pos": [
+    190.0,
+    0.0,
+    846.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "pallet_greenhouse_front",
+   "pos": [
+    238.0,
+    0.0,
+    902.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "pallet_east_lawn",
+   "pos": [
+    230.0,
+    0.0,
+    878.0
+   ],
+   "kind": "spot"
+  },
+  {
+   "id": "pallet_west_lawn",
+   "pos": [
+    166.0,
+    0.0,
+    886.0
+   ],
+   "kind": "spot"
+  }
+ ]
+}

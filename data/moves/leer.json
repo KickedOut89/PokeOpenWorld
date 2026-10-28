@@ -1,0 +1,22 @@
+{
+ "id": "leer",
+ "name": "Leer",
+ "type": "normal",
+ "category": "status",
+ "power": 0,
+ "pp": 30,
+ "accuracy": 100,
+ "priority": 0,
+ "shape": "projectile",
+ "range": 8.0,
+ "active_s": 0.15,
+ "source": "PokeAPI (Gen 5 values)",
+ "stat_change": {
+  "target": "foe",
+  "stat": "def",
+  "stages": -1
+ },
+ "speed": 14.0,
+ "radius": 0.8,
+ "tuned": true
+}

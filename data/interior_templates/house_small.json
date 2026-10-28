@@ -1,0 +1,4 @@
+{"id": "house_small", "size": [10, 8], "floor": "#a07850", "wall": "#e8dcc4", "light": "#ffe2b0",
+ "furniture": [{"kind": "table", "pos": [0, 0, -0.5], "size": [1.8, 0.8, 1.0], "color": "#8a6a45"},
+  {"kind": "shelf", "pos": [-4.2, 0, -3.3], "size": [1.2, 2.0, 0.5], "color": "#6b4a2b"},
+  {"kind": "bed", "pos": [3.5, 0, -2.8], "size": [1.4, 0.5, 2.2], "color": "#c05050"}]}

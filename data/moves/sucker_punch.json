@@ -1,0 +1,16 @@
+{
+ "id": "sucker_punch",
+ "name": "Sucker Punch",
+ "type": "dark",
+ "category": "physical",
+ "power": 80,
+ "pp": 5,
+ "accuracy": 100,
+ "priority": 1,
+ "shape": "melee_arc",
+ "range": 4.5,
+ "active_s": 0.15,
+ "source": "PokeAPI (Gen 5 values)",
+ "arc_deg": 100.0,
+ "tuned": true
+}
