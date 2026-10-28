@@ -76,6 +76,29 @@
    "height": 1.4,
    "color": "#8a6a45",
    "area": "route_1"
+  },
+  {
+   "id": "route1_flock_south",
+   "kind": "flock",
+   "pos": [
+    42.0,
+    0.0,
+    26.0
+   ],
+   "rot": 0.0,
+   "count": 4.0,
+   "area": "route_1"
+  },
+  {
+   "id": "route1_laundry",
+   "kind": "laundry",
+   "pos": [
+    34.0,
+    0.0,
+    26.0
+   ],
+   "rot": 0.0,
+   "area": "route_1"
   }
  ],
  "doors": [

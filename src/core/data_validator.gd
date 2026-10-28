@@ -24,13 +24,14 @@ const MIN_CONTEXT_LINES := 3
 
 
 static func _check_npcs(db: DataDB, out: PackedStringArray) -> void:
-	var places := {}
+	var places := {}  # anchor/door id -> area
 	for cid in db.table(&"chunks"):
 		var c: Dictionary = db.table(&"chunks")[cid]
 		for a in c.get("npc_anchors", []):
-			places[StringName(a.id)] = true
+			places[StringName(a.id)] = a.get("area", c.get("area", ""))
 		for d in c.get("doors", []):
-			places[StringName(d.id)] = true
+			places[StringName(d.id)] = d.get("area", c.get("area", ""))
+	var residents := {}  # area -> [count, with companion]
 	var check_places := not db.table(&"chunks").is_empty()
 	for id in db.table(&"npcs"):
 		var npc: Dictionary = db.table(&"npcs")[id]
@@ -50,6 +51,17 @@ static func _check_npcs(db: DataDB, out: PackedStringArray) -> void:
 			out.append("npcs/%s: home '%s' is not a door or anchor" % [id, npc.get("home", "")])
 		if npc.has("companion") and not db.table(&"species").has(StringName(npc.companion)):
 			out.append("npcs/%s: companion species '%s' does not exist" % [id, npc.companion])
+		if role == "resident" and places.has(StringName(npc.get("home", ""))):
+			var area: String = places[StringName(npc.home)]
+			var tally: Array = residents.get_or_add(area, [0, 0])
+			tally[0] += 1
+			if npc.has("companion"):
+				tally[1] += 1
+	for area in residents:
+		var area_rec := db.get_record(&"areas", StringName(area))
+		var is_town: bool = area_rec.get("ambience", "town") == "town"
+		if is_town and not Companion.share_ok(residents[area][1], residents[area][0]):
+			out.append("npcs: area '%s' has %d/%d residents with a companion Pokémon (needs 30%%)" % [area, residents[area][1], residents[area][0]])
 	for sid in db.table(&"schedules"):
 		for b in db.table(&"schedules")[sid].get("blocks", []):
 			if check_places and not places.has(StringName(b.get("at", ""))):

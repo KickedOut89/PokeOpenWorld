@@ -56,6 +56,8 @@ func _ready() -> void:
 		var tex: Texture2D = assets.texture(key)
 		sprite.set_sheet(tex)
 	_last_pos = global_position
+	if record.has("companion"):
+		add_child(Companion.make(StringName(record.companion), self))
 
 
 func set_goal(pos: Vector3, res: Dictionary, think_interval: float) -> void:

@@ -73,6 +73,49 @@
    ],
    "height": 1.4,
    "color": "#8a6a45"
+  },
+  {
+   "id": "route1_flock_north",
+   "kind": "flock",
+   "pos": [
+    202.0,
+    2.0,
+    662.0
+   ],
+   "rot": 0,
+   "count": 5
+  },
+  {
+   "id": "route1_flock_south",
+   "kind": "flock",
+   "pos": [
+    170.0,
+    0.0,
+    794.0
+   ],
+   "rot": 0,
+   "count": 4
+  },
+  {
+   "id": "route1_drifters",
+   "kind": "drifters",
+   "pos": [
+    206.0,
+    1.0,
+    762.0
+   ],
+   "rot": 0,
+   "count": 3
+  },
+  {
+   "id": "route1_laundry",
+   "kind": "laundry",
+   "pos": [
+    162.0,
+    0.0,
+    794.0
+   ],
+   "rot": 0
   }
  ],
  "doors": [

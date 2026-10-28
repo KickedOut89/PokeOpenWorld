@@ -146,6 +146,8 @@ static func apply_lamps(tree: SceneTree, on: bool) -> void:
 		for c in lamp.get_children():
 			if c is OmniLight3D:
 				(c as OmniLight3D).light_energy = 1.6 if on else 0.0
+	for sil in tree.get_nodes_in_group(&"silhouette"):
+		(sil as Node3D).visible = on
 	for w in tree.get_nodes_in_group(&"window"):
 		var mi := w as MeshInstance3D
 		if mi != null and mi.mesh != null and mi.mesh.surface_get_material(0) is StandardMaterial3D:

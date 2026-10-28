@@ -17,6 +17,7 @@ var spawner: SpawnNode
 var npcs: NPCManager
 var barks: BarkSystem
 var dialogue: DialogueBox
+var ambience: AmbiencePlayer
 var _npc_t: float = 0.0
 
 
@@ -81,6 +82,12 @@ func _ready() -> void:
 	dialogue.choice_made.connect(func(f: StringName) -> void: State.set_flag(f))
 	dialogue.closed.connect(func() -> void: player.input_enabled = true)
 	player.interacted.connect(_on_interact)
+	ambience = AmbiencePlayer.new()
+	ambience.name = "Ambience"
+	ambience.area = streamer.current_area
+	add_child(ambience)
+	interiors.entered.connect(func(_id: StringName) -> void: ambience.indoors = true)
+	interiors.exited.connect(func(_id: StringName) -> void: ambience.indoors = false)
 	toast = MessageToast.new()
 	toast.name = "Toast"
 	add_child(toast)

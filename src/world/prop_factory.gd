@@ -28,6 +28,14 @@ static func make(prop: Dictionary) -> Node3D:
 			node = _lamp()
 		"tree":
 			node = tree(Vector3.ZERO, 1.0)
+		"flock":
+			node = FlockNode.make(int(prop.get("count", 4)), hash(prop.get("id", "")))
+		"drifters":
+			var d := Drifters.new()
+			d.count = int(prop.get("count", 3))
+			node = d
+		"laundry":
+			node = ClothSway.new()
 		_:
 			node = _box(Vector3(float(prop.get("footprint", [1, 1])[0]), float(prop.get("height", 1.2)), float(prop.get("footprint", [1, 1])[1])), Color(prop.get("color", "#b08a5a")), prop.get("solid", true))
 	node.name = "Prop_%s" % prop.get("id", "unnamed")
@@ -103,6 +111,24 @@ static func _building(prop: Dictionary) -> Node3D:
 	win.position = Vector3(size.x * 0.25, size.y * 0.6, size.z * 0.5 + 0.01)
 	win.add_to_group(&"window")
 	body.add_child(win)
+	# A third of lit windows show a resident's silhouette at night.
+	if absi(hash(prop.get("id", ""))) % 3 == 0:
+		var sil := MeshInstance3D.new()
+		var sq := QuadMesh.new()
+		sq.size = Vector2(0.35, 0.6)
+		var sm := StandardMaterial3D.new()
+		sm.albedo_color = Color(0.05, 0.05, 0.08)
+		sm.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+		sq.material = sm
+		sil.mesh = sq
+		sil.position = win.position + Vector3(0.15, -0.05, 0.01)
+		sil.visible = false
+		sil.add_to_group(&"silhouette")
+		body.add_child(sil)
+	if template.begins_with("house") or template == "barn":
+		var smoke := ChimneySmoke.new()
+		smoke.position = Vector3(size.x * 0.3, size.y + 1.8, -size.z * 0.2)
+		body.add_child(smoke)
 	return body
 
 

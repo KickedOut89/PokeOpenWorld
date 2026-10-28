@@ -61,3 +61,8 @@ func test_validator_flags_npc_references() -> void:
 func test_validator_requires_three_context_lines() -> void:
 	var errors := DataValidator.validate(DataDB.load_dir(BAD))
 	assert_true(_has_error(errors, ["terse", "3"]), "\n".join(errors))
+
+
+func test_validator_requires_companion_share_per_town() -> void:
+	var errors := DataValidator.validate(DataDB.load_dir(BAD))
+	assert_true(_has_error(errors, ["area 't'", "companion"]), "\n".join(errors))

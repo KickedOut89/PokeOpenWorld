@@ -313,6 +313,49 @@
    ],
    "height": 1.0,
    "color": "#6b4a2b"
+  },
+  {
+   "id": "pallet_flock_square",
+   "kind": "flock",
+   "pos": [
+    206.0,
+    0.0,
+    878.0
+   ],
+   "rot": 0,
+   "count": 5
+  },
+  {
+   "id": "pallet_flock_shore",
+   "kind": "flock",
+   "pos": [
+    154.0,
+    0.0,
+    930.0
+   ],
+   "rot": 0,
+   "count": 4
+  },
+  {
+   "id": "pallet_laundry",
+   "kind": "laundry",
+   "pos": [
+    142.0,
+    0.0,
+    918.0
+   ],
+   "rot": 0
+  },
+  {
+   "id": "pallet_drifters_flowers",
+   "kind": "drifters",
+   "pos": [
+    146.0,
+    0.0,
+    842.0
+   ],
+   "rot": 0,
+   "count": 3
   }
  ],
  "doors": [
