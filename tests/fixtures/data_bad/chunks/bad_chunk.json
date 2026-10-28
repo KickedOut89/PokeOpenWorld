@@ -1,4 +1,1 @@
-{"id": "bad_chunk", "region": "kanto", "coord": [0, 0], "area": "t", "cells": [], "heights": [], "props": [],
- "doors": [{"id": "chunk_door", "interior": "ghost_int", "pos": [0, 0, 0], "unlock": {"type": "always"}},
-  {"id": "ok_pending", "interior": "ghost_int", "pos": [0, 0, 0], "unlock": {"type": "pending"}}],
- "spawn_zones": [], "npc_anchors": []}
+{"id": "bad_chunk", "region": "kanto", "coord": [0, 0], "area": "t", "cells": [], "heights": [], "props": [], "doors": [{"id": "chunk_door", "interior": "ghost_int", "pos": [0, 0, 0], "unlock": {"type": "always"}}, {"id": "ok_pending", "interior": "ghost_int", "pos": [0, 0, 0], "unlock": {"type": "pending"}}], "spawn_zones": [{"id": "zone_x", "table": "nope", "rect": [0, 0, 4, 4]}], "npc_anchors": []}

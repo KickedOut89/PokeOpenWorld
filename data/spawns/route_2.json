@@ -1,0 +1,52 @@
+{
+ "id": "route_2",
+ "entries": [
+  {
+   "species": "pidgey",
+   "min_lvl": 3,
+   "max_lvl": 6,
+   "weight": 30,
+   "periods": "all"
+  },
+  {
+   "species": "rattata",
+   "min_lvl": 3,
+   "max_lvl": 6,
+   "weight": 30,
+   "periods": "all"
+  },
+  {
+   "species": "caterpie",
+   "min_lvl": 3,
+   "max_lvl": 5,
+   "weight": 20,
+   "periods": "all"
+  },
+  {
+   "species": "weedle",
+   "min_lvl": 3,
+   "max_lvl": 5,
+   "weight": 20,
+   "periods": "all"
+  },
+  {
+   "species": "sentret",
+   "min_lvl": 3,
+   "max_lvl": 5,
+   "weight": 15,
+   "periods": [
+    "morning",
+    "day"
+   ]
+  },
+  {
+   "species": "hoothoot",
+   "min_lvl": 3,
+   "max_lvl": 6,
+   "weight": 20,
+   "periods": [
+    "night"
+   ]
+  }
+ ]
+}

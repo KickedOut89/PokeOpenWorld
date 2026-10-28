@@ -15,7 +15,23 @@ static func validate(db: DataDB) -> PackedStringArray:
 	_check_schemas(db, out)
 	_check_species(db, out)
 	_check_doors(db, out)
+	_check_spawns(db, out)
 	return out
+
+
+static func _check_spawns(db: DataDB, out: PackedStringArray) -> void:
+	var species := db.table(&"species")
+	var tables := db.table(&"spawns")
+	for id in tables:
+		for e in tables[id].get("entries", []):
+			if not species.has(StringName(e.get("species", ""))):
+				out.append("spawns/%s: unknown species '%s'" % [id, e.get("species", "")])
+			elif species[StringName(e.species)].get("ambient_only", false):
+				out.append("spawns/%s: '%s' is ambient-only and cannot be a wild encounter" % [id, e.species])
+	for cid in db.table(&"chunks"):
+		for z in db.table(&"chunks")[cid].get("spawn_zones", []):
+			if not tables.has(StringName(z.get("table", ""))):
+				out.append("chunks/%s: spawn zone '%s' uses unknown table '%s'" % [cid, z.get("id", "?"), z.get("table", "")])
 
 
 static func _check_schemas(db: DataDB, out: PackedStringArray) -> void:

@@ -44,3 +44,9 @@ func test_validator_flags_chunk_door_to_missing_interior() -> void:
 func test_validator_flags_interior_with_unknown_template() -> void:
 	var errors := DataValidator.validate(DataDB.load_dir(BAD))
 	assert_true(_has_error(errors, ["no_template_int", "castle"]), "\n".join(errors))
+
+
+func test_validator_flags_unknown_spawn_species_and_zone_table() -> void:
+	var errors := DataValidator.validate(DataDB.load_dir(BAD))
+	assert_true(_has_error(errors, ["bad_table", "missingno"]), "\n".join(errors))
+	assert_true(_has_error(errors, ["zone_x", "nope"]), "\n".join(errors))
