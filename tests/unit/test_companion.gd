@@ -8,7 +8,7 @@ func test_companion_excluded_from_spawner() -> void:
 	owner_npc.add_child(c)
 	assert_true(c.is_in_group(&"ambient"))
 	assert_false(c.is_in_group(&"wild"))
-	assert_false(c is CollisionObject3D)
+	assert_false(c.is_class("CollisionObject3D"))
 	assert_eq(c.find_children("*", "CollisionObject3D", true, false).size(), 0)
 
 

@@ -34,7 +34,7 @@ func snapshot(world: Dictionary) -> Dictionary:
 
 
 func save(slot: int, data: Dictionary) -> Error:
-	if in_fight.call():
+	if in_fight.is_valid() and in_fight.call():
 		return ERR_BUSY
 	DirAccess.make_dir_recursive_absolute(dir)
 	var main := path(slot)

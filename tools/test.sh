@@ -16,8 +16,14 @@ LOG="$(mktemp)"
   | grep -v "is now available" | tee "$LOG"
 CODE=${PIPESTATUS[0]}
 TOTAL=$(grep -E "^Tests +[0-9]+" "$LOG" | awk '{print $2}')
+# GUT silently skips test files that fail to parse; treat that as a failure.
+BROKEN=$(grep -c "Failed to load script \"res://tests/" "$LOG")
 PASS=$(grep -E "^Passing Tests +[0-9]+" "$LOG" | awk '{print $3}')
 rm -f "$LOG"
+if [ "${BROKEN:-0}" -gt 0 ]; then
+  echo "RESULT: FAILED ($BROKEN test script(s) failed to load)"
+  exit 1
+fi
 if [ "$CODE" -eq 0 ] && [ -n "${TOTAL:-}" ]; then
   echo "RESULT: ${PASS:-0}/${TOTAL} passed"
 else

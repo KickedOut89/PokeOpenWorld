@@ -192,6 +192,11 @@ func ui_locked() -> bool:
 	return Engine.get_physics_frames() <= _ui_busy_frame + 1
 
 
+## The save service must not keep calling into a freed world.
+func _exit_tree() -> void:
+	Saves.in_fight = func() -> bool: return false
+
+
 func _physics_process(delta: float) -> void:
 	if player != null:
 		player.ui_blocked = ui_locked()
