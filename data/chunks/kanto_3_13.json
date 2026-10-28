@@ -143,9 +143,9 @@
     24.2
    ],
    "unlock": {
-    "type": "pending"
+    "type": "always"
    },
-   "locked_text": "No one's home.",
+   "locked_text": "It's locked.",
    "area": "pallet_town"
   }
  ],

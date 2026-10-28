@@ -12,6 +12,10 @@ const HOP_TIME := 0.35
 
 var input_enabled: bool = true
 var facing: Vector2 = Vector2(0, 1)
+## Direction the player is trying to move this frame (x east, y south).
+var last_input: Vector2 = Vector2.ZERO
+## Tests/cutscenes: when not INF, replaces stick/keyboard input.
+var forced_input: Vector2 = Vector2.INF
 var _hopping: bool = false
 
 @onready var sprite: BillboardSprite = $Sprite
@@ -26,6 +30,8 @@ func _ready() -> void:
 
 
 func move_input() -> Vector2:
+	if forced_input != Vector2.INF:
+		return forced_input
 	if not input_enabled:
 		return Vector2.ZERO
 	return Input.get_vector(&"move_left", &"move_right", &"move_up", &"move_down")
@@ -35,6 +41,7 @@ func _physics_process(delta: float) -> void:
 	if _hopping:
 		return
 	var dir := move_input()
+	last_input = dir
 	var speed := RUN_SPEED if Input.is_action_pressed(&"run") else WALK_SPEED
 	velocity.x = dir.x * speed
 	velocity.z = dir.y * speed

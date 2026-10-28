@@ -368,7 +368,8 @@
     900.2
    ],
    "unlock": {
-    "type": "pending"
+    "type": "flag",
+    "flag": "got_pokedex"
    },
    "locked_text": "The greenhouse is locked. Professor Oak keeps the key."
   },
@@ -382,9 +383,13 @@
     900.2
    ],
    "unlock": {
-    "type": "pending"
+    "type": "time"
    },
-   "locked_text": "The caf\u00e9 hasn't opened yet."
+   "locked_text": "The caf\u00e9 hasn't opened yet.",
+   "hours": [
+    8,
+    20
+   ]
   },
   {
    "id": "pallet_house_1_door",
@@ -424,9 +429,9 @@
     856.2
    ],
    "unlock": {
-    "type": "pending"
+    "type": "always"
    },
-   "locked_text": "No one's home."
+   "locked_text": "It's locked."
   },
   {
    "id": "pallet_house_3_door",
@@ -452,9 +457,9 @@
     916.2
    ],
    "unlock": {
-    "type": "pending"
+    "type": "always"
    },
-   "locked_text": "No one's home."
+   "locked_text": "It's locked."
   },
   {
    "id": "fishing_shack_door",

@@ -9,6 +9,9 @@ var streamer: WorldStreamer
 var player: Player
 var camera: HD2DCamera
 var lighting: LightingDirector
+var interiors: InteriorManager
+var doors: DoorController
+var toast: MessageToast
 
 
 func _ready() -> void:
@@ -31,6 +34,20 @@ func _ready() -> void:
 	camera.target = player
 	camera.make_current()
 	camera.snap()
+	interiors = InteriorManager.new()
+	interiors.name = "Interiors"
+	add_child(interiors)
+	interiors.setup(player, self, Data.db)
+	interiors.entered.connect(func(_id: StringName) -> void: camera.snap())
+	interiors.exited.connect(func(_id: StringName) -> void: camera.snap())
+	doors = DoorController.new()
+	doors.name = "Doors"
+	doors.player = player
+	doors.interiors = interiors
+	add_child(doors)
+	toast = MessageToast.new()
+	toast.name = "Toast"
+	add_child(toast)
 
 
 func find_anchor(id: StringName) -> Vector3:

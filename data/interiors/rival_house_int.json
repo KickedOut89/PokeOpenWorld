@@ -1,0 +1,1 @@
+{"id": "rival_house_int", "template": "house_small", "furnishing": [{"kind": "town_map", "pos": [2.5, 1.2, -3.8], "size": [2.0, 1.2, 0.1], "color": "#d8c890"}], "npcs": ["rivals_sister"], "lighting": "interior_warm"}

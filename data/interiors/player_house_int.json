@@ -1,0 +1,1 @@
+{"id": "player_house_int", "template": "house_small", "furnishing": [{"kind": "tv", "pos": [-1.5, 0, -3.4], "size": [1.2, 0.8, 0.4], "color": "#303030"}], "npcs": ["mom"], "lighting": "interior_warm"}

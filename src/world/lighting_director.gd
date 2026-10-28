@@ -12,6 +12,7 @@ var moon: DirectionalLight3D
 var world_env: WorldEnvironment
 var lamps_on: bool = false
 var overrides: Dictionary = {}  # debug menu: field -> value
+var interior: bool = false      # inside a building: no sun/moon/sky fog, warm ambient
 
 var _sky_mat: ProceduralSkyMaterial
 var _grades: Dictionary = {}
@@ -115,6 +116,14 @@ func _process(_delta: float) -> void:
 	if world_env.camera_attributes is CameraAttributesPractical:
 		var ca := world_env.camera_attributes as CameraAttributesPractical
 		ca.dof_blur_far_enabled = GraphicsPresets.dof_enabled()
+	if interior:
+		sun.visible = false
+		moon.visible = false
+		env.ambient_light_energy = 0.35
+		env.fog_density = 0.0
+		env.volumetric_fog_density = 0.0
+		env.tonemap_exposure = 1.0
+		env.adjustment_color_correction = _grades.get(&"day", null)
 	if s.lamps_on != lamps_on:
 		lamps_on = s.lamps_on
 		EventBus.lamps_changed.emit(lamps_on)

@@ -51,12 +51,20 @@ static func _check_species(db: DataDB, out: PackedStringArray) -> void:
 
 
 static func _check_doors(db: DataDB, out: PackedStringArray) -> void:
+	var doors: Array = []
+	for id in db.table(&"doors"):
+		doors.append(db.table(&"doors")[id])
+	for cid in db.table(&"chunks"):
+		doors.append_array(db.table(&"chunks")[cid].get("doors", []))
 	var interiors := db.table(&"interiors")
-	var doors := db.table(&"doors")
-	for id in doors:
-		var rec: Dictionary = doors[id]
+	for rec in doors:
 		var unlock_type: String = rec.get("unlock", {}).get("type", "")
 		if unlock_type == "pending":
 			continue
 		if not interiors.has(StringName(rec.get("interior", ""))):
-			out.append("doors/%s: interior '%s' does not exist (use unlock type 'pending')" % [id, rec.get("interior", "")])
+			out.append("doors/%s: interior '%s' does not exist (use unlock type 'pending')" % [rec.get("id", "?"), rec.get("interior", "")])
+	var templates := db.table(&"interior_templates")
+	for id in interiors:
+		var t := StringName(interiors[id].get("template", ""))
+		if not templates.has(t):
+			out.append("interiors/%s: template '%s' does not exist" % [id, t])

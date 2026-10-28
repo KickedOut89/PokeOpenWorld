@@ -8,7 +8,7 @@ const KINDS: Array[StringName] = [
 	&"species", &"moves", &"types", &"natures", &"spawns", &"weather", &"areas",
 	&"npcs", &"schedules", &"dialogue", &"quests", &"doors", &"interiors",
 	&"items", &"chunks", &"trainers", &"lighting", &"ambience", &"schema",
-	&"tileset",
+	&"tileset", &"interior_templates",
 ]
 
 var errors: PackedStringArray = []

@@ -128,9 +128,13 @@
     4.20000000000005
    ],
    "unlock": {
-    "type": "pending"
+    "type": "time"
    },
    "locked_text": "The café hasn't opened yet.",
+   "hours": [
+    8.0,
+    20.0
+   ],
    "area": "pallet_town"
   },
   {
@@ -158,9 +162,9 @@
     20.2
    ],
    "unlock": {
-    "type": "pending"
+    "type": "always"
    },
-   "locked_text": "No one's home.",
+   "locked_text": "It's locked.",
    "area": "pallet_town"
   }
  ],

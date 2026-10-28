@@ -33,3 +33,14 @@ func test_validator_flags_door_to_missing_interior() -> void:
 func test_validator_flags_missing_required_field() -> void:
 	var errors := DataValidator.validate(DataDB.load_dir(BAD))
 	assert_true(_has_error(errors, ["nameless", "name"]), "\n".join(errors))
+
+
+func test_validator_flags_chunk_door_to_missing_interior() -> void:
+	var errors := DataValidator.validate(DataDB.load_dir(BAD))
+	assert_true(_has_error(errors, ["chunk_door", "ghost_int"]), "\n".join(errors))
+	assert_false(_has_error(errors, ["ok_pending"]), "pending doors may point at unbuilt interiors")
+
+
+func test_validator_flags_interior_with_unknown_template() -> void:
+	var errors := DataValidator.validate(DataDB.load_dir(BAD))
+	assert_true(_has_error(errors, ["no_template_int", "castle"]), "\n".join(errors))
