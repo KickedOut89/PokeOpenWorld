@@ -16,7 +16,44 @@ static func validate(db: DataDB) -> PackedStringArray:
 	_check_species(db, out)
 	_check_doors(db, out)
 	_check_spawns(db, out)
+	_check_npcs(db, out)
 	return out
+
+
+const MIN_CONTEXT_LINES := 3
+
+
+static func _check_npcs(db: DataDB, out: PackedStringArray) -> void:
+	var places := {}
+	for cid in db.table(&"chunks"):
+		var c: Dictionary = db.table(&"chunks")[cid]
+		for a in c.get("npc_anchors", []):
+			places[StringName(a.id)] = true
+		for d in c.get("doors", []):
+			places[StringName(d.id)] = true
+	var check_places := not db.table(&"chunks").is_empty()
+	for id in db.table(&"npcs"):
+		var npc: Dictionary = db.table(&"npcs")[id]
+		var dlg := db.get_record(&"dialogue", StringName(npc.get("dialogue", "")))
+		if dlg.is_empty():
+			out.append("npcs/%s: dialogue '%s' does not exist" % [id, npc.get("dialogue", "")])
+		else:
+			var contexts := {}
+			for l in dlg.get("barks", []) + dlg.get("talk", []):
+				contexts[JSON.stringify(l.get("when", {}))] = true
+			if contexts.size() < MIN_CONTEXT_LINES:
+				out.append("npcs/%s: needs lines for at least %d distinct contexts (has %d)" % [id, MIN_CONTEXT_LINES, contexts.size()])
+		var role: String = npc.get("role", "resident")
+		if role != "trainer" and not db.table(&"schedules").has(StringName(npc.get("schedule", ""))):
+			out.append("npcs/%s: schedule '%s' does not exist" % [id, npc.get("schedule", "")])
+		if check_places and not places.has(StringName(npc.get("home", ""))) and npc.has("home"):
+			out.append("npcs/%s: home '%s' is not a door or anchor" % [id, npc.get("home", "")])
+		if npc.has("companion") and not db.table(&"species").has(StringName(npc.companion)):
+			out.append("npcs/%s: companion species '%s' does not exist" % [id, npc.companion])
+	for sid in db.table(&"schedules"):
+		for b in db.table(&"schedules")[sid].get("blocks", []):
+			if check_places and not places.has(StringName(b.get("at", ""))):
+				out.append("schedules/%s: anchor '%s' does not exist" % [sid, b.get("at", "")])
 
 
 static func _check_spawns(db: DataDB, out: PackedStringArray) -> void:

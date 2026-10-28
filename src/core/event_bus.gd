@@ -14,3 +14,4 @@ signal flag_set(flag: StringName)
 signal pokemon_caught(species: StringName)
 ## Short on-screen notice (locked doors, item pickups...). UI shows it.
 signal message(text: String)
+signal npc_talked(npc_id: StringName)

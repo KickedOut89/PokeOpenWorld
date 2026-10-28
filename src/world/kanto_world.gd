@@ -15,6 +15,8 @@ var toast: MessageToast
 var weather_fx: WeatherFx
 var spawner: SpawnNode
 var npcs: NPCManager
+var barks: BarkSystem
+var dialogue: DialogueBox
 var _npc_t: float = 0.0
 
 
@@ -69,6 +71,16 @@ func _ready() -> void:
 	npcs.setup(Data.db.table(&"npcs"), Data.db.table(&"schedules"), NPCManager.index_anchors(streamer.records()),
 		func(rec: Dictionary) -> Node3D: return NPC.make(rec))
 	update_npcs()
+	barks = BarkSystem.new()
+	barks.name = "Barks"
+	barks.player = player
+	add_child(barks)
+	dialogue = DialogueBox.new()
+	dialogue.name = "Dialogue"
+	add_child(dialogue)
+	dialogue.choice_made.connect(func(f: StringName) -> void: State.set_flag(f))
+	dialogue.closed.connect(func() -> void: player.input_enabled = true)
+	player.interacted.connect(_on_interact)
 	toast = MessageToast.new()
 	toast.name = "Toast"
 	add_child(toast)
@@ -101,3 +113,23 @@ func update_npcs() -> void:
 func _weather_for_chunk(c: Vector2i) -> StringName:
 	var d := streamer.record(c)
 	return Weather.weather_for_area(d.area) if d != null else &"clear"
+
+
+func _on_interact(target: Node) -> void:
+	if dialogue.is_open() or target == null:
+		return
+	var npc := target as NPC
+	if npc == null:
+		return
+	talk_to(npc.record)
+
+
+## Opens the NPC's context-picked talk line (and its branch, if any).
+func talk_to(rec: Dictionary) -> void:
+	var dlg := Data.db.get_record(&"dialogue", StringName(rec.get("dialogue", "")))
+	var line := barks.selector.pick_line(dlg.get("talk", []), barks.context(), RandomNumberGenerator.new())
+	if line.is_empty():
+		return
+	player.input_enabled = false
+	dialogue.open(String(rec.get("name", "")), [line], dlg.get("branches", {}))
+	EventBus.npc_talked.emit(StringName(rec.get("id", "")))

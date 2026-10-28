@@ -50,3 +50,14 @@ func test_validator_flags_unknown_spawn_species_and_zone_table() -> void:
 	var errors := DataValidator.validate(DataDB.load_dir(BAD))
 	assert_true(_has_error(errors, ["bad_table", "missingno"]), "\n".join(errors))
 	assert_true(_has_error(errors, ["zone_x", "nope"]), "\n".join(errors))
+
+
+func test_validator_flags_npc_references() -> void:
+	var errors := DataValidator.validate(DataDB.load_dir(BAD))
+	assert_true(_has_error(errors, ["mute", "missing_dialogue"]), "\n".join(errors))
+	assert_true(_has_error(errors, ["mute", "none_sched"]), "\n".join(errors))
+
+
+func test_validator_requires_three_context_lines() -> void:
+	var errors := DataValidator.validate(DataDB.load_dir(BAD))
+	assert_true(_has_error(errors, ["terse", "3"]), "\n".join(errors))
